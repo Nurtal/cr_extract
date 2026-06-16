@@ -1,0 +1,3 @@
+# Dépendances d'exécution : aucune (bibliothèque standard uniquement).
+# Dépendances de développement / tests :
+pytest>=8.0

@@ -1,0 +1,141 @@
+# ROADMAP — CR Extract
+
+Extraction d'informations structurées à partir de comptes rendus médicaux non
+structurés, **par combinaisons de regex** (+ score de confiance pour les cas
+difficiles). Données 100 % fictives.
+
+---
+
+## 0. Cadre & contraintes
+
+- **Entrée** : colonne `TEXTE` du CSV (texte libre FR, addictologie/psychiatrie).
+- **Sortie** : 13 champs structurés (voir tableau ci-dessous).
+- **Méthode imposée** : regex uniquement (pas de ML), score de confiance optionnel.
+- **Vérité terrain** : les 13 colonnes du CSV servent de gold labels pour l'évaluation.
+- **Langue du code/docs** : français (cohérence avec le README).
+
+### Les 13 champs cibles
+
+| # | Champ | Type | Valeurs | Difficulté |
+|---|-------|------|---------|------------|
+| 1 | Célibataire / en couple | catégoriel | `en couple` / `célibataire` / `NA` | moyenne |
+| 2 | Situation professionnelle | catégoriel | `actif` / `inactif` / `NA` | élevée |
+| 3 | SDF / absence de logement | booléen 3-états | `True` / `False` / `NA` | moyenne |
+| 4 | Curatelle / Tutelle | catégoriel | `curatelle` / `tutelle` / `NA` | faible |
+| 5 | Antécédents sevrages compliqués | booléen 3-états | `True` / `False` / `NA` | élevée |
+| 6 | Consommation alcool | booléen 3-états | `True` / `False` / `NA` | moyenne |
+| 7 | Consommation tabac | booléen 3-états | `True` / `False` / `NA` | moyenne |
+| 8 | Cannabis / THC / CBD | catégoriel | `Cannabis` / `THC` / `CBD` / `NA` | moyenne |
+| 9 | Cocaïne | booléen | `True` / `False` | moyenne |
+| 10 | Cocaïne – voie d'administration | catégoriel | `nasale` / `intraveineuse` / `NA` | faible |
+| 11 | Héroïne | booléen | `True` / `False` | moyenne |
+| 12 | Héroïne – quantité | numérique | `0.3`–`1.2` (g/j) / `NA` | élevée |
+| 13 | Kétamine | booléen 3-états | `True` / `False` / `NA` | faible |
+
+**Distinction clé à modéliser partout** : `False` (négation explicite, ex. « pas
+d'alcool ») ≠ `NA` (sujet non abordé dans le CR).
+
+---
+
+## Phase 1 — Socle technique
+
+**But** : pouvoir charger les données et lancer une évaluation, même avec des
+extracteurs vides.
+
+- [ ] Structure du projet (package `cr_extract/`, `tests/`, `requirements.txt`,
+      `.gitignore` excluant `venv/`).
+- [ ] Chargement CSV robuste (`utf-8-sig` pour le BOM, gestion des champs
+      multi-lignes — déjà géré par le module `csv`).
+- [ ] Modèle de résultat commun : `ResultatExtraction(valeur, confiance, preuve)`
+      où `preuve` = empan/texte ayant déclenché le match (traçabilité).
+- [ ] Interface `Extracteur` (une classe/fonction par champ, signature unifiée).
+- [ ] Normalisation du texte en amont : minuscules, gestion des accents pour les
+      regex, mais **conservation** du texte d'origine pour la preuve.
+
+## Phase 2 — Extracteurs « faciles » (validation de l'approche)
+
+Champs à vocabulaire fermé et marqueurs explicites — sert de preuve de concept.
+
+- [ ] **Curatelle / Tutelle** (#4) : `curatelle`, `tutelle`, gestion de la négation
+      (« pas de mesure de protection » → `NA`).
+- [ ] **Cocaïne – voie** (#10) : `nasale|sniff`, `IV|intraveineuse|injection`.
+- [ ] **Kétamine** (#13), **Cocaïne** (#9), **Héroïne** (#11) : présence + négation.
+- [ ] **Cannabis / THC / CBD** (#8) : choix de la sous-catégorie selon le terme.
+
+## Phase 3 — Gestion de la négation & des 3 états (cœur du sujet)
+
+Brique transverse réutilisée par les champs booléens (#3, #5, #6, #7, #13…).
+
+- [ ] Lexique de négation FR : `pas de`, `aucun`, `nie`, `absence de`, `sans`,
+      `dénie`, `ne … pas`, abréviations (`0`, `–`).
+- [ ] Fenêtre de proximité négation↔terme (n caractères/tokens) pour rattacher
+      la négation au bon item.
+- [ ] Logique 3 états : terme + contexte positif → `True` ; terme + négation →
+      `False` ; terme absent → `NA`.
+- [ ] Tests unitaires dédiés négation (cas « pas d'autre toxique », « nie tout
+      usage d'opiacés ou de cocaïne »).
+
+## Phase 4 — Extracteurs « difficiles » + score de confiance
+
+- [ ] **Situation professionnelle** (#2) : `actif` (emploi, activité maintenue,
+      profession citée) vs `inactif` (chômage, arrêt de travail, AAH, retraité,
+      sans emploi). Synonymie riche → **score de confiance**.
+- [ ] **Antécédents sevrages compliqués** (#5) : sevrage **antérieur** +
+      complication (`delirium tremens`, `crises convulsives`, `réanimation`) ;
+      distinguer du sevrage actuel/programmé. → **score de confiance**.
+- [ ] **Situation conjugale** (#1) : `marié·e`, `en couple`, `conjoint` vs
+      `célibataire`, `séparé`, `divorcé`, `seul`.
+- [ ] **Héroïne – quantité** (#12) : extraction numérique (`0.5 g/j`, « un demi
+      gramme »…), normalisation des unités vers g/j, gestion virgule décimale.
+- [ ] **SDF** (#3) : `SDF`, `sans domicile`, `pas de logement stable`, `à la rue`
+      vs logement mentionné.
+- [ ] Calibration : émettre `NA` plutôt qu'un faux positif quand confiance < seuil.
+
+## Phase 5 — Évaluation & qualité
+
+- [ ] Harnais d'éval : prédiction vs gold, **accuracy par champ** + matrice de
+      confusion (notamment `False` vs `NA`).
+- [ ] Rapport global (CSV/markdown) + identification des lignes en échec.
+- [ ] Objectif chiffré par champ (ex. ≥ 90 % sur les champs faciles, ≥ 75 % sur
+      les difficiles) — à ajuster après première mesure (baseline).
+- [ ] Suite de tests unitaires par extracteur (cas limites issus du CSV).
+- [ ] Itération : analyse d'erreurs → raffinage des regex → re-mesure.
+
+## Phase 6 — Industrialisation (optionnel)
+
+- [ ] CLI : `cr-extract <fichier.csv>` → CSV structuré + colonnes de confiance.
+- [ ] Export des preuves (empans) pour audit clinique.
+- [ ] Documentation d'usage dans le README + exemples.
+
+---
+
+## Architecture cible (proposition)
+
+```
+cr_extract/
+├── __init__.py
+├── modele.py          # ResultatExtraction, types de champs
+├── chargement.py      # lecture CSV (utf-8-sig)
+├── negation.py        # brique transverse négation / 3 états (Phase 3)
+├── extracteurs/
+│   ├── __init__.py    # registre {nom_champ: extracteur}
+│   ├── conjugal.py
+│   ├── professionnel.py
+│   ├── logement.py
+│   ├── juridique.py
+│   ├── sevrage.py
+│   └── substances.py  # alcool, tabac, cannabis, cocaïne, héroïne, kétamine
+├── evaluation.py      # accuracy/matrice de confusion vs gold
+└── cli.py
+tests/
+└── test_*.py
+```
+
+## Décisions à trancher
+
+1. **Stockage des regex** : en dur dans le code Python, ou externalisées (YAML/JSON)
+   pour faciliter l'itération sans toucher au code ? (Recommandé : YAML par champ.)
+2. **Score de confiance** : sur tous les champs ou seulement les « difficiles »
+   (#2, #5, #12) comme suggéré par le README ?
+3. **Seuils** : produire un `NA` prudent sous un seuil, ou toujours forcer une
+   décision binaire ?
