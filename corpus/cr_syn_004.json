@@ -1,0 +1,19 @@
+{
+  "id": "cr_syn_004",
+  "texte": "URGENCES. Homme 21 ans, célibataire, étudiant. Vit en colocation. Pas de protection. Anxiété aiguë et palpitations après prise de LSD en soirée, associée à des amphétamines (speed). Cannabis régulier. Alcool ce soir. Tabac. Pas d'opiacés, pas de cocaïne. Pas d'antécédent de sevrage. Surveillance, retour à la normale en quelques heures.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "lsd": "True",
+    "amphetamines": "True"
+  }
+}

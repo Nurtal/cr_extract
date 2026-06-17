@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_003",
+  "texte": "COURRIER CSAPA. Madame R., 31 ans, en couple, sans emploi. Sous curatelle simple. Enceinte de 18 semaines. Plus de consommation d'héroïne depuis le relais par méthadone, abstinente depuis un an. Tabac. Pas d'alcool. Pas de cocaïne. Pas de cannabis. Suivi conjoint addictologie-obstétrique mis en place.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "grossesse": "True",
+    "traitement_substitution": "methadone"
+  }
+}

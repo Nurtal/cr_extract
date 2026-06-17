@@ -1,0 +1,17 @@
+{
+  "id": "cr_syn_002",
+  "texte": "note de garde : H 26a, malaise en festival apres prise de MDMA (ecstasy) et alcool. tabac. cannabis aussi. pas d'opiaces ni de coke. celib, en activite (graphiste). pas de protection. hyperthermie moderee, hydratation, surveillance. rentre au matin, cs addicto proposee.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "mdma": "True"
+  }
+}

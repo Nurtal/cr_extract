@@ -47,6 +47,27 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 Rappel : `False` = négation explicite (« pas d'alcool ») ≠ `NA` = sujet non
 abordé. `cocaine` et `heroine` n'utilisent pas `NA` (absence = `False`).
 
+## Tags expérimentaux (sans extracteur — travail futur)
+
+Certains comptes rendus synthétiques (`cr_syn_*.json`) portent des tags qui
+n'ont **pas encore d'extracteur**. Ils sont conservés et chargés normalement,
+mais ignorés par l'évaluation tant qu'aucun extracteur ne les cible. Ils servent
+d'amorce pour de prochaines itérations :
+
+| Tag | Valeurs proposées | Exemple |
+|-----|-------------------|---------|
+| `benzodiazepines` | `True` / `False` / `NA` | `cr_syn_001` |
+| `mdma` | `True` / `False` / `NA` | `cr_syn_002` |
+| `lsd` | `True` / `False` / `NA` | `cr_syn_004` |
+| `amphetamines` | `True` / `False` / `NA` | `cr_syn_004` |
+| `grossesse` | `True` / `False` / `NA` | `cr_syn_003` |
+| `traitement_substitution` | `methadone` / `buprenorphine` / `NA` | `cr_syn_003` |
+
+Pour rendre l'un de ces tags « actif » : l'ajouter au catalogue
+(`cr_extract/modele.py`) puis écrire l'extracteur correspondant dans
+`cr_extract/extracteurs/` — l'évaluation le prendra alors en compte
+automatiquement.
+
 ## Ajouter / modifier des données
 
 - **Nouveau compte rendu** : déposer un fichier `cr_xxx.json` (n'importe quel
