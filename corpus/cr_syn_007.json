@@ -1,0 +1,22 @@
+{
+  "id": "cr_syn_007",
+  "texte": "CONSULTATION. Homme 62 ans, marié, retraité. Pas de protection. Trouble du sommeil persistant, prend un somnifère chaque soir. Pas d'alcool. Tabac. Pas de drogue. Pas d'antécédent de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "benzodiazepines": "NA",
+    "hypnotiques": "True",
+    "hypnotique_type": "NA"
+  }
+}

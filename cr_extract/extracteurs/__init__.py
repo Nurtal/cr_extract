@@ -36,6 +36,7 @@ def extracteurs_disponibles() -> dict[str, Extracteur]:
 from cr_extract.extracteurs import (  # noqa: E402,F401
     benzodiazepines,
     conjugal,
+    hypnotiques,
     juridique,
     logement,
     professionnel,

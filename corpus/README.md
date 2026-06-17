@@ -45,6 +45,8 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `ketamine` | Kétamine | `True` / `False` / `NA` |
 | `benzodiazepines` | Benzodiazépines | `True` / `False` / `NA` |
 | `benzodiazepine_type` | Benzodiazépine - type | DCI (`zolpidem`, `alprazolam`…) / `NA` |
+| `hypnotiques` | Hypnotiques | `True` / `False` / `NA` |
+| `hypnotique_type` | Hypnotique - type | DCI (`zopiclone`, `zolpidem`…) / `NA` |
 
 Rappel : `False` = négation explicite (« pas d'alcool ») ≠ `NA` = sujet non
 abordé. `cocaine` et `heroine` n'utilisent pas `NA` (absence = `False`).
@@ -64,8 +66,9 @@ d'amorce pour de prochaines itérations :
 | `grossesse` | `True` / `False` / `NA` | `cr_syn_003` |
 | `traitement_substitution` | `methadone` / `buprenorphine` / `NA` | `cr_syn_003` |
 
-> `benzodiazepines` et `benzodiazepine_type` étaient expérimentaux ; ils
-> disposent désormais d'un extracteur (`cr_syn_001`, `cr_syn_005`).
+> `benzodiazepines`/`benzodiazepine_type` (cr_syn_001, cr_syn_005) et
+> `hypnotiques`/`hypnotique_type` (cr_syn_001, cr_syn_006, cr_syn_007) étaient
+> expérimentaux ; ils disposent désormais d'un extracteur.
 
 Pour rendre l'un de ces tags « actif » : l'ajouter au catalogue
 (`cr_extract/modele.py`) puis écrire l'extracteur correspondant dans

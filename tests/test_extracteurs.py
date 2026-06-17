@@ -175,6 +175,21 @@ def test_benzodiazepines(texte, presence, type_):
     assert r["benzodiazepine_type"].valeur == type_
 
 
+# --- Hypnotiques + type ---------------------------------------------------- #
+@pytest.mark.parametrize("texte, presence, type_", [
+    ("Insomnie chronique, prise quotidienne de zopiclone (Imovane).", Etat.VRAI, "zopiclone"),
+    ("Prend un somnifère chaque soir.", Etat.VRAI, "NA"),
+    ("Usage d'hypnotique au long cours, doxylamine.", Etat.VRAI, "doxylamine"),
+    ("Insomnie traitée par zolpidem.", Etat.VRAI, "zolpidem"),
+    ("Pas d'hypnotique, pas de somnifère.", Etat.FAUX, "NA"),
+    ("Consultation de suivi diabète.", Etat.NA, "NA"),
+])
+def test_hypnotiques(texte, presence, type_):
+    r = extraire_tout(texte)
+    assert r["hypnotiques"].valeur == presence
+    assert r["hypnotique_type"].valeur == type_
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

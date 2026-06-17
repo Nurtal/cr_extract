@@ -70,6 +70,11 @@ CHAMPS: tuple[Champ, ...] = (
            "diazepam", "flunitrazepam", "lorazepam", "lormetazepam", "midazolam",
            "nitrazepam", "oxazepam", "prazepam", "temazepam", "zolpidem",
            "zopiclone")),
+    Champ("hypnotiques", "Hypnotiques", TYPE_BOOLEEN),
+    Champ("hypnotique_type", "Hypnotique - type", TYPE_CATEGORIEL,
+          ("doxylamine", "estazolam", "flunitrazepam", "loprazolam",
+           "lormetazepam", "melatonine", "nitrazepam", "temazepam",
+           "zolpidem", "zopiclone")),
 )
 
 # Index par clé interne et par intitulé de colonne, pour les recherches rapides.

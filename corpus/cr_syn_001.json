@@ -16,6 +16,8 @@
     "heroine_quantite": "NA",
     "ketamine": "NA",
     "benzodiazepines": "True",
-    "benzodiazepine_type": "zolpidem"
+    "benzodiazepine_type": "zolpidem",
+    "hypnotiques": "True",
+    "hypnotique_type": "zolpidem"
   }
 }

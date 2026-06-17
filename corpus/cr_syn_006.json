@@ -1,0 +1,23 @@
+{
+  "id": "cr_syn_006",
+  "texte": "CONSULTATION SOMMEIL. Madame V., 58 ans, mariée, en activité (enseignante). Pas de protection. Insomnie chronique, prise quotidienne de zopiclone (Imovane) depuis plusieurs années, souhaite l'arrêter. Pas d'alcool. Non fumeuse. Pas de drogue. Pas d'antécédent de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "benzodiazepines": "True",
+    "benzodiazepine_type": "zopiclone",
+    "hypnotiques": "True",
+    "hypnotique_type": "zopiclone"
+  }
+}

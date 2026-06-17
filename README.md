@@ -38,6 +38,8 @@ Champs additionnels (hors CSV d'origine) :
 |-------------|-------------------|
 | `benzodiazepines` | `True` / `False` / `NA` — usage/mésusage ; le contexte purement thérapeutique (« sevrage sous oxazépam ») n'est pas compté |
 | `benzodiazepine_type` | molécule en DCI (`zolpidem`, `alprazolam`, `diazepam`…) / `NA` |
+| `hypnotiques` | `True` / `False` / `NA` — prise d'un hypnotique / somnifère (prescrit ou détourné) |
+| `hypnotique_type` | molécule en DCI (`zopiclone`, `zolpidem`, `doxylamine`…) / `NA` |
 
 **Distinction clé** : `False` (négation explicite, « pas d'alcool ») ≠ `NA`
 (sujet non abordé dans le compte rendu). Voir [`ROADMAP.md`](ROADMAP.md) pour le
@@ -196,7 +198,8 @@ cr_extract/
 ├── negation.py        # brique transverse : négation + logique 3 états (True/False/NA)
 ├── extracteurs/       # un module par famille de champs (registre auto-enregistré)
 │   ├── conjugal.py · professionnel.py · logement.py
-│   ├── juridique.py · sevrage.py · substances.py · benzodiazepines.py
+│   ├── juridique.py · sevrage.py · substances.py
+│   ├── benzodiazepines.py · hypnotiques.py
 ├── pipeline.py        # applique les 13 extracteurs à un texte
 ├── dataframe.py       # detecter() : enrichit un DataFrame polars/pandas
 ├── corpus.py          # corpus JSON éditable (un fichier par CR)
@@ -237,7 +240,7 @@ distribution des valeurs, puis la synthèse des tags **non couverts**.
 ## Tests & performance
 
 ```bash
-python -m pytest        # 115 tests
+python -m pytest        # 121 tests
 ```
 
 Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**
