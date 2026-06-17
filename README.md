@@ -191,6 +191,7 @@ cr_extract/
 ├── pipeline.py        # applique les 13 extracteurs à un texte
 ├── dataframe.py       # detecter() : enrichit un DataFrame polars/pandas
 ├── corpus.py          # corpus JSON éditable (un fichier par CR)
+├── couverture.py      # tags annotés couverts (ou non) par un extracteur
 ├── evaluation.py      # accuracy / matrice de confusion vs gold
 └── cli.py
 ```
@@ -212,10 +213,22 @@ python -m cr_extract.cli corpus comptes_rendus_medicaux.csv -o corpus  # (re)gé
 python -m cr_extract.cli evaluer corpus                                 # évaluer le dossier
 ```
 
+### Couverture des tags
+
+Pour voir quels tags annotés sont (ou non) traités par un extracteur — utile
+après l'ajout de nouveaux tags expérimentaux :
+
+```bash
+python -m cr_extract.cli couverture corpus
+```
+
+Le rapport liste, par tag, la couverture (✓/✗), le nombre d'occurrences et la
+distribution des valeurs, puis la synthèse des tags **non couverts**.
+
 ## Tests & performance
 
 ```bash
-python -m pytest        # 103 tests
+python -m pytest        # 108 tests
 ```
 
 Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**

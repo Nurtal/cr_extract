@@ -25,13 +25,19 @@ from pathlib import Path
 from cr_extract.chargement import charger_csv
 from cr_extract.modele import CHAMPS
 from cr_extract.pipeline import extraire_tout
-from cr_extract.corpus import csv_vers_corpus
+from cr_extract.corpus import csv_vers_corpus, charger_corpus
+from cr_extract.couverture import couverture_tags, rapport_couverture
 from cr_extract.evaluation import (
     evaluer_corpus,
     evaluer_fichier,
     rapport_markdown,
     rapport_confusions,
 )
+
+
+def _charger_source(source: Path) -> list:
+    """Charge un corpus JSON (dossier) ou un CSV annoté."""
+    return charger_corpus(source) if Path(source).is_dir() else charger_csv(source)
 
 
 def _commande_extraire(args: argparse.Namespace) -> int:
@@ -82,6 +88,12 @@ def _commande_corpus(args: argparse.Namespace) -> int:
     return 0
 
 
+def _commande_couverture(args: argparse.Namespace) -> int:
+    couverture = couverture_tags(_charger_source(args.source))
+    print(rapport_couverture(couverture))
+    return 0
+
+
 def construire_parseur() -> argparse.ArgumentParser:
     parseur = argparse.ArgumentParser(
         prog="cr-extract",
@@ -109,6 +121,14 @@ def construire_parseur() -> argparse.ArgumentParser:
     p_co.add_argument("-o", "--sortie", type=Path, default=Path("corpus"),
                       help="dossier de sortie (défaut : corpus/)")
     p_co.set_defaults(fonction=_commande_corpus)
+
+    p_cv = sous.add_parser(
+        "couverture",
+        help="tags annotés couverts (ou non) par un extracteur",
+    )
+    p_cv.add_argument("source", type=Path,
+                      help="CSV annoté ou dossier de corpus JSON")
+    p_cv.set_defaults(fonction=_commande_couverture)
 
     return parseur
 

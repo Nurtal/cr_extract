@@ -9,6 +9,7 @@ from cr_extract.chargement import CompteRendu, charger_csv
 from cr_extract.pipeline import extraire_tout
 from cr_extract.dataframe import detecter
 from cr_extract.corpus import charger_corpus, ecrire_corpus, csv_vers_corpus
+from cr_extract.couverture import couverture_tags, rapport_couverture, tags_non_couverts
 
 __all__ = [
     "Champ",
@@ -21,4 +22,7 @@ __all__ = [
     "charger_corpus",
     "ecrire_corpus",
     "csv_vers_corpus",
+    "couverture_tags",
+    "rapport_couverture",
+    "tags_non_couverts",
 ]
