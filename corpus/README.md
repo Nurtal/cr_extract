@@ -56,6 +56,7 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `pancreatite` | Pancréatite | `True` / `False` / `NA` |
 | `cardiovasculaire` | Problèmes cardiovasculaires | `True` / `False` / `NA` |
 | `bpco` | BPCO | `True` / `False` / `NA` |
+| `emphyseme` | Emphysème | `True` / `False` / `NA` |
 | `addictolytique` | Addictolytique | `True` / `False` / `NA` |
 | `addictolytique_type` | Addictolytique - type | DCI (`acamprosate`, `methadone`…) / `NA` |
 | `traitement_substitution` | Traitement de substitution | `True` / `False` / `NA` |
@@ -71,7 +72,7 @@ est conservé et chargé normalement, simplement ignoré par l'évaluation tant
 qu'aucun extracteur ne le cible. C'est l'amorce d'une prochaine itération.
 
 > **Aucun pour l'instant** : tous les tags annotés du corpus disposent désormais
-> d'un extracteur (couverture 25/25). Pour en introduire un nouveau, l'annoter
+> d'un extracteur (couverture complète). Pour en introduire un nouveau, l'annoter
 > dans un ou plusieurs `cr_syn_*.json` puis suivre la procédure ci-dessous.
 
 Pour rendre un tag « actif » : l'ajouter au catalogue

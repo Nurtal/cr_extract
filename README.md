@@ -53,6 +53,7 @@ Champs additionnels (hors CSV d'origine) :
 | `pancreatite` | `True` / `False` / `NA` — pancréatite (aiguë / chronique / éthylique) |
 | `cardiovasculaire` | `True` / `False` / `NA` — pathologie CV établie (AVC, IDM, insuffisance cardiaque, endocardite, HTA…) ; symptômes isolés / bilan ne comptent pas |
 | `bpco` | `True` / `False` / `NA` — BPCO / bronchite chronique / emphysème ; « pneumopathie » aiguë ne compte pas |
+| `emphyseme` | `True` / `False` / `NA` — emphysème (recoupe `bpco`) |
 
 **Distinction clé** : `False` (négation explicite, « pas d'alcool ») ≠ `NA`
 (sujet non abordé dans le compte rendu). Voir [`ROADMAP.md`](ROADMAP.md) pour le
@@ -217,7 +218,7 @@ cr_extract/
 │   ├── addictolytique.py · substitution.py
 │   ├── grossesse.py · hepatopathie.py
 │   ├── suivi_hepato_gastro.py · pancreatite.py
-│   ├── cardiovasculaire.py · bpco.py
+│   ├── cardiovasculaire.py · bpco.py · emphyseme.py
 ├── pipeline.py        # applique les 13 extracteurs à un texte
 ├── dataframe.py       # detecter() : enrichit un DataFrame polars/pandas
 ├── corpus.py          # corpus JSON éditable (un fichier par CR)
@@ -258,7 +259,7 @@ distribution des valeurs, puis la synthèse des tags **non couverts**.
 ## Tests & performance
 
 ```bash
-python -m pytest        # 190 tests
+python -m pytest        # 195 tests
 ```
 
 Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**

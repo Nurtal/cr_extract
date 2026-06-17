@@ -336,6 +336,24 @@ def test_bpco(texte, attendu):
     assert extraire_tout(texte)["bpco"].valeur == attendu
 
 
+# --- Emphysème ------------------------------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Emphysème pulmonaire sévère.", Etat.VRAI),
+    ("Poumons emphysémateux.", Etat.VRAI),
+    ("Pas d'emphysème.", Etat.FAUX),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_emphyseme(texte, attendu):
+    assert extraire_tout(texte)["emphyseme"].valeur == attendu
+
+
+def test_emphyseme_recoupe_bpco():
+    # L'emphysème pulmonaire active aussi le champ BPCO (axes liés).
+    r = extraire_tout("Emphysème pulmonaire sévère.")
+    assert r["emphyseme"].valeur == Etat.VRAI
+    assert r["bpco"].valeur == Etat.VRAI
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]
