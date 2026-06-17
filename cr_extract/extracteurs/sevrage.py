@@ -35,7 +35,7 @@ _SEVRAGE = re.compile(r"(?<!\w)sevrage\w*(?!\w)")
 # Absence explicite d'antécédent de sevrage, ou tout premier sevrage : oriente
 # vers False dès lors qu'un sevrage est évoqué sans complication.
 _PAS_ANTECEDENT = re.compile(
-    r"(?<!\w)((pas|aucun|sans)[^.]{0,6}antecedent[^.]{0,18}sevrage|premier sevrage)"
+    r"(?<!\w)((pas|aucun|sans)[^.]{0,6}(antecedent|atcd)[^.]{0,18}sevrage|premier sevrage)"
 )
 
 # Proximité (caractères) entre une complication et une mention de sevrage.

@@ -1,0 +1,18 @@
+{
+  "id": "cr_syn_045",
+  "texte": "OBS. H 58a, célib, SDF, sans emploi. Sous tutelle. Sd de Korsakoff sur OH chronique. Troubles cognitifs majeurs. ATCD de DT à répétition. Tabac. Pas d'autre toxique.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "True",
+    "protection_juridique": "tutelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "troubles_cognitifs": "True"
+  }
+}

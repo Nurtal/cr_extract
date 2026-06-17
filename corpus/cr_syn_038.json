@@ -1,0 +1,19 @@
+{
+  "id": "cr_syn_038",
+  "texte": "CS. F 29a, en couple, en activité (infirmière). Pas de protection. TAG suivi, sous anxiolytique. OH festif. Non fumeuse. Pas de drogue. Pas d'ATCD de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "troubles_anxieux": "True",
+    "psychotropes": "True"
+  }
+}

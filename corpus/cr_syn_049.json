@@ -1,0 +1,23 @@
+{
+  "id": "cr_syn_049",
+  "texte": "CR. H 40a, célib, sans emploi stable, hébergé chez un ami temporairement. Pas de protection. Héro fumée (~0.4 g/j), pas de coke. Sous BHD depuis peu. VHC+ et VHB. Tabac. Pas d'OH. Cannabis occasionnel. ATCD de sevrage non compliqué.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "heroine": "True",
+    "heroine_quantite": "0.4",
+    "ketamine": "NA",
+    "addictolytique": "True",
+    "addictolytique_type": "buprenorphine",
+    "traitement_substitution": "True",
+    "traitement_substitution_type": "buprenorphine",
+    "hepatopathie": "True"
+  }
+}

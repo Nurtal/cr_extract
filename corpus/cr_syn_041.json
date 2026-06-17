@@ -1,0 +1,20 @@
+{
+  "id": "cr_syn_041",
+  "texte": "CR INFECTIO. F 33a, célib, sans emploi, hébergée en CHRS. Pas de protection. Usagère héro IV (~0.7 g/j), coke IV aussi. Abcès sur point d'injection. VHC+. Tabac. Pas d'OH. Pas de cannabis. ATCD de sevrage compliqué.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "0.7",
+    "ketamine": "NA",
+    "hepatopathie": "True"
+  }
+}

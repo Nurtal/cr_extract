@@ -1,0 +1,19 @@
+{
+  "id": "cr_syn_047",
+  "texte": "CS ADDICTO. H 46a, en couple, en activité (commercial). Pas de protection. Coke nasale quotidienne, retentissement pro. OH le soir. Tabac. Pas d'opiacés, pas de cannabis. Bilan cardio demandé (palpitations). Pas d'ATCD de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "ketamine": "NA",
+    "cardiovasculaire": "NA"
+  }
+}

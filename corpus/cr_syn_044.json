@@ -1,0 +1,19 @@
+{
+  "id": "cr_syn_044",
+  "texte": "note urgences : H 24a, malaise en teuf. avait pris keta + MDMA + LSD + OH. tachycardie, anxiété, redescend. tabac. cannabis aussi. pas d'opiacés ni coke. célib, étudiant. pas de protection. surveillé, OK au matin.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "True",
+    "mdma": "True",
+    "lsd": "True",
+    "troubles_anxieux": "True"
+  }
+}

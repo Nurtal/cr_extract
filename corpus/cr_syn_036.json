@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_036",
+  "texte": "OBS PSY. F 31a, célib, sans emploi. Sous curatelle. Admise pour TS (IMV aux benzo). EDM sévère, sous antidépresseur et NL. OH festif. Tabac. Pas de drogue. Pas d'ATCD de sevrage.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "benzodiazepines": "True",
+    "depression": "True",
+    "tentative_suicide": "True",
+    "psychotropes": "True"
+  }
+}

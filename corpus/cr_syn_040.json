@@ -1,0 +1,19 @@
+{
+  "id": "cr_syn_040",
+  "texte": "CR CHIR DIG. H 49a, marié, en arrêt de travail (maçon). Pas de protection. Pancréatite aiguë OH. Cytolyse hépatique. ATCD de DT. OH quotidien. Tabac. Pas d'autre toxique.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "hepatopathie": "True",
+    "pancreatite": "True"
+  }
+}

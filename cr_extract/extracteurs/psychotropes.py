@@ -26,7 +26,8 @@ from cr_extract.extracteurs import enregistrer
 _PSYCHOTROPES = re.compile(
     r"(?<!\w)("
     r"psychotrop\w*|antidepress\w*|neurolep\w*|antipsychot\w*|anxiolyt\w*|"
-    r"thymoregul\w*|thymo-regul\w*|normothym\w*|regulateur\w* de l'humeur|lithium"
+    r"thymoregul\w*|thymo-regul\w*|normothym\w*|regulateur\w* de l'humeur|lithium|"
+    r"\bnl\b"  # NL = neuroleptique (abréviation courante en psychiatrie)
     r")(?!\w)"
 )
 

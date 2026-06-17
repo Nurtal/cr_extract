@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_043",
+  "texte": "COURRIER CSAPA. F 28a, en couple, sans emploi. Sous curatelle. Enceinte 12 SA. Sous métha (TSO), abstinente héro depuis 8 mois. Tabac. Pas d'OH. Pas de coke. Pas de cannabis.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "curatelle",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "addictolytique": "True",
+    "addictolytique_type": "methadone",
+    "traitement_substitution": "True",
+    "traitement_substitution_type": "methadone",
+    "grossesse": "True"
+  }
+}

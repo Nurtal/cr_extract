@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_034",
+  "texte": "garde nuit : H 38a connu, en manque. sous TSO par BHD. OH le we, coke sniffée parfois. tabac ++. pas de cannabis. célib, sans emploi, SDF. pas de protection. ttt sympto, soulagé, repart au matin.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "True",
+    "protection_juridique": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "ketamine": "NA",
+    "addictolytique": "True",
+    "addictolytique_type": "buprenorphine",
+    "traitement_substitution": "True",
+    "traitement_substitution_type": "buprenorphine"
+  }
+}

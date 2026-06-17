@@ -1,0 +1,19 @@
+{
+  "id": "cr_syn_039",
+  "texte": "COURRIER. H 47a, célib (divorcé), en invalidité. Sous tutelle. PMD connue, stabilisée sous lithium. OH chronique. Tabac. Cannabis. Pas d'opiacés. ATCD de sevrage compliqué de convulsions.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "tutelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "troubles_bipolaires": "True",
+    "psychotropes": "True"
+  }
+}

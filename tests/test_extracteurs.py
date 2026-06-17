@@ -476,6 +476,21 @@ def test_antidepresseur_psychotrope_mais_pas_depression():
     assert r["depression"].valeur == Etat.NA
 
 
+# --- Acronymes / abréviations courantes ------------------------------------ #
+@pytest.mark.parametrize("texte, champ, attendu", [
+    ("Sous NL retard.", "psychotropes", Etat.VRAI),         # NL = neuroleptique
+    ("TAG suivi en CMP.", "troubles_anxieux", Etat.VRAI),   # TAG = trouble anxieux généralisé
+    ("Pas d'ATCD de sevrage.", "sevrages_compliques", Etat.FAUX),  # ATCD = antécédent
+    ("Sous TSO par BHD.", "traitement_substitution", Etat.VRAI),
+    ("ATCD de DT en 2019.", "sevrages_compliques", Etat.VRAI),
+    ("Admise pour IMV.", "tentative_suicide", Etat.VRAI),
+    ("EDM caractérisé.", "depression", Etat.VRAI),
+    ("VHC+ chronique.", "hepatopathie", Etat.VRAI),
+])
+def test_acronymes_courants(texte, champ, attendu):
+    assert extraire_tout(texte)[champ].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

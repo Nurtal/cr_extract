@@ -22,7 +22,7 @@ from cr_extract.extracteurs import enregistrer
 _ANXIEUX = re.compile(
     r"(?<!\w)("
     r"anxiete\w*|anxieux|anxieuse|angoiss\w*|trouble\w* anxieux|"
-    r"attaque\w* de panique|trouble\w* panique|anxio-depress\w*"
+    r"attaque\w* de panique|trouble\w* panique|anxio-depress\w*|\btag\b"
     r")(?!\w)"
 )
 

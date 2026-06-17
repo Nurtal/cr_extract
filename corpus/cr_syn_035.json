@@ -1,0 +1,19 @@
+{
+  "id": "cr_syn_035",
+  "texte": "CR HOSPIT - MÉDECINE. H 55a, marié, retraité. Pas de protection. Cirrhose OH avec VHC chronique, adressé en HGE. ATCD de DT en 2018. OH quotidien sévère. Tabac. Pas d'autre toxique. Bilan en cours.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "hepatopathie": "True",
+    "suivi_hepato_gastro": "True"
+  }
+}

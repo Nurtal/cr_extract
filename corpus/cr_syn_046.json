@@ -1,0 +1,20 @@
+{
+  "id": "cr_syn_046",
+  "texte": "CR PSY. F 41a, divorcée (célib), en arrêt de travail. Pas de protection. Hospit après TS par défenestration. EDM sévère. Sous antidépresseur. OH en augmentation. Tabac. Pas de drogue. Pas d'ATCD de sevrage.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "depression": "True",
+    "tentative_suicide": "True",
+    "psychotropes": "True"
+  }
+}

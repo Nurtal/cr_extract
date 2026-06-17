@@ -1,0 +1,17 @@
+{
+  "id": "cr_syn_048",
+  "texte": "transmissions : rien à signaler chambre 8, dame âgée sous tutelle, désorientée, aucune conso d'aucune sorte. dort. RAS.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "NA",
+    "sdf": "NA",
+    "protection_juridique": "tutelle",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "heroine": "False",
+    "ketamine": "NA",
+    "troubles_cognitifs": "NA"
+  }
+}
