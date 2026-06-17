@@ -51,6 +51,7 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `lsd` | LSD | `True` / `False` / `NA` |
 | `amphetamines` | Amphétamines | `True` / `False` / `NA` |
 | `grossesse` | Grossesse | `True` / `False` / `NA` |
+| `hepatopathie` | Hépatopathie | `True` / `False` / `NA` |
 | `addictolytique` | Addictolytique | `True` / `False` / `NA` |
 | `addictolytique_type` | Addictolytique - type | DCI (`acamprosate`, `methadone`…) / `NA` |
 | `traitement_substitution` | Traitement de substitution | `True` / `False` / `NA` |

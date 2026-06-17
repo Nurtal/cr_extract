@@ -38,6 +38,7 @@ from cr_extract.extracteurs import (  # noqa: E402,F401
     benzodiazepines,
     conjugal,
     grossesse,
+    hepatopathie,
     hypnotiques,
     juridique,
     logement,

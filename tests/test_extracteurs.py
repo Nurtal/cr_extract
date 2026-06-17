@@ -258,6 +258,22 @@ def test_grossesse(texte, attendu):
     assert extraire_tout(texte)["grossesse"].valeur == attendu
 
 
+# --- Hépatopathie ---------------------------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Cirrhose alcoolique avec varices œsophagiennes.", Etat.VRAI),
+    ("Hospitalisée pour bilan d'une cytolyse hépatique.", Etat.VRAI),
+    ("Hépatopathie alcoolique.", Etat.VRAI),
+    ("Hépatite C chronique.", Etat.VRAI),
+    ("Bilan hépatique normal, pas de cirrhose.", Etat.FAUX),
+    ("Foie normal à l'échographie.", Etat.FAUX),
+    # « bilan hépatique » seul = examen, pas une maladie.
+    ("Bilan hépatique demandé.", Etat.NA),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_hepatopathie(texte, attendu):
+    assert extraire_tout(texte)["hepatopathie"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]
