@@ -58,6 +58,7 @@ Champs additionnels (hors CSV d'origine) :
 | `troubles_cognitifs` | `True` / `False` / `NA` — trouble cognitif établi (démence, Korsakoff, troubles mnésiques…) ; « risques cognitifs » / confusion aiguë ne comptent pas |
 | `depression` | `True` / `False` / `NA` — épisode dépressif / dépression / syndrome anxio-dépressif ; anxiété seule / « décompensation thymique » ne comptent pas |
 | `troubles_anxieux` | `True` / `False` / `NA` — anxiété / angoisse / trouble anxieux / panique ; « anxiolytique » (médicament) ne compte pas |
+| `troubles_bipolaires` | `True` / `False` / `NA` — trouble bipolaire / épisode maniaque / cyclothymie ; « manie » courante et « décompensation thymique » ne comptent pas |
 
 **Distinction clé** : `False` (négation explicite, « pas d'alcool ») ≠ `NA`
 (sujet non abordé dans le compte rendu). Voir [`ROADMAP.md`](ROADMAP.md) pour le
@@ -224,7 +225,7 @@ cr_extract/
 │   ├── suivi_hepato_gastro.py · pancreatite.py
 │   ├── cardiovasculaire.py · bpco.py · emphyseme.py
 │   ├── diabete.py · troubles_cognitifs.py
-│   ├── depression.py · troubles_anxieux.py
+│   ├── depression.py · troubles_anxieux.py · troubles_bipolaires.py
 ├── pipeline.py        # applique les 13 extracteurs à un texte
 ├── dataframe.py       # detecter() : enrichit un DataFrame polars/pandas
 ├── corpus.py          # corpus JSON éditable (un fichier par CR)
@@ -265,7 +266,7 @@ distribution des valeurs, puis la synthèse des tags **non couverts**.
 ## Tests & performance
 
 ```bash
-python -m pytest        # 227 tests
+python -m pytest        # 235 tests
 ```
 
 Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**

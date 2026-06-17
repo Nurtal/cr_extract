@@ -423,6 +423,22 @@ def test_anxio_depressif_active_anxieux_et_depression():
     assert r["depression"].valeur == Etat.VRAI
 
 
+# --- Troubles bipolaires --------------------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Trouble bipolaire de type I.", Etat.VRAI),
+    ("Patient bipolaire stabilisé.", Etat.VRAI),
+    ("Épisode maniaque avec agitation.", Etat.VRAI),
+    ("Psychose maniaco-dépressive.", Etat.VRAI),
+    ("Cyclothymie.", Etat.VRAI),
+    ("Pas de trouble bipolaire.", Etat.FAUX),
+    # « décompensation thymique » n'est pas spécifiquement bipolaire.
+    ("Décompensation thymique.", Etat.NA),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_troubles_bipolaires(texte, attendu):
+    assert extraire_tout(texte)["troubles_bipolaires"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

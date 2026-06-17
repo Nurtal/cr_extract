@@ -1,0 +1,20 @@
+{
+  "id": "cr_syn_028",
+  "texte": "OBSERVATION PSYCHIATRIE. Femme 35 ans, célibataire, en invalidité. Sous curatelle. Trouble bipolaire de type I, épisode maniaque avec alcoolisations. Tabac. Cannabis. Pas d'opiacés. Pas d'antécédent de sevrage.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "troubles_bipolaires": "True"
+  }
+}
