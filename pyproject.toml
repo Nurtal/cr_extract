@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cr-extract"
+version = "0.2.0"
+description = "Extraction d'informations structurées de comptes rendus médicaux par regex"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Nurtal" }]
+keywords = ["nlp", "regex", "addictologie", "extraction", "comptes-rendus"]
+dependencies = [
+    "polars>=0.20",
+]
+
+[project.optional-dependencies]
+pandas = ["pandas>=1.5"]
+dev = ["pytest>=8.0", "pandas>=1.5"]
+
+[project.scripts]
+cr-extract = "cr_extract.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["cr_extract"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/cr_extract",
+    "/tests",
+    "/conftest.py",
+    "/README.md",
+    "/ROADMAP.md",
+]

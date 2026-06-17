@@ -1,3 +1,6 @@
-# Dépendances d'exécution : aucune (bibliothèque standard uniquement).
-# Dépendances de développement / tests :
+# Dépendance d'exécution.
+polars>=0.20
+
+# Dépendances de développement / tests (entrée pandas + suite de tests).
+pandas>=1.5
 pytest>=8.0

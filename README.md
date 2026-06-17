@@ -33,11 +33,18 @@ déclenchée), pour l'audit clinique.
 détail des champs et des phases.
 
 ## Installation
-Aucune dépendance d'exécution (bibliothèque standard uniquement). Pour les tests :
+
+Le projet s'installe comme un package Python et s'utilise depuis n'importe quel
+autre code :
 
 ```bash
-pip install -r requirements.txt   # pytest
+pip install .                 # depuis une copie du dépôt
+pip install ".[pandas]"       # + support des DataFrames pandas en entrée
+pip install ".[dev]"          # + pytest et pandas (développement)
 ```
+
+Seule dépendance d'exécution : `polars` (installée automatiquement). `pandas`
+n'est requis que si vous passez un DataFrame pandas en entrée.
 
 ## Guide d'utilisation
 
@@ -77,7 +84,49 @@ Le rapport donne l'accuracy par champ et l'accuracy globale, et — avec
 `--confusions` — les confusions les plus fréquentes (notamment `False` vs `NA`),
 pour piloter le raffinage des regex.
 
-### 3. En Python
+### 3. Sur un DataFrame (polars ou pandas) — usage recommandé en intégration
+
+`detecter` prend un DataFrame contenant une colonne de texte et la liste des
+items à détecter, et renvoie une **copie polars** enrichie d'une colonne par
+item :
+
+```python
+import polars as pl
+from cr_extract import detecter
+
+df = pl.DataFrame({"TEXTE": [
+    "Patient marié. Tabac actif. Pas d'alcool. Cocaïne nasale.",
+    "SDF. Héroïne IV environ 0.5 g/jour. Pas de cannabis.",
+]})
+
+resultat = detecter(df, items=["alcool", "tabac", "cocaine", "sdf", "heroine_quantite"])
+print(resultat)
+```
+
+```
+┌─────────────────────┬────────┬───────┬─────────┬───────┬──────────────────┐
+│ TEXTE               ┆ alcool ┆ tabac ┆ cocaine ┆ sdf   ┆ heroine_quantite │
+│ str                 ┆ bool   ┆ bool  ┆ bool    ┆ bool  ┆ f64              │
+╞═════════════════════╪════════╪═══════╪═════════╪═══════╪══════════════════╡
+│ Patient marié. …    ┆ false  ┆ true  ┆ true    ┆ false ┆ null             │
+│ SDF. Héroïne IV …   ┆ null   ┆ null  ┆ false   ┆ true  ┆ 0.5              │
+└─────────────────────┴────────┴───────┴─────────┴───────┴──────────────────┘
+```
+
+- L'entrée peut être un DataFrame **polars** ou **pandas** ; le DataFrame
+  d'origine n'est pas modifié.
+- Encodage des colonnes ajoutées selon le type d'item :
+  - booléen → `True` (présent) / `False` (nié explicitement) / `null` (non abordé) ;
+  - catégoriel → libellé (`"en couple"`, `"Cannabis"`, `"nasale"`…) / `null` ;
+  - numérique (`heroine_quantite`) → flottant en g/j / `null`.
+- Options : `colonne_texte=` (défaut `"TEXTE"`), `prefixe=` (préfixe des
+  colonnes ajoutées, p. ex. `"item_"`).
+
+Items disponibles : `situation_conjugale`, `situation_professionnelle`, `sdf`,
+`protection_juridique`, `sevrages_compliques`, `alcool`, `tabac`, `cannabis`,
+`cocaine`, `cocaine_voie`, `heroine`, `heroine_quantite`, `ketamine`.
+
+### 4. Extraction unitaire en Python
 
 ```python
 from cr_extract import extraire_tout
@@ -88,19 +137,6 @@ r = resultats["alcool"]
 print(r.valeur)      # False  (négation explicite « pas d'alcool »)
 print(r.confiance)   # 1.0
 print(r.preuve)      # empan de texte ayant motivé la décision
-
-resultats["situation_conjugale"].valeur   # "en couple"
-resultats["tabac"].valeur                  # True
-```
-
-Pour itérer sur un fichier complet avec accès aux annotations de référence :
-
-```python
-from cr_extract import charger_csv, extraire_tout
-
-for cr in charger_csv("comptes_rendus_medicaux.csv"):
-    predictions = extraire_tout(cr.texte)
-    # cr.gold contient les valeurs de référence par clé de champ
 ```
 
 ## Score de confiance
@@ -127,6 +163,7 @@ cr_extract/
 │   ├── conjugal.py · professionnel.py · logement.py
 │   ├── juridique.py · sevrage.py · substances.py
 ├── pipeline.py        # applique les 13 extracteurs à un texte
+├── dataframe.py       # detecter() : enrichit un DataFrame polars/pandas
 ├── evaluation.py      # accuracy / matrice de confusion vs gold
 └── cli.py
 ```
