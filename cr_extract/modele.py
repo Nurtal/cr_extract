@@ -95,6 +95,7 @@ CHAMPS: tuple[Champ, ...] = (
     Champ("emphyseme", "Emphysème", TYPE_BOOLEEN),
     Champ("diabete", "Diabète", TYPE_BOOLEEN),
     Champ("troubles_cognitifs", "Troubles cognitifs", TYPE_BOOLEEN),
+    Champ("depression", "Épisode dépressif / dépression", TYPE_BOOLEEN),
 )
 
 # Index par clé interne et par intitulé de colonne, pour les recherches rapides.

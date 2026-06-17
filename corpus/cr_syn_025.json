@@ -1,0 +1,20 @@
+{
+  "id": "cr_syn_025",
+  "texte": "OBSERVATION PSYCHIATRIQUE. Homme 39 ans, marié, en arrêt de travail (cadre). Pas de protection. Épisode dépressif sévère avec idées noires. Consommation d'alcool en augmentation. Tabac. Pas de stupéfiants. Pas d'antécédent de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "depression": "True"
+  }
+}

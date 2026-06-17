@@ -386,6 +386,22 @@ def test_troubles_cognitifs(texte, attendu):
     assert extraire_tout(texte)["troubles_cognitifs"].valeur == attendu
 
 
+# --- Dépression / épisode dépressif ---------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Épisode dépressif sévère.", Etat.VRAI),
+    ("Syndrome anxio-dépressif.", Etat.VRAI),
+    ("Dépression caractérisée.", Etat.VRAI),
+    ("Pas de syndrome dépressif.", Etat.FAUX),
+    # Anxiété / humeur / médicament : pas une dépression avérée.
+    ("Crise d'angoisse.", Etat.NA),
+    ("Décompensation thymique sur fond de polyconsommation.", Etat.NA),
+    ("Consulte pour gérer son anxiété.", Etat.NA),
+    ("Sous antidépresseur.", Etat.NA),
+])
+def test_depression(texte, attendu):
+    assert extraire_tout(texte)["depression"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

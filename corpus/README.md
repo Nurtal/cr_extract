@@ -59,6 +59,7 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `emphyseme` | Emphysème | `True` / `False` / `NA` |
 | `diabete` | Diabète | `True` / `False` / `NA` |
 | `troubles_cognitifs` | Troubles cognitifs | `True` / `False` / `NA` |
+| `depression` | Épisode dépressif / dépression | `True` / `False` / `NA` |
 | `addictolytique` | Addictolytique | `True` / `False` / `NA` |
 | `addictolytique_type` | Addictolytique - type | DCI (`acamprosate`, `methadone`…) / `NA` |
 | `traitement_substitution` | Traitement de substitution | `True` / `False` / `NA` |
