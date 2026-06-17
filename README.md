@@ -49,6 +49,7 @@ Champs additionnels (hors CSV d'origine) :
 | `amphetamines` | `True` / `False` / `NA` — amphétamines / speed / métamphétamine |
 | `grossesse` | `True` / `False` / `NA` — grossesse en cours (≠ antécédents / désir de grossesse) |
 | `hepatopathie` | `True` / `False` / `NA` — atteinte hépatique (cirrhose, hépatite, cytolyse…) ; « bilan hépatique » seul ne compte pas |
+| `suivi_hepato_gastro` | `True` / `False` / `NA` — suivi / orientation en hépato-gastro-entérologie ; « chirurgie/hémorragie digestive » ne compte pas |
 
 **Distinction clé** : `False` (négation explicite, « pas d'alcool ») ≠ `NA`
 (sujet non abordé dans le compte rendu). Voir [`ROADMAP.md`](ROADMAP.md) pour le
@@ -210,7 +211,7 @@ cr_extract/
 │   ├── juridique.py · sevrage.py · substances.py
 │   ├── benzodiazepines.py · hypnotiques.py
 │   ├── addictolytique.py · substitution.py
-│   ├── grossesse.py · hepatopathie.py
+│   ├── grossesse.py · hepatopathie.py · suivi_hepato_gastro.py
 ├── pipeline.py        # applique les 13 extracteurs à un texte
 ├── dataframe.py       # detecter() : enrichit un DataFrame polars/pandas
 ├── corpus.py          # corpus JSON éditable (un fichier par CR)
@@ -251,7 +252,7 @@ distribution des valeurs, puis la synthèse des tags **non couverts**.
 ## Tests & performance
 
 ```bash
-python -m pytest        # 160 tests
+python -m pytest        # 169 tests
 ```
 
 Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**

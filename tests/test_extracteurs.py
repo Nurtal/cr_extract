@@ -274,6 +274,23 @@ def test_hepatopathie(texte, attendu):
     assert extraire_tout(texte)["hepatopathie"].valeur == attendu
 
 
+# --- Suivi hépato-gastro-entérologie --------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Compte rendu - Hépato-Gastro-Entérologie.", Etat.VRAI),
+    ("Suivi en hépato-gastro-entérologie programmé.", Etat.VRAI),
+    ("Adressé à l'hépatologue.", Etat.VRAI),
+    ("Avis gastro-entérologique demandé.", Etat.VRAI),
+    ("Lien CSAPA et suivi HGE.", Etat.VRAI),
+    ("Pas de suivi gastro-entérologique.", Etat.FAUX),
+    # « digestive » (acte/symptôme) n'est pas un suivi HGE.
+    ("Hospitalisation en chirurgie digestive.", Etat.NA),
+    ("Hémorragie digestive sur varices œsophagiennes.", Etat.NA),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_suivi_hepato_gastro(texte, attendu):
+    assert extraire_tout(texte)["suivi_hepato_gastro"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]
