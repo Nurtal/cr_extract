@@ -1,0 +1,20 @@
+{
+  "id": "cr_syn_016",
+  "texte": "COMPTE RENDU - CARDIOLOGIE. Homme 60 ans, marié, retraité. Pas de protection. Insuffisance cardiaque sur cardiopathie ischémique. Alcoolodépendance ancienne. Tabac. Pas d'autre toxique. Antécédent de delirium tremens.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "cardiovasculaire": "True"
+  }
+}

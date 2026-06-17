@@ -90,6 +90,7 @@ CHAMPS: tuple[Champ, ...] = (
     Champ("hepatopathie", "Hépatopathie", TYPE_BOOLEEN),
     Champ("suivi_hepato_gastro", "Suivi hépato-gastro-entérologie", TYPE_BOOLEEN),
     Champ("pancreatite", "Pancréatite", TYPE_BOOLEEN),
+    Champ("cardiovasculaire", "Problèmes cardiovasculaires", TYPE_BOOLEEN),
 )
 
 # Index par clé interne et par intitulé de colonne, pour les recherches rapides.

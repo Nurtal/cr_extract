@@ -304,6 +304,23 @@ def test_pancreatite(texte, attendu):
     assert extraire_tout(texte)["pancreatite"].valeur == attendu
 
 
+# --- Problèmes cardiovasculaires ------------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("AVC ischémique, unité neurovasculaire.", Etat.VRAI),
+    ("Suivi insuffisance cardiaque.", Etat.VRAI),
+    ("Admis pour endocardite.", Etat.VRAI),
+    ("Antécédents cardiovasculaires multiples.", Etat.VRAI),
+    ("Pas d'antécédent cardiovasculaire.", Etat.FAUX),
+    # Symptômes transitoires / bilan : pas une pathologie CV avérée.
+    ("Palpitations après prise de THC.", Etat.NA),
+    ("Tachycardie après prise de MDMA.", Etat.NA),
+    ("Évaluation cardiovasculaire proposée.", Etat.NA),
+    ("Douleur thoracique, finalement reflux.", Etat.NA),
+])
+def test_cardiovasculaire(texte, attendu):
+    assert extraire_tout(texte)["cardiovasculaire"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]
