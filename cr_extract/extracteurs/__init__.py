@@ -37,6 +37,7 @@ from cr_extract.extracteurs import (  # noqa: E402,F401
     addictolytique,
     benzodiazepines,
     conjugal,
+    grossesse,
     hypnotiques,
     juridique,
     logement,

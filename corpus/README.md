@@ -50,6 +50,7 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `mdma` | MDMA | `True` / `False` / `NA` |
 | `lsd` | LSD | `True` / `False` / `NA` |
 | `amphetamines` | Amphétamines | `True` / `False` / `NA` |
+| `grossesse` | Grossesse | `True` / `False` / `NA` |
 | `addictolytique` | Addictolytique | `True` / `False` / `NA` |
 | `addictolytique_type` | Addictolytique - type | DCI (`acamprosate`, `methadone`…) / `NA` |
 | `traitement_substitution` | Traitement de substitution | `True` / `False` / `NA` |
@@ -60,20 +61,15 @@ abordé. `cocaine` et `heroine` n'utilisent pas `NA` (absence = `False`).
 
 ## Tags expérimentaux (sans extracteur — travail futur)
 
-Certains comptes rendus synthétiques (`cr_syn_*.json`) portent des tags qui
-n'ont **pas encore d'extracteur**. Ils sont conservés et chargés normalement,
-mais ignorés par l'évaluation tant qu'aucun extracteur ne les cible. Ils servent
-d'amorce pour de prochaines itérations :
+Un tag *expérimental* est un tag annoté dans le corpus mais sans extracteur : il
+est conservé et chargé normalement, simplement ignoré par l'évaluation tant
+qu'aucun extracteur ne le cible. C'est l'amorce d'une prochaine itération.
 
-| Tag | Valeurs proposées | Exemple |
-|-----|-------------------|---------|
-| `grossesse` | `True` / `False` / `NA` | `cr_syn_003` |
+> **Aucun pour l'instant** : tous les tags annotés du corpus disposent désormais
+> d'un extracteur (couverture 25/25). Pour en introduire un nouveau, l'annoter
+> dans un ou plusieurs `cr_syn_*.json` puis suivre la procédure ci-dessous.
 
-> Tous les autres tags expérimentaux disposent désormais d'un extracteur :
-> `benzodiazepines`, `hypnotiques`, `addictolytique`, `traitement_substitution`
-> (avec leurs `*_type`), ainsi que `mdma`, `lsd` et `amphetamines`.
-
-Pour rendre l'un de ces tags « actif » : l'ajouter au catalogue
+Pour rendre un tag « actif » : l'ajouter au catalogue
 (`cr_extract/modele.py`) puis écrire l'extracteur correspondant dans
 `cr_extract/extracteurs/` — l'évaluation le prendra alors en compte
 automatiquement.

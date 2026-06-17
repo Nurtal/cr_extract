@@ -242,6 +242,22 @@ def test_traitement_substitution(texte, presence, type_):
     assert r["traitement_substitution_type"].valeur == type_
 
 
+# --- Grossesse ------------------------------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Patiente enceinte de 18 semaines.", Etat.VRAI),
+    ("Patiente gestante, suivi obstétrical.", Etat.VRAI),
+    ("Test de grossesse négatif.", Etat.FAUX),
+    ("Patiente non enceinte.", Etat.FAUX),
+    # Antécédents / projet / repère temporel : pas une grossesse en cours.
+    ("Deux grossesses antérieures, trois enfants.", Etat.NA),
+    ("Consultation pour sevrage tabac avant grossesse.", Etat.NA),
+    ("Désir de grossesse exprimé.", Etat.NA),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_grossesse(texte, attendu):
+    assert extraire_tout(texte)["grossesse"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]
