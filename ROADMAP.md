@@ -4,6 +4,14 @@ Extraction d'informations structurées à partir de comptes rendus médicaux non
 structurés, **par combinaisons de regex** (+ score de confiance pour les cas
 difficiles). Données 100 % fictives.
 
+> **État d'avancement (Phases 1 → 6 réalisées).** Pipeline complet,
+> 13 extracteurs, harnais d'évaluation et CLI. **Accuracy globale : 98,2 %**
+> (1277/1300) sur le CSV de référence ; tous les champs dépassent les cibles
+> (≥ 90 % faciles, ≥ 75 % difficiles). Les erreurs résiduelles relèvent
+> majoritairement d'annotations contradictoires de la vérité terrain (textes
+> quasi identiques étiquetés différemment, notamment `False` vs `NA`).
+> Mesurer : `python -m cr_extract.cli evaluer comptes_rendus_medicaux.csv`.
+
 ---
 
 ## 0. Cadre & contraintes
@@ -42,70 +50,70 @@ d'alcool ») ≠ `NA` (sujet non abordé dans le CR).
 **But** : pouvoir charger les données et lancer une évaluation, même avec des
 extracteurs vides.
 
-- [ ] Structure du projet (package `cr_extract/`, `tests/`, `requirements.txt`,
+- [x] Structure du projet (package `cr_extract/`, `tests/`, `requirements.txt`,
       `.gitignore` excluant `venv/`).
-- [ ] Chargement CSV robuste (`utf-8-sig` pour le BOM, gestion des champs
+- [x] Chargement CSV robuste (`utf-8-sig` pour le BOM, gestion des champs
       multi-lignes — déjà géré par le module `csv`).
-- [ ] Modèle de résultat commun : `ResultatExtraction(valeur, confiance, preuve)`
+- [x] Modèle de résultat commun : `ResultatExtraction(valeur, confiance, preuve)`
       où `preuve` = empan/texte ayant déclenché le match (traçabilité).
-- [ ] Interface `Extracteur` (une classe/fonction par champ, signature unifiée).
-- [ ] Normalisation du texte en amont : minuscules, gestion des accents pour les
+- [x] Interface `Extracteur` (une classe/fonction par champ, signature unifiée).
+- [x] Normalisation du texte en amont : minuscules, gestion des accents pour les
       regex, mais **conservation** du texte d'origine pour la preuve.
 
 ## Phase 2 — Extracteurs « faciles » (validation de l'approche)
 
 Champs à vocabulaire fermé et marqueurs explicites — sert de preuve de concept.
 
-- [ ] **Curatelle / Tutelle** (#4) : `curatelle`, `tutelle`, gestion de la négation
+- [x] **Curatelle / Tutelle** (#4) : `curatelle`, `tutelle`, gestion de la négation
       (« pas de mesure de protection » → `NA`).
-- [ ] **Cocaïne – voie** (#10) : `nasale|sniff`, `IV|intraveineuse|injection`.
-- [ ] **Kétamine** (#13), **Cocaïne** (#9), **Héroïne** (#11) : présence + négation.
-- [ ] **Cannabis / THC / CBD** (#8) : choix de la sous-catégorie selon le terme.
+- [x] **Cocaïne – voie** (#10) : `nasale|sniff`, `IV|intraveineuse|injection`.
+- [x] **Kétamine** (#13), **Cocaïne** (#9), **Héroïne** (#11) : présence + négation.
+- [x] **Cannabis / THC / CBD** (#8) : choix de la sous-catégorie selon le terme.
 
 ## Phase 3 — Gestion de la négation & des 3 états (cœur du sujet)
 
 Brique transverse réutilisée par les champs booléens (#3, #5, #6, #7, #13…).
 
-- [ ] Lexique de négation FR : `pas de`, `aucun`, `nie`, `absence de`, `sans`,
+- [x] Lexique de négation FR : `pas de`, `aucun`, `nie`, `absence de`, `sans`,
       `dénie`, `ne … pas`, abréviations (`0`, `–`).
-- [ ] Fenêtre de proximité négation↔terme (n caractères/tokens) pour rattacher
+- [x] Fenêtre de proximité négation↔terme (n caractères/tokens) pour rattacher
       la négation au bon item.
-- [ ] Logique 3 états : terme + contexte positif → `True` ; terme + négation →
+- [x] Logique 3 états : terme + contexte positif → `True` ; terme + négation →
       `False` ; terme absent → `NA`.
-- [ ] Tests unitaires dédiés négation (cas « pas d'autre toxique », « nie tout
+- [x] Tests unitaires dédiés négation (cas « pas d'autre toxique », « nie tout
       usage d'opiacés ou de cocaïne »).
 
 ## Phase 4 — Extracteurs « difficiles » + score de confiance
 
-- [ ] **Situation professionnelle** (#2) : `actif` (emploi, activité maintenue,
+- [x] **Situation professionnelle** (#2) : `actif` (emploi, activité maintenue,
       profession citée) vs `inactif` (chômage, arrêt de travail, AAH, retraité,
       sans emploi). Synonymie riche → **score de confiance**.
-- [ ] **Antécédents sevrages compliqués** (#5) : sevrage **antérieur** +
+- [x] **Antécédents sevrages compliqués** (#5) : sevrage **antérieur** +
       complication (`delirium tremens`, `crises convulsives`, `réanimation`) ;
       distinguer du sevrage actuel/programmé. → **score de confiance**.
-- [ ] **Situation conjugale** (#1) : `marié·e`, `en couple`, `conjoint` vs
+- [x] **Situation conjugale** (#1) : `marié·e`, `en couple`, `conjoint` vs
       `célibataire`, `séparé`, `divorcé`, `seul`.
-- [ ] **Héroïne – quantité** (#12) : extraction numérique (`0.5 g/j`, « un demi
+- [x] **Héroïne – quantité** (#12) : extraction numérique (`0.5 g/j`, « un demi
       gramme »…), normalisation des unités vers g/j, gestion virgule décimale.
-- [ ] **SDF** (#3) : `SDF`, `sans domicile`, `pas de logement stable`, `à la rue`
+- [x] **SDF** (#3) : `SDF`, `sans domicile`, `pas de logement stable`, `à la rue`
       vs logement mentionné.
-- [ ] Calibration : émettre `NA` plutôt qu'un faux positif quand confiance < seuil.
+- [x] Calibration : émettre `NA` plutôt qu'un faux positif quand confiance < seuil.
 
 ## Phase 5 — Évaluation & qualité
 
-- [ ] Harnais d'éval : prédiction vs gold, **accuracy par champ** + matrice de
+- [x] Harnais d'éval : prédiction vs gold, **accuracy par champ** + matrice de
       confusion (notamment `False` vs `NA`).
-- [ ] Rapport global (CSV/markdown) + identification des lignes en échec.
-- [ ] Objectif chiffré par champ (ex. ≥ 90 % sur les champs faciles, ≥ 75 % sur
+- [x] Rapport global (CSV/markdown) + identification des lignes en échec.
+- [x] Objectif chiffré par champ (ex. ≥ 90 % sur les champs faciles, ≥ 75 % sur
       les difficiles) — à ajuster après première mesure (baseline).
-- [ ] Suite de tests unitaires par extracteur (cas limites issus du CSV).
-- [ ] Itération : analyse d'erreurs → raffinage des regex → re-mesure.
+- [x] Suite de tests unitaires par extracteur (cas limites issus du CSV).
+- [x] Itération : analyse d'erreurs → raffinage des regex → re-mesure.
 
 ## Phase 6 — Industrialisation (optionnel)
 
-- [ ] CLI : `cr-extract <fichier.csv>` → CSV structuré + colonnes de confiance.
-- [ ] Export des preuves (empans) pour audit clinique.
-- [ ] Documentation d'usage dans le README + exemples.
+- [x] CLI : `cr-extract <fichier.csv>` → CSV structuré + colonnes de confiance.
+- [x] Export des preuves (empans) pour audit clinique.
+- [x] Documentation d'usage dans le README + exemples.
 
 ---
 
@@ -131,11 +139,25 @@ tests/
 └── test_*.py
 ```
 
-## Décisions à trancher
+## Décisions tranchées (mise en œuvre actuelle)
 
-1. **Stockage des regex** : en dur dans le code Python, ou externalisées (YAML/JSON)
-   pour faciliter l'itération sans toucher au code ? (Recommandé : YAML par champ.)
-2. **Score de confiance** : sur tous les champs ou seulement les « difficiles »
-   (#2, #5, #12) comme suggéré par le README ?
-3. **Seuils** : produire un `NA` prudent sous un seuil, ou toujours forcer une
-   décision binaire ?
+1. **Stockage des regex** : **en dur dans le code Python**, regroupées en tête de
+   chaque module d'extracteur (lisibilité + accès direct à la logique de
+   décision). L'externalisation YAML reste une évolution possible si le besoin
+   d'itération sans code se confirme.
+2. **Score de confiance** : présent **sur tous les champs**, mais réellement
+   discriminant sur les « difficiles » — confiance abaissée en cas d'ambiguïté
+   (conflit actif/inactif → 0.6 ; SDF déduit par défaut → 0.6 ; quantité
+   héroïne → 0.7) et maximale (1.0) sur les marqueurs explicites.
+3. **Seuils** : on privilégie un **`NA` prudent** lorsqu'aucun signal fiable
+   n'est trouvé (champs catégoriels/3 états), conformément à la distinction
+   `False`/`NA`. Les deux champs strictement booléens (#9 cocaïne, #11 héroïne)
+   font exception : absence de mention = `False` (convention de la vérité
+   terrain).
+
+## Pistes d'amélioration ultérieures
+
+- Externalisation des lexiques (YAML par champ) pour itérer sans toucher au code.
+- Fenêtre de proximité pondérée (distance négation↔terme) plutôt que binaire.
+- Désambiguïsation `False`/`NA` sur SDF et sevrages (principale source d'erreur
+  résiduelle), si la vérité terrain est consolidée.

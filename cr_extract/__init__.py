@@ -6,6 +6,7 @@ Toutes les données utilisées dans ce projet sont fictives.
 
 from cr_extract.modele import Champ, ResultatExtraction, Etat
 from cr_extract.chargement import CompteRendu, charger_csv
+from cr_extract.pipeline import extraire_tout
 
 __all__ = [
     "Champ",
@@ -13,4 +14,5 @@ __all__ = [
     "Etat",
     "CompteRendu",
     "charger_csv",
+    "extraire_tout",
 ]

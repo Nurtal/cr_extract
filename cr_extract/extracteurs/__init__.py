@@ -1,7 +1,9 @@
 """Registre des extracteurs, indexés par clé interne de champ.
 
-Vide en Phase 1 : les extracteurs seront enregistrés ici au fil des phases 2-4
-via le décorateur :func:`enregistrer`.
+Les extracteurs s'enregistrent via le décorateur :func:`enregistrer`. Importer
+ce package suffit à peupler ``REGISTRE`` : les modules d'extracteurs sont chargés
+en fin de fichier (après définition du décorateur, pour éviter les imports
+circulaires).
 """
 
 from __future__ import annotations
@@ -27,3 +29,15 @@ def enregistrer(cle_champ: str) -> Callable[[type], type]:
 def extracteurs_disponibles() -> dict[str, Extracteur]:
     """Renvoie une copie du registre courant."""
     return dict(REGISTRE)
+
+
+# Chargement des extracteurs concrets : l'import déclenche l'enregistrement via
+# le décorateur. Placé en fin de module pour que ``enregistrer`` existe déjà.
+from cr_extract.extracteurs import (  # noqa: E402,F401
+    conjugal,
+    juridique,
+    logement,
+    professionnel,
+    sevrage,
+    substances,
+)
