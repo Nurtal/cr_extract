@@ -25,7 +25,13 @@ from pathlib import Path
 from cr_extract.chargement import charger_csv
 from cr_extract.modele import CHAMPS
 from cr_extract.pipeline import extraire_tout
-from cr_extract.evaluation import evaluer_fichier, rapport_markdown, rapport_confusions
+from cr_extract.corpus import csv_vers_corpus
+from cr_extract.evaluation import (
+    evaluer_corpus,
+    evaluer_fichier,
+    rapport_markdown,
+    rapport_confusions,
+)
 
 
 def _commande_extraire(args: argparse.Namespace) -> int:
@@ -58,11 +64,21 @@ def _commande_extraire(args: argparse.Namespace) -> int:
 
 
 def _commande_evaluer(args: argparse.Namespace) -> int:
-    scores = evaluer_fichier(args.fichier)
+    # On accepte indifféremment un CSV annoté ou un dossier de corpus JSON.
+    if Path(args.source).is_dir():
+        scores = evaluer_corpus(args.source)
+    else:
+        scores = evaluer_fichier(args.source)
     print(rapport_markdown(scores))
     if args.confusions:
         print()
         print(rapport_confusions(scores))
+    return 0
+
+
+def _commande_corpus(args: argparse.Namespace) -> int:
+    chemins = csv_vers_corpus(args.fichier, args.sortie)
+    print(f"{len(chemins)} comptes rendus écrits dans {args.sortie}/", file=sys.stderr)
     return 0
 
 
@@ -82,10 +98,17 @@ def construire_parseur() -> argparse.ArgumentParser:
     p_ex.set_defaults(fonction=_commande_extraire)
 
     p_ev = sous.add_parser("evaluer", help="comparer à la vérité terrain")
-    p_ev.add_argument("fichier", type=Path, help="CSV annoté (13 colonnes gold)")
+    p_ev.add_argument("source", type=Path,
+                      help="CSV annoté (13 colonnes gold) ou dossier de corpus JSON")
     p_ev.add_argument("--confusions", action="store_true",
                       help="détailler les confusions par champ")
     p_ev.set_defaults(fonction=_commande_evaluer)
+
+    p_co = sous.add_parser("corpus", help="générer un corpus JSON depuis un CSV")
+    p_co.add_argument("fichier", type=Path, help="CSV annoté source")
+    p_co.add_argument("-o", "--sortie", type=Path, default=Path("corpus"),
+                      help="dossier de sortie (défaut : corpus/)")
+    p_co.set_defaults(fonction=_commande_corpus)
 
     return parseur
 

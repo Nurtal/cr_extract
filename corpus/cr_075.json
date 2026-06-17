@@ -1,0 +1,19 @@
+{
+  "id": "cr_075",
+  "texte": "COMPTE RENDU D'HOSPITALISATION - INFECTIOLOGIE\nPatient de 37 ans, célibataire, hébergé temporairement chez un ami, sans emploi stable. Pas de protection. VIH récemment découvert dans un contexte d'usage de drogues injectables. Héroïne IV, environ 1.2 g/jour. Cocaïne en injection. Tabac. Alcool occasionnel. Pas de cannabis. Antécédent de sevrage compliqué. Mise sous traitement, lien CSAPA et TSO.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "1.2",
+    "ketamine": "NA"
+  }
+}

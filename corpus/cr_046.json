@@ -1,0 +1,19 @@
+{
+  "id": "cr_046",
+  "texte": "note de garde : F 31a, en manque, sueurs, mydriase, douleurs diffuses. usagère héro fumée d'apres elle (~0.4g/j). pas de coke. tabac. pas d'alcool. célib, logée chez sa mère. pas de protection. soulagée par ttt symptomatique, orientée csapa.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "NA",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "True",
+    "heroine_quantite": "0.4",
+    "ketamine": "NA"
+  }
+}

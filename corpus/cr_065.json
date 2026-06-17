@@ -1,0 +1,19 @@
+{
+  "id": "cr_065",
+  "texte": "COMPTE RENDU D'HOSPITALISATION\nPatiente de 47 ans, célibataire, sans domicile fixe, suivie en équipe mobile. Sous tutelle. Polyconsommation : alcool quotidien sévère avec antécédent de delirium, héroïne fumée (quantité non précisée), tabac. Pas de cocaïne. Cannabis occasionnel. Kétamine rapportée par le passé, non actuelle. Hospitalisée pour érysipèle, évolution favorable.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "True",
+    "protection_juridique": "tutelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "True",
+    "heroine_quantite": "NA",
+    "ketamine": "False"
+  }
+}

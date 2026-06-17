@@ -1,0 +1,19 @@
+{
+  "id": "cr_061",
+  "texte": "COMPTE RENDU - SSR\nMonsieur B., 49 ans, célibataire, sans domicile fixe avant l'hospitalisation, hébergement à organiser à la sortie. Sous curatelle renforcée. Séjour de sevrage alcoolique, troisième tentative, antécédents de sevrages compliqués. Cette fois sans complication. A maintenu le tabac. Usage ancien d'héroïne, abstinent. Pas de cocaïne. Travail social intensif mené durant le séjour.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "NA",
+    "sdf": "True",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "True",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

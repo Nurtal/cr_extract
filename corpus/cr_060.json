@@ -1,0 +1,19 @@
+{
+  "id": "cr_060",
+  "texte": "CR CONSULTATION ADDICTOLOGIE\nMadame P., 36 ans, en couple, en activité (coiffeuse). Pas de protection. Demande pour usage de cocaïne sniffée le week-end, en hausse. Alcool associé. Tabac. Pas d'opiacés, pas de cannabis. Pas d'antécédent de sevrage. Évaluation du retentissement et proposition de suivi.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

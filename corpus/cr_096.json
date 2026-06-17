@@ -1,0 +1,19 @@
+{
+  "id": "cr_096",
+  "texte": "CONSULTATION ADDICTOLOGIE\nMadame C., 41 ans, en couple, en activité (pharmacienne). Pas de protection. Demande pour usage de cocaïne sniffée hebdomadaire, qu'elle craint de voir augmenter. Alcool associé. Tabac non. Pas d'opiacés, pas de cannabis. Pas d'antécédent de sevrage. Mise en place d'un suivi et d'objectifs concrets.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

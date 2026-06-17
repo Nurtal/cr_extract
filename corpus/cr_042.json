@@ -1,0 +1,19 @@
+{
+  "id": "cr_042",
+  "texte": "COMPTE RENDU - RÉANIMATION\nPatient de 39 ans admis pour overdose aux opioïdes, naloxone aux urgences. Célibataire. Sans domicile fixe. Pas de protection identifiée. Usager d'héroïne par voie intraveineuse au long cours, quantité non précisée. Cocaïne associée en injection. Alcool. Tabac. Évolution neurologique favorable après extubation. Avis addictologie et social demandés.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "NA",
+    "sdf": "True",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

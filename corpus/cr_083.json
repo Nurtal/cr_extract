@@ -1,0 +1,19 @@
+{
+  "id": "cr_083",
+  "texte": "CR HOSPITALISATION\nPatient de 60 ans, marié, retraité. Pas de protection. AVC ischémique. Facteurs de risque : tabagisme actif, consommation d'alcool quotidienne. Pas d'autre toxique. Pas d'antécédent de sevrage. Prise en charge en unité neurovasculaire, rééducation initiée.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

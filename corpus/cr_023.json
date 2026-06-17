@@ -1,0 +1,19 @@
+{
+  "id": "cr_023",
+  "texte": "CONSULTATION\nPatiente de 33 ans, célibataire, en activité (infirmière). Consulte concernant un usage quotidien de CBD pour gérer son anxiété, qu'elle souhaite diminuer. Pas d'alcool. Non fumeuse de tabac. Pas d'autre substance. Aucun antécédent de sevrage. Pas de protection.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "CBD",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

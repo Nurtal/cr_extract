@@ -1,0 +1,19 @@
+{
+  "id": "cr_047",
+  "texte": "OBSERVATION - UNITÉ DE SOINS\nPatient de 41 ans amené par les forces de l'ordre, mutique, opposant à l'examen. Aucune information disponible sur la situation conjugale, le logement, l'activité ou une éventuelle mesure de protection. Odeur d'alcool. Le reste de l'évaluation toxicologique est impossible en l'état. Réévaluation à distance.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "NA",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "NA",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

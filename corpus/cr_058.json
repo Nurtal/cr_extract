@@ -1,0 +1,19 @@
+{
+  "id": "cr_058",
+  "texte": "Consultation jeune adulte. Homme 20 ans, célibataire, en apprentissage (actif). Vit chez ses parents. Pas de protection. Usage de cannabis quotidien depuis trois ans, souhaite réduire. Pas d'alcool problématique. Tabac. Pas d'autre toxique. Pas d'antécédent de sevrage. Entretien motivationnel engagé.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

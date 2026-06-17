@@ -1,0 +1,19 @@
+{
+  "id": "cr_001",
+  "texte": "Pt 38 ans amené par pompiers, retrouvé dvt gare. Connu du service. SDF depuis env. 2 ans, pas de logement stable. Célib. Alcoolisation aigue, haleine oenolique +++. Conso OH chronique. Tabac +. THC occasionnel d'apres lui. Pas d'arg pr autres tox. RAS neuro. Dégrisement, surveillance, sortie demain matin si OK.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "NA",
+    "sdf": "True",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

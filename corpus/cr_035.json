@@ -1,0 +1,19 @@
+{
+  "id": "cr_035",
+  "texte": "Obs. Mme 36 ans, urgences pour crise d'angoisse. En couple, mère au foyer (inactive). Pas de protection. Conso : pas d'alcool, non fumeuse. Prend du CBD en gouttes le soir. Pas d'autre substance. Rassurée, sortie avec conseils.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "CBD",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

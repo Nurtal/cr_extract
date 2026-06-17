@@ -1,0 +1,19 @@
+{
+  "id": "cr_057",
+  "texte": "COMPTE RENDU D'HOSPITALISATION - MÉDECINE\nPatient de 33 ans, en couple, ouvrier du bâtiment en activité. Pas de protection. Admis pour endocardite, contexte d'usage de drogues injectables. Héroïne en intraveineuse, environ 0.7 g/jour. Cocaïne également injectée. Tabac. Alcool occasionnel. Pas de cannabis. Antécédent d'un sevrage spontané difficile. Antibiothérapie prolongée, avis chirurgical cardiaque.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "0.7",
+    "ketamine": "NA"
+  }
+}

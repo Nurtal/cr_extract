@@ -1,0 +1,19 @@
+{
+  "id": "cr_037",
+  "texte": "COURRIER DE SORTIE - SSR ADDICTOLOGIE\nMadame H., 50 ans, sort après un séjour de six semaines. Divorcée, vit seule (célibataire). En invalidité (inactive). Sous curatelle. Sevrage alcoolique consolidé, abstinence maintenue durant tout le séjour, sans complication cette fois (deux sevrages antérieurs compliqués). A arrêté le tabac pendant l'hospitalisation. Pas d'autre addiction. Relais en CSAPA organisé.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "True",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

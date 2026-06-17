@@ -62,6 +62,13 @@ def evaluer_fichier(chemin: Union[str, Path]) -> dict[str, ScoreChamp]:
     return evaluer(charger_csv(chemin))
 
 
+def evaluer_corpus(dossier: Union[str, Path]) -> dict[str, ScoreChamp]:
+    """Charge un corpus JSON (un fichier par CR) et renvoie les scores."""
+    from cr_extract.corpus import charger_corpus
+
+    return evaluer(charger_corpus(dossier))
+
+
 def rapport_markdown(scores: dict[str, ScoreChamp]) -> str:
     """Produit un rapport markdown : accuracy par champ + accuracy globale."""
     lignes = ["# Rapport d'évaluation CR Extract", "", "| Champ | Accuracy | Corrects / Total |", "|---|---|---|"]

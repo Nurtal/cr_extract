@@ -1,0 +1,19 @@
+{
+  "id": "cr_085",
+  "texte": "SYNTHÈSE ADDICTOLOGIE\nMonsieur G., 46 ans, en couple, en activité (chauffeur de taxi). Pas de protection. Usage de cocaïne par voie nasale quotidien pour « tenir » les longues journées. Alcool le soir. Tabac. Pas d'opiacés, pas de cannabis. Pas d'antécédent de sevrage. Évaluation cardiovasculaire et suivi proposé.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

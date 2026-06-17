@@ -1,0 +1,19 @@
+{
+  "id": "cr_008",
+  "texte": "Transmissions nuit : M. au lit, calme. A reçu son traitement de 22h. Se plaint d'envies de fumer, accompagné en zone fumeur x2. Pas d'alcool évidemment (hospit pour sevrage). Sommeil correct. Demande quand il pourra sortir. Pas d'autre événement.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "NA",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cr_031",
+  "texte": "Bon courage pour la suite. Concernant M. en 8 : alcoolo connu, là pour sevrage, J3, pas de signe de manque marqué aujourd'hui, scores de Cushman bas. Tabac, accompagné pour fumer. Pas d'autre conso. Vit seul, célibataire, encore en activité (technicien). Pas de protection. Moral un peu bas ce soir, à surveiller. Le reste RAS.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

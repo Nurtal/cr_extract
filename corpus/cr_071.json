@@ -1,0 +1,19 @@
+{
+  "id": "cr_071",
+  "texte": "obs garde : H 50a amené pr alcoolisation massive + bagarre. dossier : DT en 2021. tabac. coke par voie nasale qd il boit d'apres lui. pas opiacés. SDF, dort dehors. célib. pas de protection connue. dégrisement, surveillance.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "NA",
+    "sdf": "True",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

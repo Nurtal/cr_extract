@@ -1,0 +1,19 @@
+{
+  "id": "cr_007",
+  "texte": "COMPTE RENDU - MÉDECINE INTERNE\nPatiente de 58 ans hospitalisée pour bilan d'une cytolyse hépatique. Mariée, en activité (institutrice). Pas de protection juridique.\nÀ l'interrogatoire, consommation d'alcool occasionnelle et festive, sans critère de dépendance. Non fumeuse. Pas d'usage de toxiques. L'enquête étiologique s'orientera vers une cause médicamenteuse ou auto-immune.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

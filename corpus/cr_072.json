@@ -1,0 +1,19 @@
+{
+  "id": "cr_072",
+  "texte": "CR CONSULTATION\nPatiente de 40 ans, en couple, en activité (juriste). Pas de protection. Utilise du CBD quotidiennement pour des douleurs articulaires et un stress professionnel. Pas d'alcool problématique, usage occasionnel. Non fumeuse. Pas d'autre substance. Pas d'antécédent de sevrage. Échanges sur l'intérêt et les limites du CBD.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "False",
+    "cannabis": "CBD",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

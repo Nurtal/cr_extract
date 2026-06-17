@@ -1,0 +1,19 @@
+{
+  "id": "cr_013",
+  "texte": "CR HOSPITALISATION - ORTHOPÉDIE\nPatient de 35 ans opéré d'une fracture du radius après accident de scooter. En couple. Artisan plombier, en activité. Pas de protection.\nVolet addictologie (interrogatoire systématique) : tabac à 15 cig/j, consommation d'alcool festive le week-end, usage récréatif de cannabis le soir. Pas de cocaïne, pas d'opiacés. Suites opératoires simples.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cr_026",
+  "texte": "Observation médicale. Homme de 67 ans adressé pour douleurs lombaires. Marié, retraité. Pas de protection. Ne consomme pas d'alcool, n'a jamais fumé, aucun toxique. Examen rachidien et imagerie à compléter.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

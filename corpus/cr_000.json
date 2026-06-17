@@ -1,0 +1,19 @@
+{
+  "id": "cr_000",
+  "texte": "COMPTE RENDU D'HOSPITALISATION - SERVICE D'ADDICTOLOGIE\nMotif d'hospitalisation : sevrage alcoolique programmé.\nPatient de 54 ans, marié, deux enfants, actuellement en arrêt de travail prolongé (chauffeur poids lourd). Pas de mesure de protection juridique.\nAntécédents : un épisode de delirium tremens en 2019 lors d'un sevrage non encadré ayant nécessité un passage en réanimation.\nConsommation : alcool quotidien estimé à 12-15 verres standard. Tabagisme actif à 20 cig/j. Pas d'autre toxique déclaré.\nÉvolution : sevrage sous oxazépam dégressif, bonne tolérance, pas de complication notable durant le séjour.\nConclusion : retour à domicile avec suivi en hôpital de jour.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

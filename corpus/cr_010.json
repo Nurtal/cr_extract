@@ -1,0 +1,19 @@
+{
+  "id": "cr_010",
+  "texte": "Entrée en gériatrie aiguë. Femme 84 ans, veuve, vivant en EHPAD. Sous tutelle. Hospitalisée pour syndrome confusionnel fébrile. Pas de consommation de toxiques, pas d'alcool, n'a jamais fumé. Antécédents cardiovasculaires multiples. Prise en charge symptomatique.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "tutelle",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

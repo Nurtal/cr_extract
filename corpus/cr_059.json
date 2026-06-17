@@ -1,0 +1,19 @@
+{
+  "id": "cr_059",
+  "texte": "note : patiente amenée inconsciente, suspicion d'intoxication. aucune info perso disponible (pas de papiers, pas d'accompagnant). prise en charge réa. toxiques à doser. rien de renseigné sur conso, situation sociale ou protection à ce stade.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "NA",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "NA",
+    "tabac": "NA",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

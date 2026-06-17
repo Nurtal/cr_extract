@@ -1,0 +1,19 @@
+{
+  "id": "cr_093",
+  "texte": "obs : F 27a, en couple, en activité (vendeuse). consultation pr sevrage tabac avant grossesse. pas d'alcool. pas de drogue. pas de protection. pas d'antécédent de sevrage. substituts nicotiniques proposés, accompagnement.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cr_051",
+  "texte": "COMPTE RENDU\nMonsieur A., 52 ans, divorcé (célibataire), en activité (commercial). Pas de protection. Consulte pour une consommation d'alcool quotidienne en augmentation, ressentie comme un problème. Un antécédent de sevrage hospitalier compliqué de convulsions il y a six ans. Tabac. Pas de drogue illicite. Reprise d'un accompagnement et bilan hépatique.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

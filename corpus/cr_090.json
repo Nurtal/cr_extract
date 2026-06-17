@@ -1,0 +1,19 @@
+{
+  "id": "cr_090",
+  "texte": "note de garde, vite : H ~40a SDF, retrouvé inconscient, suspicion OD opiacés, naloxone par SMUR, repris. usager héro connu (IV). dossier mentionne coke IV. tabac. pas d'info conjugale/protection. surveillé, refuse hospit prolongée.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "NA",
+    "sdf": "True",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "NA",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cr_018",
+  "texte": "COMPTE RENDU DE CONSULTATION DE MÉDECINE DU TRAVAIL\nSalarié de 31 ans, en couple, poste de cariste, apte. Interrogatoire addictologique : pas de consommation d'alcool, non fumeur, aucun usage de stupéfiants. Pas de mesure de protection. Examen clinique normal.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

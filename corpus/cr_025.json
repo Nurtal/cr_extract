@@ -1,0 +1,19 @@
+{
+  "id": "cr_025",
+  "texte": "COMPTE RENDU D'HOSPITALISATION - MÉDECINE\nPatient de 42 ans, sans domicile fixe, vivant à la rue depuis plusieurs mois. Célibataire. Pas d'activité professionnelle. Sous curatelle renforcée.\nAdmis pour une pneumopathie sur terrain précaire. Sur le plan addictologique, situation complexe : alcoolodépendance sévère avec antécédent de delirium tremens, tabagisme majeur, héroïne sniffée puis fumée (quantité difficile à préciser), cocaïne en intraveineuse. Pas de cannabis rapporté. Usage ancien de kétamine, non actif.\nÉvolution respiratoire favorable. Orientation sociale travaillée avec l'assistante sociale.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "True",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "NA",
+    "ketamine": "False"
+  }
+}

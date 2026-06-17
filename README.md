@@ -190,6 +190,7 @@ cr_extract/
 │   ├── juridique.py · sevrage.py · substances.py
 ├── pipeline.py        # applique les 13 extracteurs à un texte
 ├── dataframe.py       # detecter() : enrichit un DataFrame polars/pandas
+├── corpus.py          # corpus JSON éditable (un fichier par CR)
 ├── evaluation.py      # accuracy / matrice de confusion vs gold
 └── cli.py
 ```
@@ -197,12 +198,26 @@ cr_extract/
 Point clé : la distinction **`False`** vs **`NA`** est modélisée dans
 `negation.py` et réutilisée par tous les champs booléens.
 
+## Corpus d'évaluation
+
+Le dossier [`corpus/`](corpus/) contient les comptes rendus annotés sous forme
+de **fichiers JSON éditables** (un par CR : texte + tags). C'est le format à
+privilégier pour **ajouter des comptes rendus synthétiques**, ajuster les tags
+d'un CR, ou introduire de **nouveaux tags** à travailler plus tard. Il donne le
+même résultat d'évaluation que le CSV de référence. Voir
+[`corpus/README.md`](corpus/README.md) pour le schéma et les valeurs autorisées.
+
+```bash
+python -m cr_extract.cli corpus comptes_rendus_medicaux.csv -o corpus  # (re)générer
+python -m cr_extract.cli evaluer corpus                                 # évaluer le dossier
+```
+
 ## Tests & performance
 
 ```bash
-python -m pytest        # 87 tests
+python -m pytest        # 103 tests
 ```
 
-Sur le CSV de référence (100 comptes rendus) : **accuracy globale 98,2 %**
+Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**
 (1277/1300). Tous les champs dépassent les cibles de la ROADMAP
 (≥ 90 % faciles, ≥ 75 % difficiles).

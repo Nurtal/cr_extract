@@ -1,0 +1,19 @@
+{
+  "id": "cr_017",
+  "texte": "SYNTHÈSE PLURIDISCIPLINAIRE\nPatient de 44 ans, situation conjugale non renseignée dans le dossier. Sans emploi. Hébergement non précisé. Sous curatelle.\nTableau de polyaddiction sévère : alcool, héroïne fumée (quantité non chiffrée), cocaïne injectée. Multiples sevrages dont au moins deux compliqués. Tabac. Usage de kétamine rapporté par le passé, statut actuel incertain. Décision d'orientation vers un séjour en SSR addictologie.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "inactif",
+    "sdf": "NA",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

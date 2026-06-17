@@ -1,0 +1,19 @@
+{
+  "id": "cr_009",
+  "texte": "SYNTHÈSE - HÔPITAL DE JOUR ADDICTOLOGIE\nMonsieur T., 27 ans, célibataire, hébergé chez ses parents, étudiant ayant interrompu son cursus (situation considérée comme inactive). Aucune mesure de protection.\nPolyconsommation : cannabis quotidien (plusieurs joints/jour), kétamine en contexte festif, cocaïne sniffée occasionnellement. Pas d'alcoolodépendance, consommation modérée. Tabagisme actif. Pas d'opiacés. Pas d'antécédent de sevrage compliqué.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "True"
+  }
+}

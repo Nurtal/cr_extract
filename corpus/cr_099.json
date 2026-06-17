@@ -1,0 +1,19 @@
+{
+  "id": "cr_099",
+  "texte": "obs fin de garde, dernière : F 36a, en couple, en activité (assistante maternelle). vient pr aide arrêt alcool, conso quotidienne le soir, motivée. pas de sevrage compliqué connu. tabac. pas de drogue. pas de protection. orientée consultation addicto programmée. voilà, bonne journée à l'équipe de jour.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

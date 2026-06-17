@@ -1,0 +1,19 @@
+{
+  "id": "cr_002",
+  "texte": "Cher Confrère,\nJ'ai revu en consultation Madame B., 29 ans, dans le cadre du suivi de sa dépendance aux opioïdes. Elle est en couple, vit avec son conjoint, et a repris une activité de serveuse depuis trois mois, ce qui est encourageant. Pas de mesure de protection.\nSur le plan des consommations : substitution par méthadone bien suivie, plus de consommation d'héroïne depuis huit mois. Elle reconnaît un usage de cocaïne par voie nasale lors de sorties festives, environ une fois par mois. Tabac actif. Pas d'alcool. Pas de cannabis.\nJe la reverrai dans un mois.\nBien confraternellement.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

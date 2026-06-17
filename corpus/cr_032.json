@@ -1,0 +1,19 @@
+{
+  "id": "cr_032",
+  "texte": "COMPTE RENDU\nPatiente de 28 ans, célibataire, hébergée en foyer pour jeunes travailleurs, sans emploi stable. Pas de protection. Consommation d'héroïne fumée, environ 0.8 g par jour selon ses dires. Pas de cocaïne. Tabac. Pas d'alcool. Cannabis occasionnel. Premier contact avec le soin, pas d'antécédent de sevrage.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "True",
+    "heroine_quantite": "0.8",
+    "ketamine": "NA"
+  }
+}

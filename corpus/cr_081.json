@@ -1,0 +1,19 @@
+{
+  "id": "cr_081",
+  "texte": "note de garde : H 41a usager héro, en manque, agité. dit fumer l'héro, ~0.5g/j. pas de coke. tabac. alcool aussi. en couple. sans emploi. pas de protection. ttt symptomatique, soulagé, part avant fin de surveillance.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "True",
+    "heroine_quantite": "0.5",
+    "ketamine": "NA"
+  }
+}

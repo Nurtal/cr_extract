@@ -1,0 +1,19 @@
+{
+  "id": "cr_079",
+  "texte": "CR. Femme 48 ans, en couple, en activité (secrétaire). Pas de protection. Consultation de suivi diabète. Pas d'alcool, ne fume pas, aucun toxique. Pas d'antécédent de sevrage. Équilibre glycémique correct, traitement maintenu.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

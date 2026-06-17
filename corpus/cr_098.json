@@ -1,0 +1,19 @@
+{
+  "id": "cr_098",
+  "texte": "COMPTE RENDU D'HOSPITALISATION - MÉDECINE INTERNE\nPatient de 34 ans, célibataire, hébergé en CHRS, sans emploi. Sous curatelle simple. Polyconsommation : héroïne IV (~0.6 g/j), cocaïne injectée, alcool, tabac, cannabis. Kétamine occasionnelle. Antécédent de sevrage compliqué. Admis pour syndrome infectieux, bilan en cours, coordination addictologique et sociale.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "0.6",
+    "ketamine": "True"
+  }
+}

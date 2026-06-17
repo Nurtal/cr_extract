@@ -1,0 +1,19 @@
+{
+  "id": "cr_084",
+  "texte": "note interne : F 22a, crise d'angoisse + tachycardie après produit acheté comme \"THC liquide\" vapoté. pas d'alcool. fumeuse. rien d'autre. célib, étudiante, coloc. pas de protection. surveillance, rassurée, sortie.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "THC",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

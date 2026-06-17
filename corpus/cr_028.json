@@ -1,0 +1,19 @@
+{
+  "id": "cr_028",
+  "texte": "Cher confrère,\nJe fais le point sur Monsieur G., 55 ans, que vous m'aviez adressé. Il vit en couple, est en invalidité (inactif). Une mesure de tutelle a été récemment prononcée. Sur le plan des consommations : alcoolisation chronique avec deux hospitalisations antérieures pour sevrage, dont une compliquée d'un syndrome de sevrage sévère. Il continue de fumer. Pas d'usage de stupéfiants illicites. Je vous tiendrai informé de l'évolution.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "tutelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

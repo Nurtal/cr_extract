@@ -1,0 +1,19 @@
+{
+  "id": "cr_044",
+  "texte": "garde : H 44a connu, alcoolisation + plaie superficielle main suturée. dit avoir arrêté l'héro depuis 3 ans (sous métha). tabac. pas de coke. pas de cannabis. en couple, intérim. pas de protection. sorti après suture.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

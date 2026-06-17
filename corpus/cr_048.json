@@ -1,0 +1,19 @@
+{
+  "id": "cr_048",
+  "texte": "CONSULTATION D'ADDICTOLOGIE\nMonsieur N., 47 ans, célibataire, en activité (technicien de maintenance). Pas de protection. Consultation pour usage de cocaïne par voie nasale, plusieurs grammes par semaine, avec insomnies. Consommation d'alcool associée importante. Tabac. Pas d'opiacés, pas de cannabis. Pas d'antécédent de sevrage. Bilan cardiologique demandé compte tenu de palpitations.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

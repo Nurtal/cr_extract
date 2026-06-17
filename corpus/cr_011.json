@@ -1,0 +1,19 @@
+{
+  "id": "cr_011",
+  "texte": "obs garde : F 24a, malaise en boite de nuit. dit avoir pris de la keta + alcool + un peu de coke (sniff). pas d'ATCD. examen ok apres qq heures. tabac oui. raccompagnée par amis. cs addicto proposée, refusée.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "NA",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "True"
+  }
+}

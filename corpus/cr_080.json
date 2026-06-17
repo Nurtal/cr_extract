@@ -1,0 +1,19 @@
+{
+  "id": "cr_080",
+  "texte": "COMPTE RENDU - PSYCHIATRIE\nPatient de 28 ans, célibataire, sans emploi, hébergé en foyer. Sous sauvegarde de justice. Décompensation sur arrêt de traitement. Consommation de cannabis quotidienne, alcoolisations, prises de cocaïne par voie nasale. Tabac. Kétamine rapportée en soirée. Pas d'opiacés. Pas d'antécédent de sevrage. Reprise du traitement.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "True"
+  }
+}

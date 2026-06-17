@@ -1,0 +1,19 @@
+{
+  "id": "cr_054",
+  "texte": "SYNTHÈSE D'HOSPITALISATION\nPatient de 57 ans, marié, retraité de la fonction publique. Pas de protection. Admis pour chute avec hématome. Alcoolisation chronique reconnue, plusieurs verres par jour. Antécédent d'un sevrage compliqué de delirium. Tabagisme actif. Pas d'autre substance. Mise en route d'un sevrage encadré, bonne tolérance.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

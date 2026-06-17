@@ -1,0 +1,19 @@
+{
+  "id": "cr_087",
+  "texte": "COMPTE RENDU D'HOSPITALISATION - MÉDECINE\nPatiente de 32 ans, en couple, sans emploi. Pas de protection. Admise pour abcès cutané sur point d'injection. Usagère d'héroïne IV, environ 0.9 g/jour, et de cocaïne injectée. Tabac. Pas d'alcool. Pas de cannabis. Antécédent de sevrage compliqué. Drainage, antibiothérapie, proposition de TSO.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "0.9",
+    "ketamine": "NA"
+  }
+}

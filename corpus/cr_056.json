@@ -1,0 +1,19 @@
+{
+  "id": "cr_056",
+  "texte": "COURRIER\nCher confrère, je vous transmets des nouvelles de Madame R., 44 ans. Elle vit seule (célibataire), en invalidité. Sous tutelle. Abstinence alcoolique maintenue depuis dix mois après deux sevrages antérieurs compliqués. A diminué le tabac. Aucune autre consommation. Suivi mensuel poursuivi, évolution satisfaisante.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "tutelle",
+    "sevrages_compliques": "True",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cr_039",
+  "texte": "Consultation. Homme 30 ans, en couple, ingénieur en activité. Signale un usage de kétamine en augmentation, plusieurs fois par semaine, avec troubles urinaires associés. Pas d'alcool problématique. Non fumeur. Pas d'autre toxique. Pas de protection, pas d'antécédent de sevrage. Bilan urologique demandé.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "True"
+  }
+}

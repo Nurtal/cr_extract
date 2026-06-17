@@ -1,0 +1,19 @@
+{
+  "id": "cr_030",
+  "texte": "ENTRÉE EN UNITÉ FERMÉE\nPatient de 31 ans amené par les forces de l'ordre, état d'agitation. Situation conjugale et logement non documentés à l'entrée. Pas d'emploi connu. Pas de mesure de protection identifiée.\nTableau évocateur d'une intoxication aux stimulants : cocaïne probable (voie non précisée), associée à une consommation d'alcool. Tabac. Reste de l'interrogatoire impossible en l'état.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "inactif",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

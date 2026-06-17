@@ -1,0 +1,19 @@
+{
+  "id": "cr_082",
+  "texte": "COURRIER MÉDECIN TRAITANT\nCher confrère, j'ai vu Madame S., 53 ans, mariée, en invalidité. Sous curatelle. Alcoolodépendance ancienne, abstinente depuis quatre mois après un sevrage hospitalier non compliqué. A arrêté le tabac. Pas d'autre consommation. Pas d'antécédent de sevrage compliqué. Suivi conjoint à poursuivre.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

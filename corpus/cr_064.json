@@ -1,0 +1,19 @@
+{
+  "id": "cr_064",
+  "texte": "CR. Homme 64 ans, BPCO, consultation pneumo. Marié, retraité. Pas de protection. Tabagisme actif majeur, n'arrive pas à arrêter. Pas d'alcool. Pas de drogue. Aucun antécédent de sevrage. Renforcement du traitement inhalé, nouvelle proposition de sevrage tabagique.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

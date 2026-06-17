@@ -1,0 +1,19 @@
+{
+  "id": "cr_068",
+  "texte": "URGENCES. Femme 55 ans, douleurs abdominales. Mariée, sans activité professionnelle. Pas de protection. Consommation d'alcool quotidienne reconnue. Ancienne fumeuse. Pas de drogue. Pas d'antécédent de sevrage organisé. Bilan en cours, hospitalisation courte.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

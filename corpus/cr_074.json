@@ -1,0 +1,19 @@
+{
+  "id": "cr_074",
+  "texte": "note : F 35a, malaise + douleur thoracique post-fête. avait sniffé de la coke et bu. pas d'opiacés. tabac. cannabis aussi. célib, en activité (graphiste). pas de protection. ECG, tropo ok après surveillance. cs addicto proposée.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

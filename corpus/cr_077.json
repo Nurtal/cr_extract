@@ -1,0 +1,19 @@
+{
+  "id": "cr_077",
+  "texte": "CONSULTATION D'ADDICTOLOGIE\nMonsieur L., 45 ans, marié, en activité (restaurateur). Pas de protection. Demande concernant une consommation d'alcool quotidienne liée au métier, ressentie comme excessive. Tabac. Pas de drogue illicite. Pas d'antécédent de sevrage. Objectifs de réduction discutés, suivi rapproché.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

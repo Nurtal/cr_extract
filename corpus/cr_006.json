@@ -1,0 +1,19 @@
+{
+  "id": "cr_006",
+  "texte": "H 33a, conduit par BSPP, agitation voie publique. Polyconso connue. hero IV (env 1g/j d'apres lui), coke aussi parfois en IV. tabac++. OH le we. pas de ttt substitution actuellement. veut pas rester. parti contre avis medical avant fin de surveillance.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "NA",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "1.0",
+    "ketamine": "NA"
+  }
+}

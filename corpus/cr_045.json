@@ -1,0 +1,19 @@
+{
+  "id": "cr_045",
+  "texte": "COURRIER DE LIAISON - CSAPA\nCher confrère, je vous adresse Madame F., 34 ans, dans le cadre de sa prise en charge. Elle vit en couple, est sans emploi actuellement. Une mesure de curatelle simple est en place. Usagère d'héroïne par voie intraveineuse, consommation estimée à 0.6 g/jour. Cocaïne associée, également en injection. Tabac actif. Pas d'alcool depuis l'instauration du suivi. Pas de cannabis. Pas d'antécédent de sevrage encadré. Initiation d'un TSO discutée.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "0.6",
+    "ketamine": "NA"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cr_076",
+  "texte": "transmissions : dame âgée chambre 6, sous tutelle, désorientée mais calme. aucune conso d'aucune sorte. pas de tabac, pas d'alcool. a mangé un peu. nuit sans incident.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "NA",
+    "sdf": "NA",
+    "protection_juridique": "tutelle",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cr_078",
+  "texte": "obs urgences brute : H amené par police, refuse tout, agressif, sent l'alcool fort. pas d'info exploitable (situation perso, logement, protection inconnus). tabac (clope sur lui). pas d'examen possible. dégrisement contention légère, réévaluation.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "NA",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

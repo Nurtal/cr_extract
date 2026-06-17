@@ -1,0 +1,19 @@
+{
+  "id": "cr_043",
+  "texte": "Femme 53 ans, fibromyalgie, consultation de suivi. En couple, en invalidité. Pas de protection. Pas d'alcool, ancienne fumeuse sevrée. Utilise du CBD. Pas de drogue. Adaptation du traitement antalgique.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "CBD",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

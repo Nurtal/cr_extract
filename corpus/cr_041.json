@@ -1,0 +1,19 @@
+{
+  "id": "cr_041",
+  "texte": "CONSULTATION\nPatiente de 45 ans, en couple, en activité (architecte). Suivie pour douleurs neuropathiques, utilise du cannabis à visée antalgique (THC). Pas d'alcool. Non fumeuse de tabac. Pas d'autre substance. Pas de protection, pas d'antécédent de sevrage. Discussion autour des alternatives thérapeutiques.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "THC",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

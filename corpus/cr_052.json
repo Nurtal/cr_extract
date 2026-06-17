@@ -1,0 +1,19 @@
+{
+  "id": "cr_052",
+  "texte": "URGENCES - homme 23a, agitation + hallucinations après prise de kétamine en grande quantité (« en immersion » selon les amis). alcool associé. tabac. cannabis aussi. pas de coke ni d'opiacés rapporté. célib, étudiant. pas de protection. surveillance, retour à la normale en quelques heures.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "True"
+  }
+}

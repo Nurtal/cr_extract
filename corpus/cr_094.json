@@ -1,0 +1,19 @@
+{
+  "id": "cr_094",
+  "texte": "COMPTE RENDU D'HOSPITALISATION\nMonsieur Z., 55 ans, marié, en arrêt de travail (artisan). Pas de protection. Hospitalisé pour hémorragie digestive sur varices œsophagiennes. Alcoolodépendance ancienne et sévère. Antécédent de delirium tremens. Tabac. Pas d'autre toxique. Geste endoscopique réalisé, sevrage encadré débuté.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

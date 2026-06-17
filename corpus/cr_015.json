@@ -1,0 +1,19 @@
+{
+  "id": "cr_015",
+  "texte": "CONSULTATION DE TABACOLOGIE\nMonsieur R., 52 ans, marié, fonctionnaire en activité. Consultation pour aide au sevrage tabagique (30 paquets-années). Pas de consommation d'alcool problématique, usage très occasionnel. Aucun autre toxique. Pas de mesure de protection. Mise en place de substituts nicotiniques.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

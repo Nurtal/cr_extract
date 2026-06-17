@@ -1,0 +1,19 @@
+{
+  "id": "cr_063",
+  "texte": "OBSERVATION PSYCHIATRIQUE\nPatient de 39 ans, marié, en arrêt de travail (cadre). Pas de protection. Hospitalisé pour épisode dépressif sévère. Consommation d'alcool en augmentation comme automédication, sans dépendance avérée. Tabac. Pas de stupéfiants. Pas d'antécédent de sevrage. Prise en charge thymique débutée.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

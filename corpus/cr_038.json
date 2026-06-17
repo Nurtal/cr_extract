@@ -1,0 +1,19 @@
+{
+  "id": "cr_038",
+  "texte": "Patient de 60 ans, cirrhose connue. Marié, retraité. Pas de protection. Poursuit malheureusement une consommation d'alcool malgré les recommandations. Ex-fumeur. Pas de drogue. Hospitalisé pour décompensation ascitique. Ponction réalisée.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

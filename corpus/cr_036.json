@@ -1,0 +1,19 @@
+{
+  "id": "cr_036",
+  "texte": "note : H 25a, ramené par amis apres soirée. avait pris MDMA, keta, coke (sniff) et bcp d'alcool. tachycardie, anxiété, redescend doucement. fumeur. cannabis aussi. célib, en activité (serveur). pas opiacés. surveillé, ok au matin.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "True"
+  }
+}

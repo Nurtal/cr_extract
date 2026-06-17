@@ -1,0 +1,19 @@
+{
+  "id": "cr_073",
+  "texte": "SYNTHÈSE - LIAISON ADDICTOLOGIE\nPatient de 58 ans, situation conjugale non renseignée. Sans emploi. Logement non documenté. Sous curatelle. Hépatopathie alcoolique. Alcool quotidien sévère. Antécédent de plusieurs sevrages dont deux compliqués. Tabac. Pas d'autre toxique mentionné. Orientation vers une hospitalisation de sevrage proposée.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "inactif",
+    "sdf": "NA",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

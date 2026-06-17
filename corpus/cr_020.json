@@ -1,0 +1,19 @@
+{
+  "id": "cr_020",
+  "texte": "COMPTE RENDU D'HOSPITALISATION\nMonsieur P., 36 ans, en couple, intérimaire (périodes d'activité irrégulières, actuellement actif). Pas de protection juridique.\nDemande d'initiation d'un traitement de substitution. Consommation d'héroïne par voie intraveineuse estimée à 0.5 g par jour. Cocaïne associée en injection. Alcool occasionnel. Tabac. Pas de cannabis. Pas d'antécédent de sevrage encadré jusqu'ici.\nInitiation de buprénorphine, bonne tolérance.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "True",
+    "heroine_quantite": "0.5",
+    "ketamine": "NA"
+  }
+}

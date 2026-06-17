@@ -1,0 +1,19 @@
+{
+  "id": "cr_055",
+  "texte": "obs interne, fin de garde, vite fait : H ~45a SDF, alcoolisé, plaie cuir chevelu suturée. connu pr OH chronique. tabac. dit prendre de la coke parfois, sniff. pas opiacés. célib. pas de protection visible. gardé pr la nuit, à revoir.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "NA",
+    "sdf": "True",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

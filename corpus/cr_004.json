@@ -1,0 +1,19 @@
+{
+  "id": "cr_004",
+  "texte": "CONSULTATION D'ADDICTOLOGIE\nMme L., 41 ans, vit en couple, cadre dans une entreprise de communication (activité maintenue). Aucune mesure de protection.\nDemande d'aide concernant une consommation de cocaïne par voie nasale devenue pluri-hebdomadaire. Consommation d'alcool associée le week-end. Pas de tabac. Pas d'opiacés, pas de cannabis. Pas d'antécédent de sevrage.\nMise en place d'un suivi rapproché et bilan biologique demandé.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

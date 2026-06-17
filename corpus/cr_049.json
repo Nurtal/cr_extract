@@ -1,0 +1,19 @@
+{
+  "id": "cr_049",
+  "texte": "CR HOSPITALISATION - PSYCHIATRIE\nPatiente de 26 ans hospitalisée sous contrainte pour épisode psychotique aigu. En couple. Étudiante (inactive de fait depuis plusieurs mois). Sous sauvegarde de justice. Consommation massive de cannabis quotidienne, possiblement déclenchante. Alcoolisations associées. Tabac. Pas d'autre toxique retrouvé. Pas d'antécédent de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

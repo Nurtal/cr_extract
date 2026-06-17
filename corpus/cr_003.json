@@ -1,0 +1,19 @@
+{
+  "id": "cr_003",
+  "texte": "OBSERVATION D'ENTRÉE - PSYCHIATRIE\nPatient de 46 ans, célibataire, sans emploi depuis plusieurs années, bénéficiaire de l'AAH. Sous curatelle renforcée. Hospitalisation pour décompensation thymique sur fond de polyconsommation.\nLe patient décrit une consommation d'alcool massive et ancienne, plusieurs sevrages antérieurs dont un compliqué de crises convulsives. Tabagisme important. Usage régulier de cannabis. Il évoque également des prises de kétamine en soirée. Nie tout usage d'opiacés ou de cocaïne.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "NA",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "True"
+  }
+}

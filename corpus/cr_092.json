@@ -1,0 +1,19 @@
+{
+  "id": "cr_092",
+  "texte": "COMPTE RENDU - PSYCHIATRIE DE LIAISON\nPatient de 44 ans, célibataire, sans domicile fixe. Sous tutelle. Tentative de suicide par phlébotomie. Alcoolisation chronique sévère, antécédents de sevrages compliqués. Tabac. Héroïne fumée par le passé, statut actuel incertain. Pas de cocaïne. Cannabis. Prise en charge psychiatrique et sociale conjointe.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "True",
+    "protection_juridique": "tutelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "True",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

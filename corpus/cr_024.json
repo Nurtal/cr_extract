@@ -1,0 +1,19 @@
+{
+  "id": "cr_024",
+  "texte": "URGENCES - Femme 40 ans, intoxication médicamenteuse volontaire. En couple. Sans emploi. Pas de protection. Co-ingestion d'alcool. Tabagisme. Pas d'usage de drogues illicites rapporté. Surveillance, avis psychiatrique demandé.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

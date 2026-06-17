@@ -1,0 +1,19 @@
+{
+  "id": "cr_019",
+  "texte": "H ~50a SDF, ramassé sur banc, hypotherme léger. réchauffement, perf. OH chronique sévère. plusieurs DT dans le passé d'apres dossier. tabac. roule des joints (cannabis). pas opiacés. célib. réchauffé, surveillé, gardé pr la nuit.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "NA",
+    "sdf": "True",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

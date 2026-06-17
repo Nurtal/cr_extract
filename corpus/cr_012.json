@@ -1,0 +1,19 @@
+{
+  "id": "cr_012",
+  "texte": "Madame, Monsieur,\nJe vous adresse Monsieur D., 49 ans, divorcé donc actuellement célibataire, sans domicile fixe et hébergé en CHRS de manière précaire. Mesure de curatelle en cours. Sur le plan addictologique : ancien usager d'héroïne par voie intraveineuse, abstinent depuis substitution. Consommation d'alcool chronique avec un antécédent de sevrage compliqué de convulsions. Tabac actif. Pas de cocaïne. Pas de cannabis actuellement.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "NA",
+    "sdf": "True",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

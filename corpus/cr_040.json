@@ -1,0 +1,19 @@
+{
+  "id": "cr_040",
+  "texte": "amené par police, refuse de parler, sent l'alcool. pas d'identité claire. pas d'info sur situation perso, logement, rien. tabac (paquet dans poche). pas d'examen possible, opposant. dégrisement. à réévaluer demain.",
+  "tags": {
+    "situation_conjugale": "NA",
+    "situation_professionnelle": "NA",
+    "sdf": "NA",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}
