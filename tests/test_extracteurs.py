@@ -291,6 +291,19 @@ def test_suivi_hepato_gastro(texte, attendu):
     assert extraire_tout(texte)["suivi_hepato_gastro"].valeur == attendu
 
 
+# --- Pancréatite ----------------------------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Pancréatite aiguë d'origine éthylique.", Etat.VRAI),
+    ("Pancréatite chronique calcifiante.", Etat.VRAI),
+    ("Lipase normale, pas de pancréatite.", Etat.FAUX),
+    # « pancréas » seul (organe / autre contexte) ne compte pas.
+    ("Adénocarcinome du pancréas.", Etat.NA),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_pancreatite(texte, attendu):
+    assert extraire_tout(texte)["pancreatite"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

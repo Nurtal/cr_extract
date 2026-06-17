@@ -50,6 +50,7 @@ Champs additionnels (hors CSV d'origine) :
 | `grossesse` | `True` / `False` / `NA` — grossesse en cours (≠ antécédents / désir de grossesse) |
 | `hepatopathie` | `True` / `False` / `NA` — atteinte hépatique (cirrhose, hépatite, cytolyse…) ; « bilan hépatique » seul ne compte pas |
 | `suivi_hepato_gastro` | `True` / `False` / `NA` — suivi / orientation en hépato-gastro-entérologie ; « chirurgie/hémorragie digestive » ne compte pas |
+| `pancreatite` | `True` / `False` / `NA` — pancréatite (aiguë / chronique / éthylique) |
 
 **Distinction clé** : `False` (négation explicite, « pas d'alcool ») ≠ `NA`
 (sujet non abordé dans le compte rendu). Voir [`ROADMAP.md`](ROADMAP.md) pour le
@@ -166,9 +167,10 @@ print(resultat)
 - Options : `colonne_texte=` (défaut `"TEXTE"`), `prefixe=` (préfixe des
   colonnes ajoutées, p. ex. `"item_"`).
 
-Items disponibles : `situation_conjugale`, `situation_professionnelle`, `sdf`,
-`protection_juridique`, `sevrages_compliques`, `alcool`, `tabac`, `cannabis`,
-`cocaine`, `cocaine_voie`, `heroine`, `heroine_quantite`, `ketamine`.
+Items disponibles : toutes les clés internes listées dans la section
+[« Les champs extraits »](#les-champs-extraits) ci-dessus (les 13 champs de
+référence + les champs additionnels). En Python :
+`from cr_extract.modele import CHAMPS_PAR_CLE; list(CHAMPS_PAR_CLE)`.
 
 Voir [`example.py`](example.py) pour un script complet (détection sur DataFrame
 puis filtrage du résultat).
@@ -211,7 +213,8 @@ cr_extract/
 │   ├── juridique.py · sevrage.py · substances.py
 │   ├── benzodiazepines.py · hypnotiques.py
 │   ├── addictolytique.py · substitution.py
-│   ├── grossesse.py · hepatopathie.py · suivi_hepato_gastro.py
+│   ├── grossesse.py · hepatopathie.py
+│   ├── suivi_hepato_gastro.py · pancreatite.py
 ├── pipeline.py        # applique les 13 extracteurs à un texte
 ├── dataframe.py       # detecter() : enrichit un DataFrame polars/pandas
 ├── corpus.py          # corpus JSON éditable (un fichier par CR)
@@ -252,7 +255,7 @@ distribution des valeurs, puis la synthèse des tags **non couverts**.
 ## Tests & performance
 
 ```bash
-python -m pytest        # 169 tests
+python -m pytest        # 174 tests
 ```
 
 Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**
