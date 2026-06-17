@@ -1,5 +1,7 @@
 # CR Extract
 
+[![version](https://img.shields.io/github/v/tag/Nurtal/cr_extract?label=version&sort=semver)](https://github.com/Nurtal/cr_extract/releases)
+
 ## Description
 Extraction d'informations structurées à partir de comptes rendus médicaux non
 structurés (addictologie / psychiatrie, texte libre en français).
