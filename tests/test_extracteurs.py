@@ -402,6 +402,27 @@ def test_depression(texte, attendu):
     assert extraire_tout(texte)["depression"].valeur == attendu
 
 
+# --- Troubles anxieux ------------------------------------------------------ #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Trouble anxieux généralisé.", Etat.VRAI),
+    ("Crise d'angoisse.", Etat.VRAI),
+    ("Anxiété aiguë après prise de MDMA.", Etat.VRAI),
+    ("Syndrome anxio-dépressif.", Etat.VRAI),
+    ("Pas de trouble anxieux.", Etat.FAUX),
+    # « anxiolytique » (médicament) n'est pas un trouble anxieux.
+    ("Sous anxiolytique le soir.", Etat.NA),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_troubles_anxieux(texte, attendu):
+    assert extraire_tout(texte)["troubles_anxieux"].valeur == attendu
+
+
+def test_anxio_depressif_active_anxieux_et_depression():
+    r = extraire_tout("Syndrome anxio-dépressif réactionnel.")
+    assert r["troubles_anxieux"].valeur == Etat.VRAI
+    assert r["depression"].valeur == Etat.VRAI
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

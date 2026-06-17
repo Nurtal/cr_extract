@@ -1,6 +1,6 @@
 {
-  "id": "cr_syn_026",
-  "texte": "CONSULTATION. Femme 30 ans, en couple, en activité (vendeuse). Pas de protection. Consulte pour anxiété, pas de syndrome dépressif. Alcool festif. Tabac. Pas de drogue. Pas d'antécédent de sevrage.",
+  "id": "cr_syn_027",
+  "texte": "CONSULTATION. Homme 41 ans, en couple, en activité (ingénieur). Pas de protection. Examen psychiatrique rassurant, pas de trouble anxieux ni dépressif. Alcool festif. Tabac. Pas de drogue. Pas d'antécédent de sevrage.",
   "tags": {
     "situation_conjugale": "en couple",
     "situation_professionnelle": "actif",
@@ -16,6 +16,6 @@
     "heroine_quantite": "NA",
     "ketamine": "NA",
     "depression": "False",
-    "troubles_anxieux": "True"
+    "troubles_anxieux": "False"
   }
 }
