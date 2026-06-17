@@ -21,6 +21,7 @@ from __future__ import annotations
 import re
 
 from cr_extract.modele import CHAMPS_PAR_CLE, Etat, ResultatExtraction
+from cr_extract.negation import est_nie_explicite
 from cr_extract.extracteurs import enregistrer
 
 # Molécules (DCI canonique -> motif DCI + noms commerciaux / variantes).
@@ -52,34 +53,16 @@ _MOLECULES_COMPILES = tuple(
     (dci, re.compile(rf"(?<!\w)({motif})(?!\w)")) for dci, motif in _MOLECULES
 )
 
-# Négation propre aux médicaments : on ne retient que les négations *explicites*
-# ou l'arrêt du traitement. Les marqueurs d'« abstinence » / « ancien » décrivent
-# le statut du patient vis-à-vis du produit, pas l'arrêt du médicament, et ne
-# doivent donc pas nier un addictolytique (« abstinence sous acamprosate »).
-_NEG_MED = re.compile(
-    r"(?<!\w)(pas|sans|aucun|aucune|non|ni|arret|arrete\w*|interrompu\w*|stoppe\w*)(?!\w)"
-)
-
-
-def _nie_medicament(texte: str, debut: int, fin: int) -> bool:
-    avant = texte[max(0, debut - 40):debut]
-    coupe = max((avant.rfind(c) for c in ".;:!?\n)"), default=-1)
-    if coupe != -1:
-        avant = avant[coupe + 1:]
-    if _NEG_MED.search(avant):
-        return True
-    apres = texte[fin:fin + 18]
-    return bool(
-        re.search(r"(?<!\w)n[e']", avant)
-        and re.search(r"(?<!\w)(pas|plus|jamais)(?!\w)", apres)
-    )
-
-
 def _presence(texte_normalise: str):
-    """``("present", empan)`` / ``("nie", empan)`` / ``(None, None)``."""
+    """``("present", empan)`` / ``("nie", empan)`` / ``(None, None)``.
+
+    Utilise une négation restreinte aux médicaments (cf.
+    :func:`negation.est_nie_explicite`) : « abstinence sous acamprosate » reste
+    ``present``.
+    """
     niee = None
     for m in _ADDICTOLYTIQUE.finditer(texte_normalise):
-        if _nie_medicament(texte_normalise, m.start(), m.end()):
+        if est_nie_explicite(texte_normalise, m.start(), m.end()):
             niee = niee or m
             continue
         return "present", m.group(0)
@@ -112,7 +95,7 @@ class ExtracteurAddictolytiqueType:
         # Première molécule nommée et affirmée.
         for dci, motif in _MOLECULES_COMPILES:
             m = motif.search(texte_normalise)
-            if m and not _nie_medicament(texte_normalise, m.start(), m.end()):
+            if m and not est_nie_explicite(texte_normalise, m.start(), m.end()):
                 return ResultatExtraction(dci, 0.9, m.group(0))
         # Mention générique (« traitement de substitution ») sans molécule.
         return ResultatExtraction.absent()

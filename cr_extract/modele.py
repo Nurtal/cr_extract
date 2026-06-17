@@ -80,6 +80,9 @@ CHAMPS: tuple[Champ, ...] = (
           ("acamprosate", "baclofene", "buprenorphine", "bupropion",
            "disulfirame", "methadone", "nalmefene", "naltrexone", "nicotine",
            "varenicline")),
+    Champ("traitement_substitution", "Traitement de substitution", TYPE_BOOLEEN),
+    Champ("traitement_substitution_type", "Traitement de substitution - type",
+          TYPE_CATEGORIEL, ("buprenorphine", "methadone")),
 )
 
 # Index par clé interne et par intitulé de colonne, pour les recherches rapides.

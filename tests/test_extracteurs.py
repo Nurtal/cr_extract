@@ -208,6 +208,24 @@ def test_addictolytique(texte, presence, type_):
     assert r["addictolytique_type"].valeur == type_
 
 
+# --- Traitement de substitution (TSO) + type ------------------------------- #
+@pytest.mark.parametrize("texte, presence, type_", [
+    ("Substitution par méthadone bien suivie.", Etat.VRAI, "methadone"),
+    ("Stabilisé sous buprénorphine (Subutex).", Etat.VRAI, "buprenorphine"),
+    ("Renouvellement métha.", Etat.VRAI, "methadone"),
+    ("Lien CSAPA et TSO.", Etat.VRAI, "NA"),
+    ("Pas de ttt substitution actuellement.", Etat.FAUX, "NA"),
+    # Substitution nicotinique (tabac) : ce n'est pas un TSO.
+    ("Sevrage tabagique sous substitution nicotinique.", Etat.NA, "NA"),
+    # Acamprosate est un addictolytique mais pas une substitution opiacée.
+    ("Maintien de l'abstinence sous acamprosate.", Etat.NA, "NA"),
+])
+def test_traitement_substitution(texte, presence, type_):
+    r = extraire_tout(texte)
+    assert r["traitement_substitution"].valeur == presence
+    assert r["traitement_substitution_type"].valeur == type_
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

@@ -42,6 +42,8 @@ Champs additionnels (hors CSV d'origine) :
 | `hypnotique_type` | molécule en DCI (`zopiclone`, `zolpidem`, `doxylamine`…) / `NA` |
 | `addictolytique` | `True` / `False` / `NA` — traitement de l'addiction (anti-craving, TSO, aide au sevrage tabagique) |
 | `addictolytique_type` | molécule en DCI (`acamprosate`, `methadone`, `buprenorphine`, `varenicline`…) / `NA` |
+| `traitement_substitution` | `True` / `False` / `NA` — substitution aux opiacés (TSO) |
+| `traitement_substitution_type` | `methadone` / `buprenorphine` / `NA` |
 
 **Distinction clé** : `False` (négation explicite, « pas d'alcool ») ≠ `NA`
 (sujet non abordé dans le compte rendu). Voir [`ROADMAP.md`](ROADMAP.md) pour le
@@ -201,7 +203,8 @@ cr_extract/
 ├── extracteurs/       # un module par famille de champs (registre auto-enregistré)
 │   ├── conjugal.py · professionnel.py · logement.py
 │   ├── juridique.py · sevrage.py · substances.py
-│   ├── benzodiazepines.py · hypnotiques.py · addictolytique.py
+│   ├── benzodiazepines.py · hypnotiques.py
+│   ├── addictolytique.py · substitution.py
 ├── pipeline.py        # applique les 13 extracteurs à un texte
 ├── dataframe.py       # detecter() : enrichit un DataFrame polars/pandas
 ├── corpus.py          # corpus JSON éditable (un fichier par CR)
@@ -242,7 +245,7 @@ distribution des valeurs, puis la synthèse des tags **non couverts**.
 ## Tests & performance
 
 ```bash
-python -m pytest        # 129 tests
+python -m pytest        # 136 tests
 ```
 
 Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**

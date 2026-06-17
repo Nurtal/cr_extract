@@ -49,6 +49,8 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `hypnotique_type` | Hypnotique - type | DCI (`zopiclone`, `zolpidem`…) / `NA` |
 | `addictolytique` | Addictolytique | `True` / `False` / `NA` |
 | `addictolytique_type` | Addictolytique - type | DCI (`acamprosate`, `methadone`…) / `NA` |
+| `traitement_substitution` | Traitement de substitution | `True` / `False` / `NA` |
+| `traitement_substitution_type` | Traitement de substitution - type | `methadone` / `buprenorphine` / `NA` |
 
 Rappel : `False` = négation explicite (« pas d'alcool ») ≠ `NA` = sujet non
 abordé. `cocaine` et `heroine` n'utilisent pas `NA` (absence = `False`).
@@ -66,16 +68,12 @@ d'amorce pour de prochaines itérations :
 | `lsd` | `True` / `False` / `NA` | `cr_syn_004` |
 | `amphetamines` | `True` / `False` / `NA` | `cr_syn_004` |
 | `grossesse` | `True` / `False` / `NA` | `cr_syn_003` |
-| `traitement_substitution` | `methadone` / `buprenorphine` / `NA` | `cr_syn_003` |
 
-> Note : la substitution (méthadone/buprénorphine) est désormais aussi captée
-> par le champ couvert `addictolytique` / `addictolytique_type`.
-> `traitement_substitution` reste un axe d'annotation distinct (plus étroit),
-> conservé pour un éventuel extracteur dédié.
-
-> `benzodiazepines`/`benzodiazepine_type` (cr_syn_001, cr_syn_005) et
-> `hypnotiques`/`hypnotique_type` (cr_syn_001, cr_syn_006, cr_syn_007) étaient
-> expérimentaux ; ils disposent désormais d'un extracteur.
+> Tags devenus actifs (extracteur écrit) : `benzodiazepines`/`benzodiazepine_type`
+> (cr_syn_001, cr_syn_005), `hypnotiques`/`hypnotique_type` (cr_syn_001,
+> cr_syn_006, cr_syn_007), `addictolytique`/`addictolytique_type` et
+> `traitement_substitution`/`traitement_substitution_type` (cr_syn_003,
+> cr_syn_008, cr_syn_009).
 
 Pour rendre l'un de ces tags « actif » : l'ajouter au catalogue
 (`cr_extract/modele.py`) puis écrire l'extracteur correspondant dans

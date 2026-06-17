@@ -16,6 +16,8 @@
     "heroine_quantite": "NA",
     "ketamine": "NA",
     "addictolytique": "True",
-    "addictolytique_type": "buprenorphine"
+    "addictolytique_type": "buprenorphine",
+    "traitement_substitution": "True",
+    "traitement_substitution_type": "buprenorphine"
   }
 }

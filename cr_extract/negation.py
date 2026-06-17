@@ -130,6 +130,32 @@ def est_nie(texte_normalise: str, debut: int, fin: int) -> bool:
     return False
 
 
+# Négation *explicite* (ou arrêt de traitement) : variante stricte pour les
+# médicaments, où « abstinence »/« ancien » décrivent le patient et non l'arrêt
+# du produit (« abstinence sous acamprosate » ne nie pas l'acamprosate).
+_NEG_EXPLICITE = (
+    "pas", "sans", "aucun", "aucune", "non", "ni", "nie", "jamais", "absence",
+    "arret", "arrete", "arretee", "interrompu", "interrompue", "stoppe", "stoppee",
+)
+
+
+def est_nie_explicite(texte_normalise: str, debut: int, fin: int) -> bool:
+    """Négation restreinte aux marqueurs explicites / d'arrêt de traitement.
+
+    Destinée aux médicaments (addictolytiques, substitution) : ne tient pas
+    compte de l'abstinence ni de l'ancienneté, qui qualifient le statut du
+    patient et non l'arrêt du traitement.
+    """
+    avant = _fenetre_avant(texte_normalise, debut)
+    if _mot_present(avant, _NEG_EXPLICITE):
+        return True
+    apres = _fenetre_apres(texte_normalise, fin)
+    return bool(
+        re.search(r"(?<!\w)n[e']", avant)
+        and _mot_present(apres, ("pas", "plus", "jamais"))
+    )
+
+
 # --------------------------------------------------------------------------- #
 # Recherche d'occurrences de termes
 # --------------------------------------------------------------------------- #
