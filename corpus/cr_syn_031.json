@@ -1,0 +1,20 @@
+{
+  "id": "cr_syn_031",
+  "texte": "CONSULTATION. Homme 34 ans, en couple, en activité (cadre). Pas de protection. Idées noires sans passage à l'acte, pas de tentative de suicide. Alcool festif. Tabac. Pas de drogue. Pas d'antécédent de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "tentative_suicide": "False"
+  }
+}

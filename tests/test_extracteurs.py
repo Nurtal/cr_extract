@@ -439,6 +439,22 @@ def test_troubles_bipolaires(texte, attendu):
     assert extraire_tout(texte)["troubles_bipolaires"].valeur == attendu
 
 
+# --- Tentative de suicide -------------------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Tentative de suicide par phlébotomie.", Etat.VRAI),
+    ("Admise pour intoxication médicamenteuse volontaire.", Etat.VRAI),
+    ("Geste suicidaire.", Etat.VRAI),
+    ("Pas de tentative de suicide.", Etat.FAUX),
+    # Idéation (pas de passage à l'acte), tentative de sevrage, geste technique.
+    ("Idées noires sans passage à l'acte.", Etat.NA),
+    ("Troisième tentative de sevrage alcoolique.", Etat.NA),
+    ("Geste endoscopique réalisé.", Etat.NA),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_tentative_suicide(texte, attendu):
+    assert extraire_tout(texte)["tentative_suicide"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

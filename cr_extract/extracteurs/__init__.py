@@ -53,6 +53,7 @@ from cr_extract.extracteurs import (  # noqa: E402,F401
     substances,
     substitution,
     suivi_hepato_gastro,
+    tentative_suicide,
     troubles_anxieux,
     troubles_bipolaires,
     troubles_cognitifs,
