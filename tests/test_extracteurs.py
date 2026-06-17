@@ -190,6 +190,24 @@ def test_hypnotiques(texte, presence, type_):
     assert r["hypnotique_type"].valeur == type_
 
 
+# --- Addictolytiques + type ------------------------------------------------ #
+@pytest.mark.parametrize("texte, presence, type_", [
+    ("Maintien de l'abstinence alcoolique sous acamprosate (Aotal).", Etat.VRAI, "acamprosate"),
+    ("Stabilisé sous buprénorphine (Subutex) depuis deux ans.", Etat.VRAI, "buprenorphine"),
+    ("Substitution par méthadone bien suivie.", Etat.VRAI, "methadone"),
+    ("Sevrage tabagique sous varénicline (Champix).", Etat.VRAI, "varenicline"),
+    ("Mis sous traitement de substitution.", Etat.VRAI, "NA"),
+    ("Pas de traitement de substitution actuellement.", Etat.FAUX, "NA"),
+    # La naloxone (antidote d'overdose) n'est pas un addictolytique.
+    ("Overdose aux opioïdes, naloxone aux urgences.", Etat.NA, "NA"),
+    ("Consultation de suivi diabète.", Etat.NA, "NA"),
+])
+def test_addictolytique(texte, presence, type_):
+    r = extraire_tout(texte)
+    assert r["addictolytique"].valeur == presence
+    assert r["addictolytique_type"].valeur == type_
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

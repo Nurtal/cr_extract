@@ -16,6 +16,8 @@
     "heroine_quantite": "NA",
     "ketamine": "NA",
     "grossesse": "True",
-    "traitement_substitution": "methadone"
+    "traitement_substitution": "methadone",
+    "addictolytique": "True",
+    "addictolytique_type": "methadone"
   }
 }

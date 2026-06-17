@@ -47,6 +47,8 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `benzodiazepine_type` | Benzodiazépine - type | DCI (`zolpidem`, `alprazolam`…) / `NA` |
 | `hypnotiques` | Hypnotiques | `True` / `False` / `NA` |
 | `hypnotique_type` | Hypnotique - type | DCI (`zopiclone`, `zolpidem`…) / `NA` |
+| `addictolytique` | Addictolytique | `True` / `False` / `NA` |
+| `addictolytique_type` | Addictolytique - type | DCI (`acamprosate`, `methadone`…) / `NA` |
 
 Rappel : `False` = négation explicite (« pas d'alcool ») ≠ `NA` = sujet non
 abordé. `cocaine` et `heroine` n'utilisent pas `NA` (absence = `False`).
@@ -65,6 +67,11 @@ d'amorce pour de prochaines itérations :
 | `amphetamines` | `True` / `False` / `NA` | `cr_syn_004` |
 | `grossesse` | `True` / `False` / `NA` | `cr_syn_003` |
 | `traitement_substitution` | `methadone` / `buprenorphine` / `NA` | `cr_syn_003` |
+
+> Note : la substitution (méthadone/buprénorphine) est désormais aussi captée
+> par le champ couvert `addictolytique` / `addictolytique_type`.
+> `traitement_substitution` reste un axe d'annotation distinct (plus étroit),
+> conservé pour un éventuel extracteur dédié.
 
 > `benzodiazepines`/`benzodiazepine_type` (cr_syn_001, cr_syn_005) et
 > `hypnotiques`/`hypnotique_type` (cr_syn_001, cr_syn_006, cr_syn_007) étaient

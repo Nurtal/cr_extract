@@ -75,6 +75,11 @@ CHAMPS: tuple[Champ, ...] = (
           ("doxylamine", "estazolam", "flunitrazepam", "loprazolam",
            "lormetazepam", "melatonine", "nitrazepam", "temazepam",
            "zolpidem", "zopiclone")),
+    Champ("addictolytique", "Addictolytique", TYPE_BOOLEEN),
+    Champ("addictolytique_type", "Addictolytique - type", TYPE_CATEGORIEL,
+          ("acamprosate", "baclofene", "buprenorphine", "bupropion",
+           "disulfirame", "methadone", "nalmefene", "naltrexone", "nicotine",
+           "varenicline")),
 )
 
 # Index par clé interne et par intitulé de colonne, pour les recherches rapides.

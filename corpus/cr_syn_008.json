@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_008",
+  "texte": "CONSULTATION ADDICTOLOGIE. Monsieur D., 49 ans, marié, en activité (comptable). Pas de protection. Maintien de l'abstinence alcoolique sous acamprosate (Aotal). Tabac. Pas d'autre toxique. Antécédent d'un sevrage compliqué de convulsions.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "addictolytique": "True",
+    "addictolytique_type": "acamprosate"
+  }
+}

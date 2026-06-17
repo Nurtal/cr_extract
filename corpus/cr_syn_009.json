@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_009",
+  "texte": "COURRIER CSAPA. Monsieur F., 38 ans, célibataire, sans emploi. Pas de protection. Ancien usager d'héroïne, stabilisé sous buprénorphine (Subutex) depuis deux ans, abstinent. Tabac. Pas d'alcool. Pas de cocaïne. Pas de cannabis. Suivi mensuel.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "addictolytique": "True",
+    "addictolytique_type": "buprenorphine"
+  }
+}
