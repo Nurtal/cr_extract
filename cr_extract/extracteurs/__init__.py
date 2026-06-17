@@ -49,6 +49,7 @@ from cr_extract.extracteurs import (  # noqa: E402,F401
     logement,
     pancreatite,
     professionnel,
+    psychotropes,
     sevrage,
     substances,
     substitution,

@@ -455,6 +455,27 @@ def test_tentative_suicide(texte, attendu):
     assert extraire_tout(texte)["tentative_suicide"].valeur == attendu
 
 
+# --- Utilisation de psychotropes ------------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Sous traitement psychotrope.", Etat.VRAI),
+    ("Sous antidépresseur.", Etat.VRAI),
+    ("Neuroleptique retard.", Etat.VRAI),
+    ("Anxiolytique le soir.", Etat.VRAI),
+    ("Thymorégulateur par lithium.", Etat.VRAI),
+    ("Pas de psychotrope.", Etat.FAUX),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_psychotropes(texte, attendu):
+    assert extraire_tout(texte)["psychotropes"].valeur == attendu
+
+
+def test_antidepresseur_psychotrope_mais_pas_depression():
+    # « antidépresseur » = psychotrope (médicament) mais ne vaut pas dépression.
+    r = extraire_tout("Patient sous antidépresseur.")
+    assert r["psychotropes"].valeur == Etat.VRAI
+    assert r["depression"].valeur == Etat.NA
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

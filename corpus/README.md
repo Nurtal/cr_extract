@@ -63,6 +63,7 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `troubles_anxieux` | Troubles anxieux | `True` / `False` / `NA` |
 | `troubles_bipolaires` | Troubles bipolaires | `True` / `False` / `NA` |
 | `tentative_suicide` | Tentative de suicide | `True` / `False` / `NA` |
+| `psychotropes` | Utilisation de psychotropes | `True` / `False` / `NA` |
 | `addictolytique` | Addictolytique | `True` / `False` / `NA` |
 | `addictolytique_type` | Addictolytique - type | DCI (`acamprosate`, `methadone`…) / `NA` |
 | `traitement_substitution` | Traitement de substitution | `True` / `False` / `NA` |

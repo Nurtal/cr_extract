@@ -99,6 +99,7 @@ CHAMPS: tuple[Champ, ...] = (
     Champ("troubles_anxieux", "Troubles anxieux", TYPE_BOOLEEN),
     Champ("troubles_bipolaires", "Troubles bipolaires", TYPE_BOOLEEN),
     Champ("tentative_suicide", "Tentative de suicide", TYPE_BOOLEEN),
+    Champ("psychotropes", "Utilisation de psychotropes", TYPE_BOOLEEN),
 )
 
 # Index par clé interne et par intitulé de colonne, pour les recherches rapides.
