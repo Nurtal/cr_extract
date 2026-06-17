@@ -44,6 +44,9 @@ Champs additionnels (hors CSV d'origine) :
 | `addictolytique_type` | molécule en DCI (`acamprosate`, `methadone`, `buprenorphine`, `varenicline`…) / `NA` |
 | `traitement_substitution` | `True` / `False` / `NA` — substitution aux opiacés (TSO) |
 | `traitement_substitution_type` | `methadone` / `buprenorphine` / `NA` |
+| `mdma` | `True` / `False` / `NA` — MDMA / ecstasy |
+| `lsd` | `True` / `False` / `NA` |
+| `amphetamines` | `True` / `False` / `NA` — amphétamines / speed / métamphétamine |
 
 **Distinction clé** : `False` (négation explicite, « pas d'alcool ») ≠ `NA`
 (sujet non abordé dans le compte rendu). Voir [`ROADMAP.md`](ROADMAP.md) pour le
@@ -245,7 +248,7 @@ distribution des valeurs, puis la synthèse des tags **non couverts**.
 ## Tests & performance
 
 ```bash
-python -m pytest        # 136 tests
+python -m pytest        # 144 tests
 ```
 
 Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**

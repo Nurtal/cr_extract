@@ -208,6 +208,22 @@ def test_addictolytique(texte, presence, type_):
     assert r["addictolytique_type"].valeur == type_
 
 
+# --- MDMA / LSD / amphétamines --------------------------------------------- #
+@pytest.mark.parametrize("texte, champ, attendu", [
+    ("Prise de MDMA (ecstasy) en soirée.", "mdma", Etat.VRAI),
+    ("A pris de l'exta au festival.", "mdma", Etat.VRAI),
+    ("Anxiété après prise de LSD.", "lsd", Etat.VRAI),
+    ("Usage d'amphétamines (speed).", "amphetamines", Etat.VRAI),
+    ("Consommation de crystal meth.", "amphetamines", Etat.VRAI),
+    ("Pas de MDMA.", "mdma", Etat.FAUX),
+    # « méthadone » ne doit pas déclencher amphétamines (méth ≠ meth).
+    ("Substitution par méthadone.", "amphetamines", Etat.NA),
+    ("Consultation de suivi diabète.", "lsd", Etat.NA),
+])
+def test_mdma_lsd_amphetamines(texte, champ, attendu):
+    assert extraire_tout(texte)[champ].valeur == attendu
+
+
 # --- Traitement de substitution (TSO) + type ------------------------------- #
 @pytest.mark.parametrize("texte, presence, type_", [
     ("Substitution par méthadone bien suivie.", Etat.VRAI, "methadone"),

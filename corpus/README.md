@@ -47,6 +47,9 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `benzodiazepine_type` | Benzodiazépine - type | DCI (`zolpidem`, `alprazolam`…) / `NA` |
 | `hypnotiques` | Hypnotiques | `True` / `False` / `NA` |
 | `hypnotique_type` | Hypnotique - type | DCI (`zopiclone`, `zolpidem`…) / `NA` |
+| `mdma` | MDMA | `True` / `False` / `NA` |
+| `lsd` | LSD | `True` / `False` / `NA` |
+| `amphetamines` | Amphétamines | `True` / `False` / `NA` |
 | `addictolytique` | Addictolytique | `True` / `False` / `NA` |
 | `addictolytique_type` | Addictolytique - type | DCI (`acamprosate`, `methadone`…) / `NA` |
 | `traitement_substitution` | Traitement de substitution | `True` / `False` / `NA` |
@@ -64,16 +67,11 @@ d'amorce pour de prochaines itérations :
 
 | Tag | Valeurs proposées | Exemple |
 |-----|-------------------|---------|
-| `mdma` | `True` / `False` / `NA` | `cr_syn_002` |
-| `lsd` | `True` / `False` / `NA` | `cr_syn_004` |
-| `amphetamines` | `True` / `False` / `NA` | `cr_syn_004` |
 | `grossesse` | `True` / `False` / `NA` | `cr_syn_003` |
 
-> Tags devenus actifs (extracteur écrit) : `benzodiazepines`/`benzodiazepine_type`
-> (cr_syn_001, cr_syn_005), `hypnotiques`/`hypnotique_type` (cr_syn_001,
-> cr_syn_006, cr_syn_007), `addictolytique`/`addictolytique_type` et
-> `traitement_substitution`/`traitement_substitution_type` (cr_syn_003,
-> cr_syn_008, cr_syn_009).
+> Tous les autres tags expérimentaux disposent désormais d'un extracteur :
+> `benzodiazepines`, `hypnotiques`, `addictolytique`, `traitement_substitution`
+> (avec leurs `*_type`), ainsi que `mdma`, `lsd` et `amphetamines`.
 
 Pour rendre l'un de ces tags « actif » : l'ajouter au catalogue
 (`cr_extract/modele.py`) puis écrire l'extracteur correspondant dans

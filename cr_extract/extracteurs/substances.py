@@ -37,6 +37,11 @@ _CBD = re.compile(r"(?<!\w)cbd(?!\w)")
 _COCAINE = re.compile(r"(?<!\w)(cocaine|coke|coca|crack)(?!\w)")
 _HEROINE = re.compile(r"(?<!\w)(heroine|hero)(?!\w)")
 _KETAMINE = re.compile(r"(?<!\w)(ketamine|keta)(?!\w)")
+_MDMA = re.compile(r"(?<!\w)(mdma|ecstasy|extasy|exta|molly)(?!\w)")
+_LSD = re.compile(r"(?<!\w)(lsd|buvard\w*|diethylamide)(?!\w)")
+_AMPHETAMINES = re.compile(
+    r"(?<!\w)(amphet\w*|speed|methamphetamine\w*|metamphetamine\w*|crystal\s*meth)(?!\w)"
+)
 
 # Voie d'administration de la cocaïne.
 _VOIE_NASALE = re.compile(r"(?<!\w)(nasal\w*|sniff\w*|prise\w* nasale\w*)(?!\w)")
@@ -182,6 +187,33 @@ class ExtracteurKetamine:
         if decision.valeur == "nie" and "incertain" in texte_normalise:
             return ResultatExtraction.absent()
         return _resultat_3_etats(decision)
+
+
+# --------------------------------------------------------------------------- #
+# MDMA (#), LSD (#), amphétamines (#) — 3 états (présence festive/récréative)
+# --------------------------------------------------------------------------- #
+@enregistrer("mdma")
+class ExtracteurMdma:
+    champ = CHAMPS_PAR_CLE["mdma"]
+
+    def extraire(self, texte_normalise: str, texte_origine: str) -> ResultatExtraction:
+        return _resultat_3_etats(evaluer_terme(texte_normalise, _MDMA))
+
+
+@enregistrer("lsd")
+class ExtracteurLsd:
+    champ = CHAMPS_PAR_CLE["lsd"]
+
+    def extraire(self, texte_normalise: str, texte_origine: str) -> ResultatExtraction:
+        return _resultat_3_etats(evaluer_terme(texte_normalise, _LSD))
+
+
+@enregistrer("amphetamines")
+class ExtracteurAmphetamines:
+    champ = CHAMPS_PAR_CLE["amphetamines"]
+
+    def extraire(self, texte_normalise: str, texte_origine: str) -> ResultatExtraction:
+        return _resultat_3_etats(evaluer_terme(texte_normalise, _AMPHETAMINES))
 
 
 # --------------------------------------------------------------------------- #
