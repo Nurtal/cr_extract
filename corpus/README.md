@@ -55,6 +55,7 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `suivi_hepato_gastro` | Suivi hépato-gastro-entérologie | `True` / `False` / `NA` |
 | `pancreatite` | Pancréatite | `True` / `False` / `NA` |
 | `cardiovasculaire` | Problèmes cardiovasculaires | `True` / `False` / `NA` |
+| `bpco` | BPCO | `True` / `False` / `NA` |
 | `addictolytique` | Addictolytique | `True` / `False` / `NA` |
 | `addictolytique_type` | Addictolytique - type | DCI (`acamprosate`, `methadone`…) / `NA` |
 | `traitement_substitution` | Traitement de substitution | `True` / `False` / `NA` |

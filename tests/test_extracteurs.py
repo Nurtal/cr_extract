@@ -321,6 +321,21 @@ def test_cardiovasculaire(texte, attendu):
     assert extraire_tout(texte)["cardiovasculaire"].valeur == attendu
 
 
+# --- BPCO ------------------------------------------------------------------ #
+@pytest.mark.parametrize("texte, attendu", [
+    ("BPCO sévère post-tabagique.", Etat.VRAI),
+    ("Bronchopneumopathie chronique obstructive stade II.", Etat.VRAI),
+    ("Bronchite chronique.", Etat.VRAI),
+    ("Emphysème pulmonaire.", Etat.VRAI),
+    ("EFR normales, pas de BPCO.", Etat.FAUX),
+    # « pneumopathie » (pneumonie aiguë) n'est pas une BPCO.
+    ("Admis pour une pneumopathie sur terrain précaire.", Etat.NA),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_bpco(texte, attendu):
+    assert extraire_tout(texte)["bpco"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

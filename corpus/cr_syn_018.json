@@ -1,0 +1,20 @@
+{
+  "id": "cr_syn_018",
+  "texte": "CONSULTATION PNEUMO. Homme 64 ans, marié, retraité. Pas de protection. BPCO sévère post-tabagique, oxygénothérapie. Tabagisme actif majeur. Alcool quotidien. Pas d'autre toxique. Pas d'antécédent de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "bpco": "True"
+  }
+}
