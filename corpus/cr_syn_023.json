@@ -1,0 +1,20 @@
+{
+  "id": "cr_syn_023",
+  "texte": "COMPTE RENDU - PSYCHIATRIE. Homme 56 ans, célibataire, sans emploi. Sous tutelle. Syndrome de Korsakoff sur alcoolodépendance ancienne, troubles cognitifs sévères. Tabac. Pas d'autre toxique. Antécédent de delirium tremens.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "tutelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "troubles_cognitifs": "True"
+  }
+}

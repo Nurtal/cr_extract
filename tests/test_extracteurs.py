@@ -369,6 +369,23 @@ def test_diabete(texte, attendu):
     assert extraire_tout(texte)["diabete"].valeur == attendu
 
 
+# --- Troubles cognitifs ---------------------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Troubles cognitifs sévères.", Etat.VRAI),
+    ("Syndrome de Korsakoff.", Etat.VRAI),
+    ("Démence débutante.", Etat.VRAI),
+    ("Troubles mnésiques.", Etat.VRAI),
+    ("Pas de troubles cognitifs.", Etat.FAUX),
+    ("Fonctions cognitives normales.", Etat.FAUX),
+    # « risques cognitifs » (information) / confusion aiguë : pas un trouble avéré.
+    ("Information sur les risques urologiques et cognitifs.", Etat.NA),
+    ("Syndrome confusionnel fébrile.", Etat.NA),
+    ("Consultation de suivi diabète.", Etat.NA),
+])
+def test_troubles_cognitifs(texte, attendu):
+    assert extraire_tout(texte)["troubles_cognitifs"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]
