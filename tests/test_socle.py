@@ -18,15 +18,25 @@ CSV_REFERENCE = Path(__file__).resolve().parent.parent / "comptes_rendus_medicau
 
 
 # --- Modèle ---------------------------------------------------------------- #
-def test_catalogue_contient_13_champs():
-    assert len(CHAMPS) == 13
+def test_catalogue_contient_les_13_champs_de_reference():
+    # Les 13 champs du CSV d'origine doivent rester présents (d'autres champs
+    # additionnels, hors CSV, peuvent s'y ajouter — p. ex. benzodiazépines).
+    cles = set(CHAMPS_PAR_CLE)
+    reference = {
+        "situation_conjugale", "situation_professionnelle", "sdf",
+        "protection_juridique", "sevrages_compliques", "alcool", "tabac",
+        "cannabis", "cocaine", "cocaine_voie", "heroine", "heroine_quantite",
+        "ketamine",
+    }
+    assert reference <= cles
+    assert len(CHAMPS) >= 13
 
 
 def test_index_coherents_avec_le_catalogue():
     assert set(CHAMPS_PAR_CLE.values()) == set(CHAMPS)
     assert set(CHAMPS_PAR_COLONNE.values()) == set(CHAMPS)
-    assert len(CHAMPS_PAR_CLE) == 13
-    assert len(CHAMPS_PAR_COLONNE) == 13
+    assert len(CHAMPS_PAR_CLE) == len(CHAMPS)
+    assert len(CHAMPS_PAR_COLONNE) == len(CHAMPS)
 
 
 def test_resultat_absent():

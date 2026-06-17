@@ -12,7 +12,9 @@ confiance** accompagne chaque décision, surtout utile pour les champs difficile
 Chaque décision est tracée par une **preuve** (l'empan de texte qui l'a
 déclenchée), pour l'audit clinique.
 
-## Les 13 champs extraits
+## Les champs extraits
+
+Les 13 champs de référence (alignés sur le CSV d'origine) :
 
 | # | Clé interne | Valeurs possibles |
 |---|-------------|-------------------|
@@ -29,6 +31,13 @@ déclenchée), pour l'audit clinique.
 | 11 | `heroine` | `True` / `False` |
 | 12 | `heroine_quantite` | nombre (g/j) / `NA` |
 | 13 | `ketamine` | `True` / `False` / `NA` |
+
+Champs additionnels (hors CSV d'origine) :
+
+| Clé interne | Valeurs possibles |
+|-------------|-------------------|
+| `benzodiazepines` | `True` / `False` / `NA` — usage/mésusage ; le contexte purement thérapeutique (« sevrage sous oxazépam ») n'est pas compté |
+| `benzodiazepine_type` | molécule en DCI (`zolpidem`, `alprazolam`, `diazepam`…) / `NA` |
 
 **Distinction clé** : `False` (négation explicite, « pas d'alcool ») ≠ `NA`
 (sujet non abordé dans le compte rendu). Voir [`ROADMAP.md`](ROADMAP.md) pour le
@@ -187,7 +196,7 @@ cr_extract/
 ├── negation.py        # brique transverse : négation + logique 3 états (True/False/NA)
 ├── extracteurs/       # un module par famille de champs (registre auto-enregistré)
 │   ├── conjugal.py · professionnel.py · logement.py
-│   ├── juridique.py · sevrage.py · substances.py
+│   ├── juridique.py · sevrage.py · substances.py · benzodiazepines.py
 ├── pipeline.py        # applique les 13 extracteurs à un texte
 ├── dataframe.py       # detecter() : enrichit un DataFrame polars/pandas
 ├── corpus.py          # corpus JSON éditable (un fichier par CR)
@@ -228,7 +237,7 @@ distribution des valeurs, puis la synthèse des tags **non couverts**.
 ## Tests & performance
 
 ```bash
-python -m pytest        # 108 tests
+python -m pytest        # 115 tests
 ```
 
 Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**

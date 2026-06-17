@@ -63,6 +63,13 @@ CHAMPS: tuple[Champ, ...] = (
     Champ("heroine", "Héroïne", TYPE_BOOLEEN),
     Champ("heroine_quantite", "Héroïne - quantité", TYPE_NUMERIQUE),
     Champ("ketamine", "Kétamine", TYPE_BOOLEEN),
+    # Champs additionnels (hors CSV de référence d'origine).
+    Champ("benzodiazepines", "Benzodiazépines", TYPE_BOOLEEN),
+    Champ("benzodiazepine_type", "Benzodiazépine - type", TYPE_CATEGORIEL,
+          ("alprazolam", "bromazepam", "clobazam", "clonazepam", "clorazepate",
+           "diazepam", "flunitrazepam", "lorazepam", "lormetazepam", "midazolam",
+           "nitrazepam", "oxazepam", "prazepam", "temazepam", "zolpidem",
+           "zopiclone")),
 )
 
 # Index par clé interne et par intitulé de colonne, pour les recherches rapides.

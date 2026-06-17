@@ -34,6 +34,7 @@ def extracteurs_disponibles() -> dict[str, Extracteur]:
 # Chargement des extracteurs concrets : l'import déclenche l'enregistrement via
 # le décorateur. Placé en fin de module pour que ``enregistrer`` existe déjà.
 from cr_extract.extracteurs import (  # noqa: E402,F401
+    benzodiazepines,
     conjugal,
     juridique,
     logement,

@@ -158,6 +158,23 @@ def test_ketamine(texte, attendu):
     assert val(texte, "ketamine") == attendu
 
 
+# --- Benzodiazépines + type ------------------------------------------------ #
+@pytest.mark.parametrize("texte, presence, type_", [
+    ("Dépendance aux benzodiazépines (zolpidem quotidien).", Etat.VRAI, "zolpidem"),
+    ("Usage détourné de Lexomil.", Etat.VRAI, "bromazepam"),
+    ("Mésusage de Xanax au long cours.", Etat.VRAI, "alprazolam"),
+    ("Pas de benzodiazépines.", Etat.FAUX, "NA"),
+    # Contexte thérapeutique : prescription de sevrage, pas une consommation.
+    ("Sevrage sous oxazépam dégressif, bonne tolérance.", Etat.NA, "NA"),
+    ("Traitement par diazépam en couverture du sevrage.", Etat.NA, "NA"),
+    ("Consultation de suivi diabète.", Etat.NA, "NA"),
+])
+def test_benzodiazepines(texte, presence, type_):
+    r = extraire_tout(texte)
+    assert r["benzodiazepines"].valeur == presence
+    assert r["benzodiazepine_type"].valeur == type_
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

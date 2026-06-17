@@ -29,14 +29,15 @@ def test_tags_non_couverts_sont_hors_catalogue():
 
 
 def test_couverture_detecte_un_tag_experimental():
+    # 'tag_fictif' n'a aucun extracteur : il doit ressortir comme non couvert.
     crs = [
-        CompteRendu(texte="x", gold={"alcool": "True", "benzodiazepines": "True"}, index=0),
+        CompteRendu(texte="x", gold={"alcool": "True", "tag_fictif": "True"}, index=0),
     ]
     couverture = couverture_tags(crs)
     assert couverture["alcool"].couvert is True
-    assert couverture["benzodiazepines"].couvert is False
-    assert couverture["benzodiazepines"].occurrences == 1
-    assert "benzodiazepines" in tags_non_couverts(couverture)
+    assert couverture["tag_fictif"].couvert is False
+    assert couverture["tag_fictif"].occurrences == 1
+    assert "tag_fictif" in tags_non_couverts(couverture)
     assert "alcool" not in tags_non_couverts(couverture)
 
 
@@ -55,5 +56,5 @@ def test_rapport_couverture_liste_les_tags_experimentaux():
     rapport = rapport_couverture(couverture_tags(charger_corpus(CORPUS)))
     assert "Couverture des tags" in rapport
     # Les tags expérimentaux du corpus synthétique apparaissent comme non couverts.
-    for tag in ("benzodiazepines", "mdma", "grossesse"):
+    for tag in ("mdma", "grossesse", "lsd"):
         assert tag in rapport

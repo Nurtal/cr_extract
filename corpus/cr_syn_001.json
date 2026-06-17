@@ -15,6 +15,7 @@
     "heroine": "False",
     "heroine_quantite": "NA",
     "ketamine": "NA",
-    "benzodiazepines": "True"
+    "benzodiazepines": "True",
+    "benzodiazepine_type": "zolpidem"
   }
 }
