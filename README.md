@@ -34,13 +34,31 @@ détail des champs et des phases.
 
 ## Installation
 
-Le projet s'installe comme un package Python et s'utilise depuis n'importe quel
-autre code :
+Le projet s'installe comme un package Python (sans passer par PyPI) et s'utilise
+ensuite depuis n'importe quel autre code : `import cr_extract` fonctionne depuis
+n'importe quel dossier, et la commande `cr-extract` est ajoutée au PATH.
+
+### Depuis un clone du dépôt
 
 ```bash
-pip install .                 # depuis une copie du dépôt
+git clone git@github.com:Nurtal/cr_extract.git
+cd cr_extract
+
+pip install .                 # installation classique (copie figée)
 pip install ".[pandas]"       # + support des DataFrames pandas en entrée
-pip install ".[dev]"          # + pytest et pandas (développement)
+pip install -e ".[dev]"       # mode éditable + pytest et pandas (développement)
+```
+
+Le mode **éditable** (`-e`) fait pointer le package vers les sources : les
+modifications du code sont prises en compte sans réinstaller — pratique pour
+itérer en local.
+
+### Directement depuis Git (sans cloner)
+
+```bash
+pip install "git+ssh://git@github.com/Nurtal/cr_extract.git"
+# ou une version/tag précis :
+pip install "git+ssh://git@github.com/Nurtal/cr_extract.git@v0.2.1"
 ```
 
 Seule dépendance d'exécution : `polars` (installée automatiquement). `pandas`
