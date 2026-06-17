@@ -39,6 +39,7 @@ from cr_extract.extracteurs import (  # noqa: E402,F401
     bpco,
     cardiovasculaire,
     conjugal,
+    diabete,
     emphyseme,
     grossesse,
     hepatopathie,

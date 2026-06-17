@@ -354,6 +354,21 @@ def test_emphyseme_recoupe_bpco():
     assert r["bpco"].valeur == Etat.VRAI
 
 
+# --- Diabète --------------------------------------------------------------- #
+@pytest.mark.parametrize("texte, attendu", [
+    ("Diabète de type 2 déséquilibré.", Etat.VRAI),
+    ("Patient diabétique insulinodépendant.", Etat.VRAI),
+    ("Consultation de suivi diabète.", Etat.VRAI),
+    ("Bilan métabolique : pas de diabète.", Etat.FAUX),
+    ("Patient non diabétique.", Etat.FAUX),
+    # Une glycémie isolée n'est pas un diabète.
+    ("Glycémie à 1.1 g/L.", Etat.NA),
+    ("Consultation de suivi hypertension.", Etat.NA),
+])
+def test_diabete(texte, attendu):
+    assert extraire_tout(texte)["diabete"].valeur == attendu
+
+
 # --- Traçabilité : confiance et preuve ------------------------------------- #
 def test_preuve_et_confiance_renseignees():
     r = extraire_tout("Antécédent de delirium tremens lors d'un sevrage.")["sevrages_compliques"]

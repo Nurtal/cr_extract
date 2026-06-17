@@ -57,6 +57,7 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `cardiovasculaire` | Problèmes cardiovasculaires | `True` / `False` / `NA` |
 | `bpco` | BPCO | `True` / `False` / `NA` |
 | `emphyseme` | Emphysème | `True` / `False` / `NA` |
+| `diabete` | Diabète | `True` / `False` / `NA` |
 | `addictolytique` | Addictolytique | `True` / `False` / `NA` |
 | `addictolytique_type` | Addictolytique - type | DCI (`acamprosate`, `methadone`…) / `NA` |
 | `traitement_substitution` | Traitement de substitution | `True` / `False` / `NA` |
