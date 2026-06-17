@@ -48,6 +48,9 @@ n'est requis que si vous passez un DataFrame pandas en entrée.
 
 ## Guide d'utilisation
 
+> 💡 Un exemple complet et exécutable est fourni dans
+> [`example.py`](example.py) (`python example.py`).
+
 ### 1. Extraire — produire un CSV structuré
 
 ```bash
@@ -125,6 +128,9 @@ print(resultat)
 Items disponibles : `situation_conjugale`, `situation_professionnelle`, `sdf`,
 `protection_juridique`, `sevrages_compliques`, `alcool`, `tabac`, `cannabis`,
 `cocaine`, `cocaine_voie`, `heroine`, `heroine_quantite`, `ketamine`.
+
+Voir [`example.py`](example.py) pour un script complet (détection sur DataFrame
+puis filtrage du résultat).
 
 ### 4. Extraction unitaire en Python
 
