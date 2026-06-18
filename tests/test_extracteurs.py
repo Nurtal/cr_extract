@@ -497,3 +497,58 @@ def test_preuve_et_confiance_renseignees():
     assert r.valeur == Etat.VRAI
     assert 0.0 < r.confiance <= 1.0
     assert r.preuve and "delirium" in r.preuve
+
+
+# --------------------------------------------------------------------------- #
+# Pièges « tricky » (corpus synthétique cr_syn_050+) : arbre de décision,
+# litote, étiologie, entourage, voie niée, abréviations, traitement différé.
+# --------------------------------------------------------------------------- #
+@pytest.mark.parametrize("texte, cle, attendu", [
+    # Entourage : « père alcoolique » ne concerne pas le patient.
+    ("Père alcoolique, mais la patiente ne touche pas à l'alcool.", "alcool", Etat.FAUX),
+    ("Mère diabétique. Le patient nie toute consommation d'alcool.", "alcool", Etat.FAUX),
+    # Litote / double négation : « n'est pas sans prendre un verre » -> usage.
+    ("N'est pas sans prendre un verre de vin de temps à autre.", "alcool", Etat.VRAI),
+    # Nouveaux termes alcool.
+    ("Consomme du vin quotidiennement.", "alcool", Etat.VRAI),
+    ("Quelques bières le week-end.", "alcool", Etat.VRAI),
+    # Étiologie + arrêt : « cirrhose OH … OH stoppé » -> arrêt actuel.
+    ("Cirrhose OH Child B. OH stoppé depuis l'hospitalisation.", "alcool", Etat.FAUX),
+    # Étiologie seule (sans arrêt) -> usage attesté.
+    ("Cirrhose OH avec varices œsophagiennes.", "alcool", Etat.VRAI),
+    ("Cirrhose OH. OH quotidien sévère.", "alcool", Etat.VRAI),
+    # Tabac : ex-fumeuse -> False ; entourage neutre.
+    ("Ex-fumeuse, sevrée depuis 3 ans.", "tabac", Etat.FAUX),
+])
+def test_pieges_consommation(texte, cle, attendu):
+    assert val(texte, cle) == attendu
+
+
+def test_voie_niee_donne_na():
+    # Crack fumé : voie explicitement niée -> pas de voie retenue.
+    t = "Conso de crack pluriquotidienne, pas par voie nasale ni injectée."
+    assert val(t, "cocaine") == Etat.VRAI
+    assert val(t, "cocaine_voie") == "NA"
+
+
+def test_heroine_en_relais_non_actuelle():
+    t = ("Sous Suboxone (buprénorphine/naloxone) en relais de l'héro. "
+         "Abstinent héro et coke.")
+    assert val(t, "heroine") == Etat.FAUX
+
+
+@pytest.mark.parametrize("texte, cle, attendu", [
+    ("En arrêt (chauffeur PL).", "situation_professionnelle", "inactif"),
+    ("EDC caractérisé, sans argument pour une bipolarité.", "depression", Etat.VRAI),
+    ("EDC caractérisé, sans argument pour une bipolarité.", "troubles_bipolaires", Etat.FAUX),
+    ("TB type II stabilisé sous lithium.", "troubles_bipolaires", Etat.VRAI),
+])
+def test_abreviations(texte, cle, attendu):
+    assert val(texte, cle) == attendu
+
+
+def test_addictolytique_differe_est_na():
+    # « envisage du Champix après l'accouchement » : traitement non en cours.
+    t = "Tabac poursuivi ; envisage du Champix une fois l'accouchement passé."
+    assert val(t, "addictolytique") == "NA"
+    assert val(t, "addictolytique_type") == "NA"

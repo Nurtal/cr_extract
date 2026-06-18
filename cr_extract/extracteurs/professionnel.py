@@ -21,7 +21,8 @@ from cr_extract.extracteurs import enregistrer
 
 _INACTIF = re.compile(
     r"(?<!\w)(sans emploi|sans activite|pas d'activite|pas d'emploi|sans profession|"
-    r"retraite\w*|invalidite|en invalidite|\baah\b|arret de travail|au foyer|"
+    r"retraite\w*|invalidite|en invalidite|\baah\b|arret de travail|"
+    r"en arret\b|arret maladie|arret longue duree|au foyer|"
     r"mere au foyer|pere au foyer|chomage|chomeur\w*|inactif|inactive|inactivite|"
     r"ehpad|interrompu son cursus|descolaris\w*)"
 )

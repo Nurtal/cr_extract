@@ -6,9 +6,10 @@
 - ``NA``    : non abordé.
 
 On évite « manie » au sens courant (manie = habitude/lubie) et l'abréviation
-« TB » (tuberculose) ; on s'appuie sur les entités explicitement bipolaires /
-maniaques. La « décompensation thymique » (humeur, non spécifiquement bipolaire)
-n'est pas retenue.
+« TB » *seule* (tuberculose) : « TB » n'est retenu que typé (« TB type II »,
+« TB I », « TB bipolaire »). On s'appuie sinon sur les entités explicitement
+bipolaires / maniaques. La « décompensation thymique » (humeur, non
+spécifiquement bipolaire) n'est pas retenue.
 """
 
 from __future__ import annotations
@@ -23,7 +24,10 @@ _BIPOLAIRE = re.compile(
     r"(?<!\w)("
     r"bipolair\w*|bipolarit\w*|maniaque\w*|maniaco-?depress\w*|hypomani\w*|"
     r"episode maniaque|acces maniaque|etat maniaque|phase maniaque|"
-    r"cyclothym\w*|\bpmd\b"
+    r"cyclothym\w*|\bpmd\b|"
+    # « TB » seul = tuberculose ; on ne l'admet qu'explicitement typé
+    # (« TB type II », « TB I », « TB bipolaire »).
+    r"tb type\b|tb bipolaire\b|tb i{1,2}\b|tb [12]\b"
     r")(?!\w)"
 )
 

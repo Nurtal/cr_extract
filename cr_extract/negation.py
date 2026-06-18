@@ -53,11 +53,26 @@ _NEG_AUTOUR = (
     "sevree",
     "arrete",
     "arretee",
+    "stoppe",         # « OH stoppé », « tabac stoppé » : arrêt de consommation
+    "stoppee",
+    "relais",         # « en relais de l'héroïne » : produit relayé, plus consommé
     "passe",          # « par le passé », « rapportée par le passé »
     "non actif",
     "non actuel",
     "non actuelle",
     "revolu",
+)
+
+# Entourage / antécédents familiaux : une mention rattachée à un proche ne
+# concerne pas le patient (« père alcoolique », « frère toxicomane »,
+# « antécédents familiaux »). Recherchés *avant* le terme, dans la proposition.
+_ENTOURAGE = (
+    "pere", "mere", "parent", "parents", "parental", "parentale",
+    "maternel", "maternelle", "paternel", "paternelle",
+    "frere", "soeur", "oncle", "tante", "cousin", "cousine",
+    "fils", "fille", "conjoint", "conjointe", "epoux", "epouse", "mari",
+    "famille", "familial", "familiale", "familiaux",
+    "entourage", "grand-pere", "grand-mere",
 )
 # Note : « ancien·ne » ne figure pas ici. Placé *avant* le terme (« ancien
 # fumeur ») il nie (cf. _NEG_AVANT) ; placé *après* (« alcoolodépendance
@@ -110,6 +125,11 @@ def est_nie(texte_normalise: str, debut: int, fin: int) -> bool:
     avant = _fenetre_avant(texte_normalise, debut)
     apres = _fenetre_apres(texte_normalise, fin)
 
+    # 0. Litote (double négation) : « n'est pas sans prendre un verre » affirme.
+    # Le « pas … sans » s'annule : on ne nie pas. Traité avant tout marqueur.
+    if re.search(r"(?<!\w)pas\s+sans(?!\w)", avant):
+        return False
+
     # 1. Négation explicite avant le terme.
     if _mot_present(avant, _NEG_AVANT):
         return True
@@ -128,6 +148,12 @@ def est_nie(texte_normalise: str, debut: int, fin: int) -> bool:
         return True
 
     return False
+
+
+def est_entourage(texte_normalise: str, debut: int) -> bool:
+    """Vrai si le terme en ``debut`` se rattache à un proche / aux antécédents
+    familiaux (« père alcoolique »), et ne concerne donc pas le patient."""
+    return _mot_present(_fenetre_avant(texte_normalise, debut), _ENTOURAGE)
 
 
 # Négation *explicite* (ou arrêt de traitement) : variante stricte pour les

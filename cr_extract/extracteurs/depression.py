@@ -21,7 +21,9 @@ from cr_extract.extracteurs import enregistrer
 
 # « depress\w* » couvre dépression / dépressif / dépressive, y compris dans
 # « anxio-dépressif » ; « antidépresseur » est exclu (préfixe « anti »).
-_DEPRESSION = re.compile(r"(?<!\w)(depress\w*|anxio-depress\w*|\bedm\b)(?!\w)")
+# « EDM » (épisode dépressif majeur) et « EDC » (épisode dépressif caractérisé,
+# terminologie actuelle) sont les abréviations consacrées.
+_DEPRESSION = re.compile(r"(?<!\w)(depress\w*|anxio-depress\w*|\bedm\b|\bedc\b)(?!\w)")
 
 
 @enregistrer("depression")

@@ -53,6 +53,21 @@ _MOLECULES_COMPILES = tuple(
     (dci, re.compile(rf"(?<!\w)({motif})(?!\w)")) for dci, motif in _MOLECULES
 )
 
+# Traitement seulement *évoqué* / différé / conditionnel : il n'est pas en cours
+# (« envisage du Champix après l'accouchement », « à discuter », « si échec »).
+# Recherché juste avant la molécule.
+_HYPOTHETIQUE = re.compile(
+    r"(?<!\w)(envisag\w*|a envisager|discut\w*|a discuter|propos\w*|projet\w*|"
+    r"si echec|si besoin|en cas de|ulterieur\w*|a distance|une fois|"
+    r"apres l'accouchement|a prevoir|a introduire|sera (?:introduit|propose)\w*)"
+)
+
+
+def _est_hypothetique(texte_normalise: str, debut: int) -> bool:
+    """Vrai si la molécule en ``debut`` n'est qu'envisagée / différée."""
+    return bool(_HYPOTHETIQUE.search(texte_normalise[max(0, debut - 40):debut]))
+
+
 def _presence(texte_normalise: str):
     """``("present", empan)`` / ``("nie", empan)`` / ``(None, None)``.
 
@@ -62,6 +77,8 @@ def _presence(texte_normalise: str):
     """
     niee = None
     for m in _ADDICTOLYTIQUE.finditer(texte_normalise):
+        if _est_hypothetique(texte_normalise, m.start()):
+            continue  # traitement seulement envisagé : ni présent ni nié
         if est_nie_explicite(texte_normalise, m.start(), m.end()):
             niee = niee or m
             continue
@@ -95,7 +112,11 @@ class ExtracteurAddictolytiqueType:
         # Première molécule nommée et affirmée.
         for dci, motif in _MOLECULES_COMPILES:
             m = motif.search(texte_normalise)
-            if m and not est_nie_explicite(texte_normalise, m.start(), m.end()):
+            if (
+                m
+                and not _est_hypothetique(texte_normalise, m.start())
+                and not est_nie_explicite(texte_normalise, m.start(), m.end())
+            ):
                 return ResultatExtraction(dci, 0.9, m.group(0))
         # Mention générique (« traitement de substitution ») sans molécule.
         return ResultatExtraction.absent()
