@@ -1,0 +1,22 @@
+{
+  "id": "cr_syn_057",
+  "texte": "CS médecine générale. H 55a, marié, en activité (artisan). Pas de protection. Nie toute consommation d'alcool, de tabac et de stupéfiants. Pas de syndrome dépressif ni de trouble anxieux. Pas de diabète connu. Pas d'ATCD de sevrage. Examen clinique normal.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "depression": "False",
+    "troubles_anxieux": "False",
+    "diabete": "False"
+  }
+}

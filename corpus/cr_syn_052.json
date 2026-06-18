@@ -1,0 +1,19 @@
+{
+  "id": "cr_syn_052",
+  "texte": "URG. H 36a, célib, SDF, sans emploi. Pas de protection. Conso de crack (cocaïne base fumée) pluriquotidienne, pas par voie nasale ni injectée. Pas d'héro. OH ++. Tabac. Pas de cannabis. ATCD de sevrage compliqué (crise comitiale).",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "True",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

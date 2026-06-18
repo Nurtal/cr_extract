@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_060",
+  "texte": "CS ADDICTO. F 49a, en couple, en activité (cadre). Pas de protection. Maintien de l'abstinence OH sous baclofène à dose élevée. Tabac actif. Pas de stup. ATCD de sevrage compliqué (DT en 2019).",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "addictolytique": "True",
+    "addictolytique_type": "baclofene"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "cr_syn_054",
+  "texte": "COURRIER CSAPA. H 42a, célib, sans emploi. Pas de protection. Sous méthadone 60 mg/j (TSO). Conso résiduelle d'héro sniffée environ 0,3 g/j les jours difficiles. Coke nasale parfois. Tabac. Pas d'OH. Pas de cannabis. ATCD de sevrage non compliqué.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "True",
+    "heroine_quantite": "0.3",
+    "ketamine": "NA",
+    "addictolytique": "True",
+    "addictolytique_type": "methadone",
+    "traitement_substitution": "True",
+    "traitement_substitution_type": "methadone"
+  }
+}

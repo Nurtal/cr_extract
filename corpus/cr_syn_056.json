@@ -1,0 +1,23 @@
+{
+  "id": "cr_syn_056",
+  "texte": "OBS PSY. F 47a, célib, en invalidité. Sous curatelle renforcée. EDC caractérisé, sans aucun argument pour une bipolarité. Attaques de panique récurrentes. Sous ISRS et anxiolytique. OH en hausse. Tabac. Pas de drogue. Pas d'ATCD de sevrage.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "depression": "True",
+    "troubles_anxieux": "True",
+    "troubles_bipolaires": "False",
+    "psychotropes": "True"
+  }
+}

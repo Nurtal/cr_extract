@@ -1,0 +1,19 @@
+{
+  "id": "cr_syn_059",
+  "texte": "URG. H 28a, célib, en activité (barman). Pas de protection. Intoxication à la kéta (usage récréatif en club) associée à l'alcool, K-hole transitoire. Tabac. Cannabis. Pas d'opiacés ni coke. Pas d'ATCD de sevrage. Surveillance simple.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "True"
+  }
+}

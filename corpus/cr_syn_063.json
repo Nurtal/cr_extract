@@ -1,0 +1,25 @@
+{
+  "id": "cr_syn_063",
+  "texte": "COURRIER. H 50a, divorcé, en invalidité. Sous tutelle. TB type II stabilisé sous lithium + Suboxone (buprénorphine/naloxone) en relais de l'héro. Abstinent héro et coke. OH occasionnel. Tabac. Cannabis. ATCD de sevrage compliqué.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "tutelle",
+    "sevrages_compliques": "True",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "troubles_bipolaires": "True",
+    "psychotropes": "True",
+    "addictolytique": "True",
+    "addictolytique_type": "buprenorphine",
+    "traitement_substitution": "True",
+    "traitement_substitution_type": "buprenorphine"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "cr_syn_051",
+  "texte": "CS. H 24a, célib, en activité (livreur). Pas de protection. Consomme des fleurs de CBD en infusion (bien-être), affirme ne plus toucher au THC depuis 6 mois. OH festif le week-end. Tabac roulé. Pas d'autre stup. Pas d'ATCD de sevrage.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "CBD",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA"
+  }
+}

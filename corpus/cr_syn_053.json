@@ -1,0 +1,20 @@
+{
+  "id": "cr_syn_053",
+  "texte": "CS. F 34a, en couple, en activité (sage-femme). Pas de protection. Ex-fumeuse, sevrée depuis 3 ans sans substitut. Désir de grossesse, contraception arrêtée. N'est pas sans prendre un verre de vin de temps à autre. Pas de stup. Pas d'ATCD de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "True",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "grossesse": "NA"
+  }
+}

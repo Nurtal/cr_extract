@@ -1,0 +1,22 @@
+{
+  "id": "cr_syn_065",
+  "texte": "CS SOMMEIL. F 44a, en couple, en activité (professeure). Pas de protection. Insomnie d'endormissement. Auto-médication par Donormyl (doxylamine) quasi tous les soirs, parfois de la mélatonine. Anxiété diurne marquée. Ne consomme plus d'alcool depuis 2 ans. Non fumeuse. Pas de stup. Pas d'ATCD de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "False",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "hypnotiques": "True",
+    "hypnotique_type": "doxylamine",
+    "troubles_anxieux": "True"
+  }
+}

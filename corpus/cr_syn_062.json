@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_062",
+  "texte": "CS. F 30a, en couple, en activité (coiffeuse). Pas de protection. Enceinte de 8 SA. Tabac poursuivi malgré la grossesse (~5 cig/j), envisage du Champix une fois l'accouchement passé. Pas d'OH depuis le début de grossesse. Pas de stup. Pas d'ATCD de sevrage.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "grossesse": "True",
+    "addictolytique": "NA"
+  }
+}

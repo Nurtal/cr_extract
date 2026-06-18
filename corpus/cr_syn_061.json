@@ -1,0 +1,22 @@
+{
+  "id": "cr_syn_061",
+  "texte": "CR. H 45a, célib, sans emploi, à la rue depuis plusieurs mois. Pas de protection. Sous Espéral (disulfirame), abstinent OH. Coke en IV, partage de matériel. VHC+ traité. Tabac. Pas d'héro. Pas de cannabis. ATCD de sevrage compliqué.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "True",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "True",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "addictolytique": "True",
+    "addictolytique_type": "disulfirame",
+    "hepatopathie": "True"
+  }
+}
