@@ -68,9 +68,20 @@ détail des champs et des phases.
 
 ## Installation
 
-Le projet s'installe comme un package Python (sans passer par PyPI) et s'utilise
-ensuite depuis n'importe quel autre code : `import cr_extract` fonctionne depuis
-n'importe quel dossier, et la commande `cr-extract` est ajoutée au PATH.
+Le projet est distribué sur PyPI sous le nom **`crh-parser`** (compte rendu
+hospitalier parseur). Le **module importé** reste `cr_extract` : `import
+cr_extract` fonctionne depuis n'importe quel dossier, et la commande
+`cr-extract` est ajoutée au PATH.
+
+### Depuis PyPI
+
+```bash
+pip install crh-parser              # installation standard
+pip install "crh-parser[pandas]"    # + support des DataFrames pandas en entrée
+```
+
+Seule dépendance d'exécution : `polars` (installée automatiquement). `pandas`
+n'est requis que si vous passez un DataFrame pandas en entrée.
 
 ### Depuis un clone du dépôt
 

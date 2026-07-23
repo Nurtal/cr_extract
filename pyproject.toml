@@ -1,25 +1,50 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
-name = "cr-extract"
-version = "0.2.1"
-description = "Extraction d'informations structurées de comptes rendus médicaux par regex"
+name = "crh-parser"
+dynamic = ["version"]
+description = "Extraction d'informations structurées de comptes rendus hospitaliers par regex"
 readme = "README.md"
 requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Nurtal" }]
-keywords = ["nlp", "regex", "addictologie", "extraction", "comptes-rendus"]
+keywords = ["nlp", "regex", "addictologie", "extraction", "comptes-rendus", "medical"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: French",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Text Processing :: Linguistic",
+]
 dependencies = [
     "polars>=0.20",
 ]
 
 [project.optional-dependencies]
 pandas = ["pandas>=1.5"]
-dev = ["pytest>=8.0", "pandas>=1.5"]
+dev = ["pytest>=8.0", "pandas>=1.5", "build>=1.0", "twine>=5.0"]
+
+[project.urls]
+Homepage = "https://github.com/Nurtal/cr_extract"
+Repository = "https://github.com/Nurtal/cr_extract"
+Issues = "https://github.com/Nurtal/cr_extract/issues"
 
 [project.scripts]
 cr-extract = "cr_extract.cli:main"
+
+[tool.hatch.version]
+path = "cr_extract/__init__.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["cr_extract"]
@@ -31,4 +56,8 @@ include = [
     "/conftest.py",
     "/README.md",
     "/ROADMAP.md",
+    "/LICENSE",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
