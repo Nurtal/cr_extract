@@ -1,0 +1,25 @@
+{
+  "id": "cr_syn_077",
+  "texte": "SUIVI CSAPA. H 47a, célibataire, sans emploi. Curatelle simple. Cocaïne base fumée quotidienne. Méthadone 60 mg/j depuis 2019. Héroïne stoppée. Tabac 20 cig/j. Pas d'alcool. Pas de cannabis.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "curatelle",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "crack": "True",
+    "crack_voie": "fumee",
+    "traitement_substitution": "True",
+    "traitement_substitution_type": "methadone",
+    "addictolytique": "True",
+    "addictolytique_type": "methadone"
+  }
+}

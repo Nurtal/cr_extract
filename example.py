@@ -18,6 +18,8 @@ COMPTES_RENDUS = [
     "Homme SDF, célibataire. Héroïne en intraveineuse, environ 0.5 g/jour. "
     "Pas de cannabis. Tabac.",
     "Consultation de suivi diabète. Aucune consommation, patient stable.",
+    "Sans emploi, hébergé. Crack fumé à la pipe, plusieurs prises par jour. "
+    "Pas d'héroïne.",
 ]
 
 
@@ -26,7 +28,7 @@ def exemple_dataframe() -> None:
     df = pl.DataFrame({"TEXTE": COMPTES_RENDUS})
 
     # On choisit les items à détecter (cf. README pour la liste complète).
-    items = ["alcool", "tabac", "cocaine", "cocaine_voie", "heroine",
+    items = ["alcool", "tabac", "cocaine", "crack", "crack_voie", "heroine",
              "heroine_quantite", "sdf", "situation_conjugale"]
 
     resultat = detecter(df, items=items)

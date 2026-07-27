@@ -1,14 +1,18 @@
 """Extracteurs des champs « substances ».
 
 Couvre : alcool (#6), tabac (#7), cannabis/THC/CBD (#8), cocaïne (#9),
-cocaïne – voie (#10), héroïne (#11), héroïne – quantité (#12), kétamine (#13).
+cocaïne – voie (#10), héroïne (#11), héroïne – quantité (#12), kétamine (#13),
+ainsi que les champs additionnels crack, crack – voie, MDMA, LSD, amphétamines.
 
 Deux familles de comportement selon le catalogue :
 
-- **booléen 3 états** (alcool, tabac, kétamine) : ``True`` / ``False`` / ``NA`` ;
+- **booléen 3 états** (alcool, tabac, kétamine, crack) : ``True`` / ``False`` / ``NA`` ;
 - **booléen 2 états** (cocaïne, héroïne) : ``True`` / ``False`` — jamais ``NA``,
   l'absence de mention valant négation (cf. vérité terrain) ;
-- **catégoriel** (cannabis, cocaïne-voie) : une sous-catégorie ou ``NA``.
+- **catégoriel** (cannabis, cocaïne-voie, crack-voie) : une sous-catégorie ou ``NA``.
+
+Le crack est de la cocaïne base : il constitue un champ distinct (marqueurs,
+voie et profil cliniques propres) mais **implique** ``cocaine`` à ``True``.
 """
 
 from __future__ import annotations
@@ -22,6 +26,7 @@ from cr_extract.modele import (
 )
 from cr_extract.negation import (
     Decision3Etats,
+    bornes_proposition,
     est_entourage,
     evaluer_terme,
     trouver_occurrences,
@@ -48,6 +53,13 @@ _CANNABIS = re.compile(r"(?<!\w)(cannabis|joint\w*|beuh|herbe|shit|weed|ganja)(?
 _THC = re.compile(r"(?<!\w)thc(?!\w)")
 _CBD = re.compile(r"(?<!\w)cbd(?!\w)")
 _COCAINE = re.compile(r"(?<!\w)(cocaine|coke|coca|crack)(?!\w)")
+# Crack (cocaïne base) : terme propre + formes et argot désignant la même chose.
+# « caillou » / « galette » / « free base » nomment le produit, pas la voie : ils
+# n'entraînent donc pas à eux seuls de voie d'administration.
+_CRACK = re.compile(
+    r"(?<!\w)(crack|free\s?base|freebase|caillou\w*|galette\w*|"
+    r"(?:cocaine|coke)\s+(?:base\w*|fumee\w*))(?!\w)"
+)
 _HEROINE = re.compile(r"(?<!\w)(heroine|hero)(?!\w)")
 _KETAMINE = re.compile(r"(?<!\w)(ketamine|keta)(?!\w)")
 _MDMA = re.compile(r"(?<!\w)(mdma|ecstasy|extasy|exta|molly)(?!\w)")
@@ -59,6 +71,18 @@ _AMPHETAMINES = re.compile(
 # Voie d'administration de la cocaïne.
 _VOIE_NASALE = re.compile(r"(?<!\w)(nasal\w*|sniff\w*|prise\w* nasale\w*)(?!\w)")
 _VOIE_IV = re.compile(r"(?<!\w)(intraveineu\w*|\biv\b|inject\w*|injectabl\w*)(?!\w)")
+# Voie fumée (spécifique au crack) : « fumé », « inhalé », « pipe », « basage ».
+# La lookahead écarte « fumeur »/« fumeuse », qui relèvent du tabac et non d'un
+# mode de prise du crack (« Tabagisme : fumeur, 20 cig/j, et crack sniffé »).
+_VOIE_FUMEE = re.compile(r"(?<!\w)(fum(?!eur|euse)\w*|inhal\w*|pipes?|basag\w*|vapo\w*)(?!\w)")
+
+# Voies candidates pour le crack, dans l'ordre de départage à distance égale.
+_VOIES_CRACK = ((_VOIE_FUMEE, "fumee"), (_VOIE_NASALE, "nasale"), (_VOIE_IV, "intraveineuse"))
+
+# Empan de recherche de la voie autour d'une mention de crack. Plus large que les
+# fenêtres de négation : la voie est souvent rejetée en fin de proposition
+# (« crack pluriquotidien, sniffé le plus souvent »).
+FENETRE_VOIE = 70
 
 # Quantité d'héroïne : « 0.5 g/j », « ~0.3g », « env 1g/j », « 1.2 g/jour ».
 _QUANTITE = re.compile(
@@ -178,12 +202,26 @@ class ExtracteurCannabis:
 # --------------------------------------------------------------------------- #
 # Cocaïne (#9) — 2 états — et voie d'administration (#10) — catégoriel
 # --------------------------------------------------------------------------- #
+def _decision_cocaine(texte_normalise: str) -> Decision3Etats:
+    """Décision « cocaïne » toutes formes confondues.
+
+    Le crack étant de la cocaïne base, ses marqueurs propres (« caillou »,
+    « free base ») valent mention de cocaïne : un crack affirmé sans le mot
+    « cocaïne » doit donner True, jamais False.
+    """
+    for motif in (_COCAINE, _CRACK):
+        decision = _decision_consommation(texte_normalise, motif)
+        if decision.valeur == "present":
+            return decision
+    return _decision_consommation(texte_normalise, _COCAINE)
+
+
 @enregistrer("cocaine")
 class ExtracteurCocaine:
     champ = CHAMPS_PAR_CLE["cocaine"]
 
     def extraire(self, texte_normalise: str, texte_origine: str) -> ResultatExtraction:
-        return _resultat_2_etats(evaluer_terme(texte_normalise, _COCAINE))
+        return _resultat_2_etats(_decision_cocaine(texte_normalise))
 
 
 @enregistrer("cocaine_voie")
@@ -192,9 +230,69 @@ class ExtracteurCocaineVoie:
 
     def extraire(self, texte_normalise: str, texte_origine: str) -> ResultatExtraction:
         # La voie n'a de sens que si la cocaïne est consommée.
-        if evaluer_terme(texte_normalise, _COCAINE).valeur != "present":
+        if _decision_cocaine(texte_normalise).valeur != "present":
             return ResultatExtraction.absent()
         return _voie_administration(texte_normalise, _COCAINE)
+
+
+# --------------------------------------------------------------------------- #
+# Crack — 3 états — et voie d'administration — catégoriel
+# --------------------------------------------------------------------------- #
+@enregistrer("crack")
+class ExtracteurCrack:
+    champ = CHAMPS_PAR_CLE["crack"]
+
+    def extraire(self, texte_normalise: str, texte_origine: str) -> ResultatExtraction:
+        # Champ additionnel : 3 états (contrairement à ``cocaine``, où l'absence
+        # de mention vaut False par convention de la vérité terrain d'origine).
+        return _resultat_3_etats(_decision_consommation(texte_normalise, _CRACK))
+
+
+@enregistrer("crack_voie")
+class ExtracteurCrackVoie:
+    champ = CHAMPS_PAR_CLE["crack_voie"]
+
+    def extraire(self, texte_normalise: str, texte_origine: str) -> ResultatExtraction:
+        # La voie n'a de sens que si le crack est consommé.
+        if _decision_consommation(texte_normalise, _CRACK).valeur != "present":
+            return ResultatExtraction.absent()
+        return _voie_crack(texte_normalise)
+
+
+def _voie_crack(texte_normalise: str) -> ResultatExtraction:
+    """Voie d'administration du crack : fumée / nasale / intraveineuse.
+
+    Contrairement à :func:`_voie_administration`, la recherche est **bornée à la
+    proposition** contenant la mention de crack. La voie fumée se dit avec des
+    mots (« fumé », « inhalé ») qui appartiennent aussi au tabac : les rattacher
+    au-delà de la proposition produirait des faux positifs.
+
+    Les voies niées (« pas par voie nasale ni injectée ») sont écartées ; à
+    plusieurs voies affirmées, la plus proche de la mention l'emporte, avec une
+    confiance abaissée.
+    """
+    ancres = [
+        o for o in trouver_occurrences(texte_normalise, _CRACK)
+        if not o.nie and not est_entourage(texte_normalise, o.debut)
+    ]
+    candidats = []  # (distance à l'ancre, libellé, occurrence)
+    for ancre in ancres:
+        gauche, droite = bornes_proposition(
+            texte_normalise, ancre.debut, ancre.fin, FENETRE_VOIE, FENETRE_VOIE
+        )
+        for motif, libelle in _VOIES_CRACK:
+            for occ in trouver_occurrences(texte_normalise, motif):
+                if occ.nie or occ.debut < gauche or occ.fin > droite:
+                    continue
+                candidats.append((abs(occ.debut - ancre.debut), libelle, occ))
+
+    if not candidats:
+        return ResultatExtraction.absent()
+
+    candidats.sort(key=lambda c: c[0])
+    _, libelle, occ = candidats[0]
+    concurrence = len({c[1] for c in candidats}) > 1
+    return ResultatExtraction(libelle, 0.7 if concurrence else 1.0, occ.texte)
 
 
 # --------------------------------------------------------------------------- #

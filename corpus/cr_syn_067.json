@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_067",
+  "texte": "HDJ ADDICTO. F 29a, en couple, serveuse, en activité à temps partiel. Pas de protection juridique. Crack sniffé le week-end en contexte festif, environ 2 fois par mois. Tabac occasionnel. OH mondain. Pas d'héroïne, pas de kétamine.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "nasale",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "False",
+    "crack": "True",
+    "crack_voie": "nasale"
+  }
+}

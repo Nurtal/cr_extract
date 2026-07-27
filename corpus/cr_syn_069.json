@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_069",
+  "texte": "CS ADDICTO. H 45a, marié, ouvrier en arrêt de travail. Pas de protection. Free base en IV, abcès au pli du coude. Sérologies en cours. Tabac 20 cig/j. Pas d'alcool depuis 6 mois. Pas d'héroïne.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "intraveineuse",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "crack": "True",
+    "crack_voie": "intraveineuse"
+  }
+}

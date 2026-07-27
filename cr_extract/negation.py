@@ -97,20 +97,48 @@ def _mot_present(fragment: str, mots: Sequence[str]) -> bool:
     return False
 
 
+def _borne_gauche(texte: str, debut: int, taille: int = FENETRE_AVANT) -> int:
+    """Début de la proposition contenant ``debut`` (dernière frontière en amont)."""
+    plancher = max(0, debut - taille)
+    fragment = texte[plancher:debut]
+    coupe = max(fragment.rfind(c) for c in _FRONTIERES)
+    return plancher + coupe + 1
+
+
+def _borne_droite(texte: str, fin: int, taille: int = FENETRE_APRES) -> int:
+    """Fin de la proposition contenant ``fin`` (première frontière en aval)."""
+    fragment = texte[fin:fin + taille]
+    for i, c in enumerate(fragment):
+        if c in _FRONTIERES:
+            return fin + i
+    return fin + len(fragment)
+
+
+def bornes_proposition(
+    texte: str,
+    debut: int,
+    fin: int,
+    avant: int = FENETRE_AVANT,
+    apres: int = FENETRE_APRES,
+) -> tuple[int, int]:
+    """Bornes absolues de la proposition entourant l'empan ``[debut, fin[``.
+
+    Permet de restreindre une recherche au voisinage syntaxique d'un terme :
+    tout ce qui est au-delà d'un ``.;:!?\\n)`` appartient à une autre proposition
+    et ne doit pas s'y rattacher (« Tabac : fumeur. Crack sniffé. » — « fumeur »
+    ne qualifie pas le crack).
+    """
+    return _borne_gauche(texte, debut, avant), _borne_droite(texte, fin, apres)
+
+
 def _fenetre_avant(texte: str, debut: int) -> str:
     """Fragment précédant le terme, tronqué à la dernière frontière de proposition."""
-    fragment = texte[max(0, debut - FENETRE_AVANT):debut]
-    coupe = max(fragment.rfind(c) for c in _FRONTIERES)
-    return fragment[coupe + 1:] if coupe != -1 else fragment
+    return texte[_borne_gauche(texte, debut):debut]
 
 
 def _fenetre_apres(texte: str, fin: int) -> str:
     """Fragment suivant le terme, tronqué à la première frontière de proposition."""
-    fragment = texte[fin:fin + FENETRE_APRES]
-    for i, c in enumerate(fragment):
-        if c in _FRONTIERES:
-            return fragment[:i]
-    return fragment
+    return texte[fin:_borne_droite(texte, fin)]
 
 
 def est_nie(texte_normalise: str, debut: int, fin: int) -> bool:

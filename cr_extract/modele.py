@@ -83,6 +83,12 @@ CHAMPS: tuple[Champ, ...] = (
     Champ("traitement_substitution", "Traitement de substitution", TYPE_BOOLEEN),
     Champ("traitement_substitution_type", "Traitement de substitution - type",
           TYPE_CATEGORIEL, ("buprenorphine", "methadone")),
+    # Crack = cocaïne base. Champ distinct de ``cocaine`` (qu'il implique) car la
+    # forme fumable a ses propres marqueurs, sa propre voie et un profil clinique
+    # différent. Booléen 3 états, comme les autres champs additionnels.
+    Champ("crack", "Crack", TYPE_BOOLEEN),
+    Champ("crack_voie", "Crack - voie d'administration", TYPE_CATEGORIEL,
+          ("fumee", "nasale", "intraveineuse")),
     Champ("mdma", "MDMA", TYPE_BOOLEEN),
     Champ("lsd", "LSD", TYPE_BOOLEEN),
     Champ("amphetamines", "Amphétamines", TYPE_BOOLEEN),

@@ -133,6 +133,74 @@ def test_cocaine(texte, attendu_coc, attendu_voie):
     assert r["cocaine_voie"].valeur == attendu_voie
 
 
+# --- Crack & voie d'administration ----------------------------------------- #
+@pytest.mark.parametrize("texte, attendu_crack, attendu_voie", [
+    # Voie fumée : mode de prise dominant du crack.
+    ("Consommation de crack fumé, plusieurs prises par jour.", Etat.VRAI, "fumee"),
+    ("Crack inhalé à la pipe depuis deux ans.", Etat.VRAI, "fumee"),
+    ("Cocaïne base fumée quotidiennement.", Etat.VRAI, "fumee"),
+    # Voie nasale.
+    ("Crack sniffé lors des week-ends.", Etat.VRAI, "nasale"),
+    ("Crack par voie nasale.", Etat.VRAI, "nasale"),
+    # Voie injectée -> intraveineuse (même convention que cocaine_voie).
+    ("Crack injecté en intraveineuse.", Etat.VRAI, "intraveineuse"),
+    ("Free base en IV, abcès au pli du coude.", Etat.VRAI, "intraveineuse"),
+    # Argot du produit sans mode de prise : voie non déterminable -> NA prudent.
+    ("Consommation de caillou quotidienne.", Etat.VRAI, "NA"),
+    ("Prise de galette il y a deux jours.", Etat.VRAI, "NA"),
+    # Négation explicite -> False, et pas de voie.
+    ("Pas de crack.", Etat.FAUX, "NA"),
+    ("Ni héroïne ni crack.", Etat.FAUX, "NA"),
+    # Usage révolu -> False (marqueur d'abstinence).
+    ("Crack arrêté depuis un an, abstinent.", Etat.FAUX, "NA"),
+    # Non abordé -> NA (contrairement à cocaine, 2 états).
+    ("Patient sans particularité.", "NA", "NA"),
+    ("Cocaïne par voie nasale lors de sorties.", "NA", "NA"),
+])
+def test_crack(texte, attendu_crack, attendu_voie):
+    r = extraire_tout(texte)
+    assert r["crack"].valeur == attendu_crack
+    assert r["crack_voie"].valeur == attendu_voie
+
+
+@pytest.mark.parametrize("texte", [
+    "Consommation de crack fumé.",
+    "Caillou fumé à la pipe.",
+    "Free base injecté.",
+])
+def test_crack_implique_cocaine(texte):
+    # Le crack est de la cocaïne base : il ne peut pas donner cocaine=False.
+    assert val(texte, "cocaine") == Etat.VRAI
+
+
+def test_crack_voie_bornee_a_la_proposition():
+    # « fumeur » relève du tabac : il ne doit pas devenir la voie du crack.
+    t = "Tabagisme : fumeur, 20 cig/j. Crack sniffé le week-end."
+    assert val(t, "crack_voie") == "nasale"
+    assert val(t, "tabac") == Etat.VRAI
+
+
+def test_crack_voie_niee_donne_na():
+    # Voies explicitement niées : aucune voie retenue, mais le crack reste vrai.
+    t = "Conso de crack pluriquotidienne, pas par voie nasale ni injectée."
+    assert val(t, "crack") == Etat.VRAI
+    assert val(t, "crack_voie") == "NA"
+
+
+def test_crack_entourage_non_impute_au_patient():
+    t = "Frère consommateur de crack ; le patient n'en prend pas."
+    assert val(t, "crack") == "NA"
+    assert val(t, "cocaine") == Etat.FAUX
+
+
+def test_crack_voies_concurrentes_abaisse_la_confiance():
+    # Deux voies affirmées dans la proposition : la plus proche l'emporte, mais
+    # la décision est signalée comme moins sûre.
+    r = extraire_tout("Crack fumé puis sniffé au cours de la même soirée.")["crack_voie"]
+    assert r.valeur == "fumee"
+    assert r.confiance == 0.7
+
+
 # --- Héroïne (#11) & quantité (#12) ---------------------------------------- #
 @pytest.mark.parametrize("texte, attendu_her, attendu_q", [
     ("Héroïne IV, environ 0.5 g/jour.", Etat.VRAI, "0.5"),

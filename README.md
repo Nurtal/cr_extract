@@ -36,6 +36,8 @@ Champs additionnels (hors CSV d'origine) :
 
 | Clé interne | Valeurs possibles |
 |-------------|-------------------|
+| `crack` | `True` / `False` / `NA` — crack / cocaïne base (« caillou », « galette », « free base ») ; implique `cocaine` = `True` |
+| `crack_voie` | `fumee` / `nasale` / `intraveineuse` / `NA` — voie d'administration du crack ; « injecté » compte comme `intraveineuse` |
 | `benzodiazepines` | `True` / `False` / `NA` — usage/mésusage ; le contexte purement thérapeutique (« sevrage sous oxazépam ») n'est pas compté |
 | `benzodiazepine_type` | molécule en DCI (`zolpidem`, `alprazolam`, `diazepam`…) / `NA` |
 | `hypnotiques` | `True` / `False` / `NA` — prise d'un hypnotique / somnifère (prescrit ou détourné) |
@@ -216,7 +218,9 @@ décision est ambiguë ou implicite :
 
 - conflit actif/inactif → `0.6` ;
 - SDF déduit par défaut (logement présumé) → `0.6` ;
-- quantité d'héroïne (extraction numérique) → `0.7`.
+- quantité d'héroïne (extraction numérique) → `0.7` ;
+- voie du crack quand plusieurs voies sont affirmées dans la proposition
+  (« crack fumé puis sniffé ») → `0.7`.
 
 On privilégie un `NA` prudent quand aucun signal fiable n'est trouvé, plutôt
 qu'un faux positif.
@@ -280,9 +284,10 @@ distribution des valeurs, puis la synthèse des tags **non couverts**.
 ## Tests & performance
 
 ```bash
-python -m pytest        # 259 tests
+python -m pytest        # 296 tests
 ```
 
 Sur le corpus de référence (100 comptes rendus) : **accuracy globale 98,2 %**
-(1277/1300). Tous les champs dépassent les cibles de la ROADMAP
-(≥ 90 % faciles, ≥ 75 % difficiles).
+(1277/1300). Sur le corpus JSON complet (177 comptes rendus, champs additionnels
+inclus) : **99,1 %** (2411/2434). Tous les champs dépassent les cibles de la
+ROADMAP (≥ 90 % faciles, ≥ 75 % difficiles).

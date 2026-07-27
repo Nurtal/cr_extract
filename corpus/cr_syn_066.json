@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_066",
+  "texte": "CS ADDICTO. H 42a, célibataire, vit en appartement. Sans emploi depuis 3 ans. Pas de mesure de protection juridique. Crack fumé à la pipe, plusieurs prises quotidiennes depuis 4 ans. Tabac 15 cig/j. Pas d'alcool. Pas d'héroïne. Pas de cannabis. Aucun antécédent de sevrage compliqué.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "False",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "True",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "crack": "True",
+    "crack_voie": "fumee"
+  }
+}

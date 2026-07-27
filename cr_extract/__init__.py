@@ -4,7 +4,7 @@ médicaux non structurés, par combinaisons de regex.
 Toutes les données utilisées dans ce projet sont fictives.
 """
 
-__version__ = "0.2.1"
+__version__ = "0.3.0"
 
 from cr_extract.modele import Champ, ResultatExtraction, Etat
 from cr_extract.chargement import CompteRendu, charger_csv

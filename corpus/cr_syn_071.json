@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_071",
+  "texte": "CS ADDICTO. F 41a, en couple, salariée à la mairie. Pas de protection. Alcool 6 verres par jour. Tabac 10 cig/j. Pas de crack ni de cocaïne. Pas d'héroïne. Cannabis le soir.",
+  "tags": {
+    "situation_conjugale": "en couple",
+    "situation_professionnelle": "actif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "True",
+    "tabac": "True",
+    "cannabis": "Cannabis",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "crack": "False",
+    "crack_voie": "NA"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "cr_syn_073",
+  "texte": "CS ADDICTO. H 27a, célibataire, sans emploi. Pas de protection. Frère consommateur de crack, décédé d'une overdose. Le patient n'en a jamais pris. Tabac 5 cig/j. Pas d'alcool.",
+  "tags": {
+    "situation_conjugale": "célibataire",
+    "situation_professionnelle": "inactif",
+    "sdf": "False",
+    "protection_juridique": "NA",
+    "sevrages_compliques": "NA",
+    "alcool": "False",
+    "tabac": "True",
+    "cannabis": "NA",
+    "cocaine": "False",
+    "cocaine_voie": "NA",
+    "heroine": "False",
+    "heroine_quantite": "NA",
+    "ketamine": "NA",
+    "crack": "NA",
+    "crack_voie": "NA"
+  }
+}

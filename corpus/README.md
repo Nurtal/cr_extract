@@ -47,6 +47,8 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `benzodiazepine_type` | Benzodiazépine - type | DCI (`zolpidem`, `alprazolam`…) / `NA` |
 | `hypnotiques` | Hypnotiques | `True` / `False` / `NA` |
 | `hypnotique_type` | Hypnotique - type | DCI (`zopiclone`, `zolpidem`…) / `NA` |
+| `crack` | Crack | `True` / `False` / `NA` |
+| `crack_voie` | Crack - voie d'administration | `fumee` / `nasale` / `intraveineuse` / `NA` |
 | `mdma` | MDMA | `True` / `False` / `NA` |
 | `lsd` | LSD | `True` / `False` / `NA` |
 | `amphetamines` | Amphétamines | `True` / `False` / `NA` |
@@ -70,7 +72,9 @@ résultat d'évaluation identique. **Toutes les données sont fictives.**
 | `traitement_substitution_type` | Traitement de substitution - type | `methadone` / `buprenorphine` / `NA` |
 
 Rappel : `False` = négation explicite (« pas d'alcool ») ≠ `NA` = sujet non
-abordé. `cocaine` et `heroine` n'utilisent pas `NA` (absence = `False`).
+abordé. `cocaine` et `heroine` n'utilisent pas `NA` (absence = `False`) ; `crack`,
+champ additionnel, est bien à 3 états. Le crack étant de la cocaïne base, un
+`crack` à `True` implique `cocaine` à `True`.
 
 ## Tags expérimentaux (sans extracteur — travail futur)
 
